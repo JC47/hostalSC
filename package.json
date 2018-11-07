@@ -23,6 +23,7 @@
     "cors": "2.8.5",
     "express": "4.16.4",
     "mongoose": "5.3.10",
+    "nodemailer": "4.6.8",
     "underscore": "1.9.1"
   }
 }

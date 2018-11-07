@@ -15,6 +15,9 @@ let contactoSchema = new Schema({
   telefono: {
     type: String,
     required: [true, 'El mail es necesario']
+  },
+  comentario: {
+    type: String
   }
 });
 
