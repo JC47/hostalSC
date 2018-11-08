@@ -1,49 +1,96 @@
-<!-- Intro Section -->
-<div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(../../../../assets/img/hotel2.jpg);background-size:cover; font-family: ModernSans ; background-attachment: fixed;">
-  <div class="full-bg-img mask ">
-    <div class="container flex-center">
-      <div class="row pt-5 mt-3 w-100">
-        <div class="col-md-12 mb-3">
-          <div class="intro-info-content text-center">
-            <h2 class="h1 display-3 mb-5 wow fadeInDown white-text" data-wow-delay="0.3s">TU <a class="orange-text font-bold">COMODIDAD</a></h2>
-            <h5 class="font-up mb-5 mt-1 font-bold wow fadeInDown white-text" data-wow-delay="0.3s">Reserva ahora con un 20% de descuento</h5>
-            <a mdbBtn  size="lg" class="wow fadeInDown waves-light peach-gradient white-text" data-wow-delay="0.3s" mdbWavesEffect>Reservar</a>
+<mdb-carousel [isControls]="true" class="carousel slide carousel-fade" [animation]="'fade'">
+  <!--First slide-->
+  <mdb-carousel-item>
+    <div class="view">
+      <!--Video source-->
+      <video class="video-fluid" autoplay loop>
+        <source src="https://mdbootstrap.com/img/video/Tropical.mp4" type="video/mp4" />
+      </video>
+      <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+    </div>
+    <div class="carousel-caption mt-1" style="top: 35%">
+      <h2 class="h1 display-3 mb-5 wow fadeInDown white-text" data-wow-delay="0.3s">TU <a class="orange-text font-bold">COMODIDAD</a></h2>
+      <h5 class="font-up mb-5 mt-1 font-bold wow fadeInDown white-text" data-wow-delay="0.3s">Reserva ahora con un 20% de descuento</h5>
+      <a mdbBtn  size="lg" class="wow fadeInDown waves-light peach-gradient white-text" data-wow-delay="0.3s" mdbWavesEffect>Reservar</a>
+    </div>
+  </mdb-carousel-item>
+  <!--/First slide-->
+  <!--Second slide-->
+  <mdb-carousel-item>
+    <div class="view w-100">
+      <img class="d-block w-100" src="../../../../assets/img/hotel3.jpg" alt="Second slide">
+      <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+    </div>
+    <div class="carousel-caption" style="top: 35%">
+      <h2 class="h1 display-3 mb-5 wow fadeInDown white-text" data-wow-delay="0.3s">TU <a class="orange-text font-bold">COMODIDAD</a></h2>
+      <h5 class="font-up mb-5 mt-1 font-bold wow fadeInDown white-text" data-wow-delay="0.3s">Reserva ahora con un 20% de descuento</h5>
+      <a mdbBtn  size="lg" class="wow fadeInDown waves-light peach-gradient white-text" data-wow-delay="0.3s" mdbWavesEffect>Reservar</a>
+    </div>
+  </mdb-carousel-item>
+  <!--/Second slide-->
+  <!--Third slide-->
+  <mdb-carousel-item>
+    <div class="view w-100">
+      <img class="d-block w-100" src="../../../../assets/img/hotel4.jpg" alt="Third slide">
+      <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+    </div>
+    <div class="carousel-caption" style="top: 35%">
+      <h2 class="h1 display-3 mb-5 wow fadeInDown white-text" data-wow-delay="0.3s">TU <a class="orange-text font-bold">COMODIDAD</a></h2>
+      <h5 class="font-up mb-5 mt-1 font-bold wow fadeInDown white-text" data-wow-delay="0.3s">Reserva ahora con un 20% de descuento</h5>
+      <a mdbBtn  size="lg" class="wow fadeInDown waves-light peach-gradient white-text" data-wow-delay="0.3s" mdbWavesEffect>Reservar</a>
+    </div>
+  </mdb-carousel-item>
+  <!--/Third slide-->
+</mdb-carousel>
+<!--/.Carousel Wrapper-->
+
+
+  <div class="row descripcion-breve peach-gradient">
+    <!--Grid column-->
+      <div class="container">
+        <div class="col-md-12 text-center my-5">
+          <h1 class="h1 font-bold mb-5 mt-5" style="color: white"><b>Hotel Cancún</b></h1>
+          <div class="row align-items-center">
+            <div class="col-lg-3">
+              <img src="../../../../assets/icon/hotel.svg" alt="">
+            </div>
+            <div class="col-lg-9" style="padding-left: 50px; padding-right: 50px">
+              <div class="row " >
+
+                  <b> <p align="justify" >Aqui va una descripción breve consectetur quis elit. Perspiciatis
+                    commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet,
+                    veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit.  </p></b>
+
+
+              </div>
+              <div class="row justify-content-center">
+                <button mdbBtn type="button" size="lg"   rounded="true" class="waves-light bg-white orange-text" mdbWavesEffect><b>Conocenos</b></button>
+              </div>
+            </div>
+
           </div>
         </div>
+        <!--Grid column-->
       </div>
     </div>
-  </div>
-</div>
-
-
-<div class="container">
   <!--Grid row-->
-  <div class="row">
-    <!--Grid column-->
-    <div class="col-md-12 text-center my-5">
-      <h2 class="h1 font-bold grey-text mb-5">Lorem ipsum dolor sit amet, consectetur quis elit.</h2>
-      <p align="justify">Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.</p>
-    </div>
-    <!--Grid column-->
-  </div>
-  <!--Grid row-->
-</div>
 
-<div class="view intro" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/food2.jpg); background-attachment: fixed; background-size: cover; min-height: 700px">
+
+<div class="view intro" style="background-image: url(../../../../assets/img/hotel9.jpg); background-attachment: fixed; background-size: cover; min-height: 700px">
   <div class="full-bg-img mask rgba-pink-slight">
   </div>
 </div>
 
-<div class="view intro" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/background.jpg); background-attachment: fixed; min-height: 700px">
+<div class="view intro" style="background-image: url(../../../../assets/img/hotel7.jpg); background-size: cover; background-attachment: fixed; min-height: 700px">
   <div class="full-bg-img mask rgba-purple-slight">
     <div class="container">
       <div class="d-flex align-items-center d-flex justify-content-center" style="height: 700px">
         <div class="row mt-5">
           <div class="col-md-12 wow fadeIn mb-3">
-            <div class="intro-info-content text-center">
-              <h2 class="h1 display-1 white-text mb-2 wow fadeInDown" data-wow-delay="0.3s">Welcome on my page!</h2>
-              <h4 class="mb-3 mt-1 white-text font-bold wow fadeIn" data-wow-delay="0.4s">Lorem ipsum dolor sit amet</h4>
-              <a mdbBtn color="pink" class="wow fadeIn waves-light" mdbWavesEffect data-wow-delay="0.4s">Read more</a>
+            <div class="intro-info-content text-center" style="font-family: ModernSans">
+              <h2 class="h1 display-1 white-text mb-2 wow fadeInDown" data-wow-delay="0.3s">Comparte tu habitación</h2>
+              <h4 class="mb-3 mt-1 white-text font-bold wow fadeIn" data-wow-delay="0.4s">¡Paga menos!</h4>
+              <a mdbBtn  size="lg" class="wow fadeIn waves-light peach-gradient text-white" mdbWavesEffect data-wow-delay="0.4s">Ver cómo</a>
             </div>
           </div>
         </div>
@@ -52,125 +99,69 @@
   </div>
 </div>
 
-
-    <div class="row fadein">
-
-      <div class="col-lg-4">
-        <div class="card card-image mt-3 mb-3" style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
-
-          <!-- Content -->
-          <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
-            <div>
-              <h5 class="pink-text"><i class="fa fa-pie-chart"></i> Marketing</h5>
-              <h3 class="card-title pt-2"><strong>This is card title</strong></h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
-                optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.
-                Odit sed qui, dolorum!.</p>
-              <a mdbBtn color="pink" class="waves-light" mdbWavesEffect><i class="fa fa-clone left"></i> View project</a>
-            </div>
-          </div>
-          <!-- Content -->
-        </div>
-      </div>
-
-      <div class="col-lg-4">
-        <div class="card card-image mt-3 mb-3" style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
-
-          <!-- Content -->
-          <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
-            <div>
-              <h5 class="pink-text"><i class="fa fa-pie-chart"></i> Marketing</h5>
-              <h3 class="card-title pt-2"><strong>This is card title</strong></h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
-                optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.
-                Odit sed qui, dolorum!.</p>
-              <a mdbBtn color="pink" class="waves-light" mdbWavesEffect><i class="fa fa-clone left"></i> View project</a>
-            </div>
-          </div>
-          <!-- Content -->
-        </div>
-      </div>
-
-      <div class="col-lg-4">
-        <div class="card card-image mt-3 mb-3" style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
-
-          <!-- Content -->
-          <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
-            <div>
-              <h5 class="pink-text"><i class="fa fa-pie-chart"></i> Marketing</h5>
-              <h3 class="card-title pt-2"><strong>This is card title</strong></h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
-                optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.
-                Odit sed qui, dolorum!.</p>
-              <a mdbBtn color="pink" class="waves-light" mdbWavesEffect><i class="fa fa-clone left"></i> View project</a>
-            </div>
-          </div>
-          <!-- Content -->
-        </div>
-      </div>
-    </div>
-
-
-
-
-
-<div class="row fadein">
-
-  <div class="col-lg-4">
-    <div class="card card-image mt-3 mb-3" style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
-
-      <!-- Content -->
-      <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
-        <div>
-          <h5 class="pink-text"><i class="fa fa-pie-chart"></i> Marketing</h5>
-          <h3 class="card-title pt-2"><strong>This is card title</strong></h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
-            optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.
-            Odit sed qui, dolorum!.</p>
-          <a mdbBtn color="pink" class="waves-light" mdbWavesEffect><i class="fa fa-clone left"></i> View project</a>
-        </div>
-      </div>
-      <!-- Content -->
-    </div>
+<div class="row mt-5 mb-5 " >
+  <div class="col text-center orange-text"  style="font-family: ModernSans">
+    <h1><b>¿Qué ofrecemos?</b></h1>
   </div>
 
-  <div class="col-lg-4">
-    <div class="card card-image mt-3 mb-3" style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
-
-      <!-- Content -->
-      <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
-        <div>
-          <h5 class="pink-text"><i class="fa fa-pie-chart"></i> Marketing</h5>
-          <h3 class="card-title pt-2"><strong>This is card title</strong></h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
-            optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.
-            Odit sed qui, dolorum!.</p>
-          <a mdbBtn color="pink" class="waves-light" mdbWavesEffect><i class="fa fa-clone left"></i> View project</a>
-        </div>
-      </div>
-      <!-- Content -->
-    </div>
-  </div>
-
-  <div class="col-lg-4">
-    <div class="card card-image mt-3 mb-3" style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
-
-      <!-- Content -->
-      <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
-        <div>
-          <h5 class="pink-text"><i class="fa fa-pie-chart"></i> Marketing</h5>
-          <h3 class="card-title pt-2"><strong>This is card title</strong></h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
-            optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.
-            Odit sed qui, dolorum!.</p>
-          <a mdbBtn color="pink" class="waves-light" mdbWavesEffect><i class="fa fa-clone left"></i> View project</a>
-        </div>
-      </div>
-      <!-- Content -->
-    </div>
-  </div>
 </div>
+    <div class="row fadein" style="padding-right: 50px; padding-left: 50px">
 
+
+      <div class="col-lg-4" >
+        <div class="card card-image mt-3 mb-3" style="background-image: url(../../../../assets/img/hotel1.jpg);">
+
+          <!-- Content -->
+          <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+            <div>
+              <h5 class="orange-text"><i class="fa fa-pie-chart"></i> Item 1</h5>
+              <h3 class="card-title pt-2"><strong>This is card title</strong></h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
+                optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.
+                Odit sed qui, dolorum!.</p>
+              <a mdbBtn  class="waves-light " color="warning" mdbWavesEffect><i class="fa fa-clone left"></i> Ver detalles</a>
+            </div>
+          </div>
+          <!-- Content -->
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card card-image mt-3 mb-3" style="background-image: url(../../../../assets/img/hotel8.jpg);">
+
+          <!-- Content -->
+          <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+            <div>
+              <h5 class="orange-text"><i class="fa fa-pie-chart"></i> Item 2</h5>
+              <h3 class="card-title pt-2"><strong>This is card title</strong></h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
+                optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.
+                Odit sed qui, dolorum!.</p>
+              <a mdbBtn color="warning" class="waves-light" mdbWavesEffect><i class="fa fa-clone left"></i> Ver detalles</a>
+            </div>
+          </div>
+          <!-- Content -->
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card card-image mt-3 mb-3" style="background-image: url(../../../../assets/img/hotel5.jpg);">
+
+          <!-- Content -->
+          <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+            <div>
+              <h5 class="orange-text"><i class="fa fa-pie-chart"></i> Item 3</h5>
+              <h3 class="card-title pt-2"><strong>This is card title</strong></h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
+                optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.
+                Odit sed qui, dolorum!.</p>
+              <a mdbBtn color="warning" class="waves-light" mdbWavesEffect><i class="fa fa-clone left"></i> Ver detalles</a>
+            </div>
+          </div>
+          <!-- Content -->
+        </div>
+      </div>
+    </div>
 
 
 

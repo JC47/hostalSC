@@ -3,11 +3,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import {
   NbButtonModule,
-  NbCardModule,
+  NbCardModule, NbInputModule,
   NbLayoutModule,
   NbMenuModule,
-  NbSelectModule,
-  NbThemeModule
+  NbSelectModule, NbTabsetModule,
+  NbThemeModule, NbUserModule
 } from '@nebular/theme';
 
 import { AppComponent } from './app.component';
@@ -22,9 +22,16 @@ import { ContactoComponent } from './components/page/contacto/contacto.component
 import { ReservacionComponent } from './components/page/reservacion/reservacion.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import {InputsModule, MDBBootstrapModule} from 'angular-bootstrap-md';
 import { AgmCoreModule } from '@agm/core';
 import { ReactiveFormsModule} from "@angular/forms";
+import {ContactoService} from "./services/contacto.service";
+import {HttpModule} from "@angular/http";
+import {HttpClientModule} from "@angular/common/http";
+import { LoginAdminComponent } from './components/admin/login-admin/login-admin.component';
+import { DashboardAdminComponent } from './components/admin/dashboard-admin/dashboard-admin.component';
+import {NbTabComponent, NbTabsetComponent} from "@nebular/theme/components/tabset/tabset.component";
+import {NbAuthModule, NbPasswordAuthStrategy} from "@nebular/auth";
 
 
 @NgModule({
@@ -37,7 +44,9 @@ import { ReactiveFormsModule} from "@angular/forms";
     NosotrosComponent,
     ServiciosComponent,
     ContactoComponent,
-    ReservacionComponent
+    ReservacionComponent,
+    LoginAdminComponent,
+    DashboardAdminComponent
   ],
   imports: [
     BrowserModule,
@@ -46,9 +55,13 @@ import { ReactiveFormsModule} from "@angular/forms";
     MDBBootstrapModule.forRoot(),
     NbThemeModule.forRoot(),
     NbLayoutModule,
+    NbTabsetModule,
     NbSelectModule,
+    HttpClientModule,
+    NbInputModule,
     BrowserAnimationsModule,
     NbButtonModule,
+    NbUserModule,
     ReactiveFormsModule,
     NbCardModule,
     AgmCoreModule.forRoot({
@@ -56,7 +69,9 @@ import { ReactiveFormsModule} from "@angular/forms";
     })
 
   ],
-  providers: [],
+  providers: [
+    ContactoService
+  ],
   schemas:[],
   bootstrap: [AppComponent]
 })

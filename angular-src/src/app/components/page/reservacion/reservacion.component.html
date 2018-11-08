@@ -1,3 +1,136 @@
-<p>
-  reservacion works!
-</p>
+<mdb-carousel [isControls]="true" class="carousel slide carousel-fade" [animation]="'fade'">
+  <!--First slide-->
+  <mdb-carousel-item>
+    <div class="view">
+      <!--Video source-->
+      <video class="video-fluid" autoplay loop>
+        <source src="https://mdbootstrap.com/img/video/Tropical.mp4" type="video/mp4" />
+      </video>
+      <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+    </div>
+    <div class="carousel-caption mt-1" style="top: 35%">
+      <h2 class="h1 display-3 mb-5 wow fadeInDown white-text" data-wow-delay="0.3s">TU <a class="orange-text font-bold">COMODIDAD</a></h2>
+      <h5 class="font-up mb-5 mt-1 font-bold wow fadeInDown white-text" data-wow-delay="0.3s">Reserva ahora con un 20% de descuento</h5>
+      <a mdbBtn  size="lg" class="wow fadeInDown waves-light peach-gradient white-text" data-wow-delay="0.3s" mdbWavesEffect>Reservar</a>
+    </div>
+  </mdb-carousel-item>
+  <!--/First slide-->
+  <!--Second slide-->
+  <mdb-carousel-item>
+    <div class="view w-100">
+      <img class="d-block w-100" src="../../../../assets/img/hotel3.jpg" alt="Second slide">
+      <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+    </div>
+    <div class="carousel-caption" style="top: 35%">
+      <h2 class="h1 display-3 mb-5 wow fadeInDown white-text" data-wow-delay="0.3s">TU <a class="orange-text font-bold">COMODIDAD</a></h2>
+      <h5 class="font-up mb-5 mt-1 font-bold wow fadeInDown white-text" data-wow-delay="0.3s">Reserva ahora con un 20% de descuento</h5>
+      <a mdbBtn  size="lg" class="wow fadeInDown waves-light peach-gradient white-text" data-wow-delay="0.3s" mdbWavesEffect>Reservar</a>
+    </div>
+  </mdb-carousel-item>
+  <!--/Second slide-->
+  <!--Third slide-->
+  <mdb-carousel-item>
+    <div class="view w-100">
+      <img class="d-block w-100" src="../../../../assets/img/hotel4.jpg" alt="Third slide">
+      <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+    </div>
+    <div class="carousel-caption" style="top: 35%">
+      <h2 class="h1 display-3 mb-5 wow fadeInDown white-text" data-wow-delay="0.3s">TU <a class="orange-text font-bold">COMODIDAD</a></h2>
+      <h5 class="font-up mb-5 mt-1 font-bold wow fadeInDown white-text" data-wow-delay="0.3s">Reserva ahora con un 20% de descuento</h5>
+      <a mdbBtn  size="lg" class="wow fadeInDown waves-light peach-gradient white-text" data-wow-delay="0.3s" mdbWavesEffect>Reservar</a>
+    </div>
+  </mdb-carousel-item>
+  <!--/Third slide-->
+</mdb-carousel>
+
+  <div class="row sunny-morning-gradient" style="color: white; font-family: ModernSans" >
+
+    <section class="text-center pb-3" style="width: 100%">
+      <div class="container">
+
+        <!--Section heading-->
+        <h2 class="font-weight-bold h1 py-5">
+          <strong>Reservaciones</strong>
+        </h2>
+        <!--Section description-->
+        <p class=" pb-5 text-center">Reserva una habitación para tu familia o si vienes solo y quieres ahorrar, revisa si tenemos habitaciones para compartir </p>
+
+        <!--Grid row-->
+        <div class="row">
+
+          <!--Grid column-->
+          <div class="col-md-12 mb-4">
+            <div class="card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/img%20%2832%29.jpg);">
+              <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 rounded">
+                <div>
+                  <h6 class="orange-text">
+                    <i class="fa fa-plane"></i>
+                  </h6>
+                  <h3 class="py-3 font-weight-bold">
+                    <strong>Habitación Completa</strong>
+                  </h3>
+                  <p class="pb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
+                    optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.
+                    Odit sed qui, dolorum!
+                  </p>
+                  <a mdbBtn color="secondary" size="md" rounded="true" class="waves-light" mdbWavesEffect>
+                    <i class="fa fa-bed left"></i> Reservar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-6 mb-4">
+            <div class="card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Nature/6-col/img%20%2873%29.jpg);">
+              <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 rounded">
+                <div>
+                  <h6 class="orange-text">
+                    <i class="fa fa-eye"></i>
+                  </h6>
+                  <h3 class="py-3 font-weight-bold">
+                    <strong>Habitación Compartida</strong>
+                  </h3>
+                  <p class="pb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
+                    optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.
+                    Odit sed qui, dolorum!
+                  </p>
+                  <a mdbBtn color="pink" size="md" rounded="true" class="waves-light" mdbWavesEffect>
+                    <i class="fa fa-bed left"></i> Reservar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-6 mb-4">
+            <div class="card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/City/6-col/img%20%2847%29.jpg);">
+              <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 rounded">
+                <div>
+                  <h6 class="orange-text">
+                    <i class="fa fa-eye"></i>
+                  </h6>
+                  <h3 class="py-3 font-weight-bold">
+                    <strong>Habitación Mixta</strong>
+                  </h3>
+                  <p class="pb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
+                    optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.
+                    Odit sed qui, dolorum!
+                  </p>
+                  <a mdbBtn color="success" size="md" rounded="true" class="waves-light" mdbWavesEffect>
+                    <i class="fa fa-bed left"></i>Reservar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+      </div>
+    </section>
+
+  </div>

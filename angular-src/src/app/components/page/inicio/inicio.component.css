@@ -19,7 +19,18 @@
 
 
 .intro-header {
-  height: unset !important;
+
+}
+
+carousel-caption{
+  font-family: ModernSans;
+}
+
+
+.descripcion-breve{
+  font-family: ModernSans;
+  color:white;
+  font-size: 30px;
 }
 
 

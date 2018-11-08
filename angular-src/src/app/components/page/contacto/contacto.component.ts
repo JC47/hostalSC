@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {ContactoService} from "../../../services/contacto.service";
 
 @Component({
   selector: 'app-contacto',
@@ -12,9 +14,25 @@ export class ContactoComponent implements OnInit {
     lng: 7.809007,
   };
 
-  constructor() { }
+  contactoForm:FormGroup;
+
+  constructor(private _contactoService:ContactoService) {
+    this.contactoForm= new FormGroup({
+      nombre: new FormControl('',Validators.required),
+      email: new FormControl('',[Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]),
+      telefono:new FormControl(''),
+      mensaje:new FormControl('')
+    })
+
+  }
 
   ngOnInit() {
+  }
+
+  enviarRespuesta(){
+    this._contactoService.enviarMensaje(this.contactoForm.value).subscribe(data=>{
+      console.log(data)
+    });
   }
 
 }

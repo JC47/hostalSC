@@ -1,12 +1,15 @@
-<div class="container" >
+<div class="row" style="background-image: url(../../../../assets/img/contact2.jpg); background-size: cover; height:100%" >
+  <div class="mask flex-center rgba-black-strong" style="color:white;width: 100%; font-family: ModernSans">
 
-  <section class="pb-5">
+  <div class="container"  >
+
+  <section class="pb-5"  style="margin-top:100px">
 
     <!--Section heading-->
-    <h2 class="h1 pt-4">Contact us</h2>
+    <h2 class="h1 pt-4">Dejanos un mensaje</h2>
     <!--Section description-->
-    <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi,
-      veritatis totam voluptas nostrum quisquam eum porro a pariatur accusamus veniam.</p>
+    <p class="pb-4">Quieres más información o necesitas un servicio en especial,
+      mándanos un mensaje y nos pondremos en contacto contigo inmediatamente</p>
 
     <div class="row">
 
@@ -16,42 +19,48 @@
         <!--Form with header-->
         <mdb-card>
 
-          <mdb-card-header class="info-color white-text text-center py-4">
+          <mdb-card-header class="sunny-morning-gradient white-text text-center py-4">
             <h5>
-              <strong>Contact us</strong>
+              <strong>Contactanos</strong>
             </h5>
           </mdb-card-header>
 
           <mdb-card-body class="px-lg-5 pt-0">
 
-            <form class="text-center" style="color: #757575;" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <form class="text-center" style="color: #757575;" [formGroup]="contactoForm" (ngSubmit)="enviarRespuesta()">
 
               <div class="md-form mt-3">
-                <input type="text" formControlName="contactFormName" id="materialContactFormName" class="form-control"
+                <input type="text" formControlName="nombre" id="contactForName" class="form-control"
                        mdbInputDirective>
-                <label for="materialContactFormName">Name</label>
+                <label for="contactForName">Nombre</label>
               </div>
 
               <div class="md-form">
-                <input type="email" formControlName="contactFormEmail" id="materialContactFormEmail" class="form-control"
+                <input type="email" formControlName="email" id="contactForEmail" class="form-control"
                        mdbInputDirective>
-                <label for="materialContactFormEmail">E-mail</label>
+                <label for="contactForEmail">Email</label>
               </div>
 
               <div class="md-form">
-        <textarea type="text" formControlName="contactFormMessage" id="materialContactFormMessage" class="form-control md-textarea"
+                <input type="email" formControlName="telefono" id="contactForPhone" class="form-control"
+                       mdbInputDirective>
+                <label for="contactForPhone">Telefono</label>
+              </div>
+
+              <div class="md-form">
+        <textarea type="text" formControlName="mensaje" id="materialContactFormMessage" class="form-control md-textarea"
                   mdbInputDirective></textarea>
-                <label for="materialContactFormMessage">Message</label>
+                <label for="materialContactFormMessage">Mensaje</label>
               </div>
 
-              <div class="row">
-                <div class="col-md-6 mx-auto d-flex justify-content-center">
-                  <mdb-checkbox formControlName="contactFormCopy">Send me a copy of this message</mdb-checkbox>
-                </div>
-              </div>
+              <!--<div class="row">-->
+                <!--<div class="col-md-6 mx-auto d-flex justify-content-center">-->
+                  <!--<mdb-checkbox formControlName="contactFormCopy">Quiero suscribirme al </mdb-checkbox>-->
+                <!--</div>-->
+              <!--</div>-->
 
-              <button mdbBtn color="info" outline="true" rounded="true" block="true" class="z-depth-0 my-4 waves-effect"
-                      mdbWavesEffect type="submit" [disabled]="disabledSubmitButton">Send</button>
+              <button mdbBtn  outline="true" rounded="true" block="true" class="z-depth-0 my-4 waves-effect warning-color"
+                      mdbWavesEffect type="submit" [disabled]="!contactoForm.valid">Enviar</button>
 
             </form>
 
@@ -64,7 +73,7 @@
       <!--Grid column-->
 
       <!--Grid column-->
-      <div class="col-lg-7">
+      <div class="col-lg-7 mt-4">
 
         <!--Google map-->
         <agm-map class="z-depth-1-half map-container" style="height: 400px;" [latitude]="map.lat" [longitude]="map.lng">
@@ -75,25 +84,23 @@
         <!--Buttons-->
         <div class="row text-center">
           <div class="col-md-4">
-            <a mdbBtn floating="true" color="blue" class="accent-1 waves-light" mdbWavesEffect>
               <i class="fa fa-map-marker"></i>
-            </a>
             <p>San Francisco, CA 94126</p>
             <p>United States</p>
           </div>
 
           <div class="col-md-4">
-            <a mdbBtn floating="true" color="blue" class="accent-1 waves-light" mdbWavesEffect>
+
               <i class="fa fa-phone"></i>
-            </a>
+
             <p>+ 01 234 567 89</p>
             <p>Mon - Fri, 8:00-22:00</p>
           </div>
 
           <div class="col-md-4">
-            <a mdbBtn floating="true" color="blue" class="accent-1 waves-light" mdbWavesEffect>
-              <i class="fa fa-envelope"></i>
-            </a>
+
+              <i class="fa   fa-envelope" size="lg"></i>
+
             <p>info@gmail.com</p>
             <p>sale@gmail.com</p>
           </div>
@@ -108,4 +115,7 @@
   <!--Section: Contact v.1-->
 
 
+</div>
+
+  </div>
 </div>

@@ -1,0 +1,81 @@
+<nb-layout>
+  <nb-layout-column>
+    <nb-card style="height: 100%">
+      <nb-card-header class="text-center">Login</nb-card-header>
+      <nb-card-body>
+        <nb-tabset fullWidth>
+          <nb-tab class="col-12" tabTitle="Administrador">
+
+
+
+            <form action="" class="col-4 offset-4" style="margin-top: 5%" [formGroup]="">
+              <div class="row justify-content-center">
+                  <img src="../../../../assets/icon/boss.svg" style="border-radius: 50%;width: 150px; height: 150px" alt="">
+              </div>
+
+                <div class="input-group-lader">
+                  <div class="row">
+                    <label class="col mt-2 form-control-label" style="font-size: 20px">Usuario</label>
+                  </div>
+                  <div class="row">
+                    <input fullWidth fieldSize="large"  nbInput>
+                  </div>
+                </div>
+
+                <div class="input-group-lader mt-4">
+                  <div class="row">
+                    <label class=" col mt-2 form-control-label" style="font-size: 20px">Usuario</label>
+                  </div>
+                  <div class="row">
+                    <input fullWidth fieldSize="large" nbInput>
+                  </div>
+                </div>
+
+
+
+                <input fullWidth nbButton class="mt-4" value="iniciar Sesión" type="submit" status="primary">
+
+
+
+            </form>
+
+
+
+
+
+
+
+
+          </nb-tab>
+          <nb-tab class="col-12" tabTitle="Root">
+
+            <div class="col-lg-4 offset-4" style="margin-top: 5%">
+              <div class="row">
+                <div class="col-6 offset-3">
+                  <img src="../../../../assets/icon/auth.svg" alt="">
+                </div>
+              </div>
+
+                <div class="input-group-lader mt-4">
+                  <div class="row">
+                    <label class=" col mt-2 form-control-label" style="font-size: 20px">Token Autenticador</label>
+                  </div>
+                  <div class="row">
+                    <input fullWidth fieldSize="large" nbInput>
+                  </div>
+                </div>
+
+              <input fullWidth nbButton class="mt-4" value="iniciar Sesión" type="submit" status="primary">
+              </div>
+
+
+
+
+          </nb-tab>
+        </nb-tabset>
+      </nb-card-body>
+      <nb-card-footer>By Wikipedia</nb-card-footer>
+    </nb-card>
+  </nb-layout-column>
+
+</nb-layout>
