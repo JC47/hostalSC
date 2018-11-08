@@ -389,12 +389,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _services_contacto_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./services/contacto.service */ "./src/app/services/contacto.service.ts");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _components_admin_login_admin_login_admin_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/admin/login-admin/login-admin.component */ "./src/app/components/admin/login-admin/login-admin.component.ts");
+/* harmony import */ var _components_admin_dashboard_admin_dashboard_admin_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/admin/dashboard-admin/dashboard-admin.component */ "./src/app/components/admin/dashboard-admin/dashboard-admin.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -428,7 +432,9 @@ var AppModule = /** @class */ (function () {
                 _components_page_nosotros_nosotros_component__WEBPACK_IMPORTED_MODULE_9__["NosotrosComponent"],
                 _components_page_servicios_servicios_component__WEBPACK_IMPORTED_MODULE_10__["ServiciosComponent"],
                 _components_page_contacto_contacto_component__WEBPACK_IMPORTED_MODULE_11__["ContactoComponent"],
-                _components_page_reservacion_reservacion_component__WEBPACK_IMPORTED_MODULE_12__["ReservacionComponent"]
+                _components_page_reservacion_reservacion_component__WEBPACK_IMPORTED_MODULE_12__["ReservacionComponent"],
+                _components_admin_login_admin_login_admin_component__WEBPACK_IMPORTED_MODULE_19__["LoginAdminComponent"],
+                _components_admin_dashboard_admin_dashboard_admin_component__WEBPACK_IMPORTED_MODULE_20__["DashboardAdminComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -437,10 +443,13 @@ var AppModule = /** @class */ (function () {
                 angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_14__["MDBBootstrapModule"].forRoot(),
                 _nebular_theme__WEBPACK_IMPORTED_MODULE_2__["NbThemeModule"].forRoot(),
                 _nebular_theme__WEBPACK_IMPORTED_MODULE_2__["NbLayoutModule"],
+                _nebular_theme__WEBPACK_IMPORTED_MODULE_2__["NbTabsetModule"],
                 _nebular_theme__WEBPACK_IMPORTED_MODULE_2__["NbSelectModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_18__["HttpClientModule"],
+                _nebular_theme__WEBPACK_IMPORTED_MODULE_2__["NbInputModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_13__["BrowserAnimationsModule"],
                 _nebular_theme__WEBPACK_IMPORTED_MODULE_2__["NbButtonModule"],
+                _nebular_theme__WEBPACK_IMPORTED_MODULE_2__["NbUserModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_16__["ReactiveFormsModule"],
                 _nebular_theme__WEBPACK_IMPORTED_MODULE_2__["NbCardModule"],
                 _agm_core__WEBPACK_IMPORTED_MODULE_15__["AgmCoreModule"].forRoot({
@@ -479,6 +488,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_page_reservacion_reservacion_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/page/reservacion/reservacion.component */ "./src/app/components/page/reservacion/reservacion.component.ts");
 /* harmony import */ var _components_page_servicios_servicios_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/page/servicios/servicios.component */ "./src/app/components/page/servicios/servicios.component.ts");
 /* harmony import */ var _components_page_contacto_contacto_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/page/contacto/contacto.component */ "./src/app/components/page/contacto/contacto.component.ts");
+/* harmony import */ var _components_admin_login_admin_login_admin_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/admin/login-admin/login-admin.component */ "./src/app/components/admin/login-admin/login-admin.component.ts");
+/* harmony import */ var _components_admin_dashboard_admin_dashboard_admin_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/admin/dashboard-admin/dashboard-admin.component */ "./src/app/components/admin/dashboard-admin/dashboard-admin.component.ts");
+
+
 
 
 
@@ -496,7 +509,11 @@ var APP_ROUTES = [
             { path: 'servicios', component: _components_page_servicios_servicios_component__WEBPACK_IMPORTED_MODULE_6__["ServiciosComponent"] },
             { path: 'contacto', component: _components_page_contacto_contacto_component__WEBPACK_IMPORTED_MODULE_7__["ContactoComponent"] }
         ] },
-    { path: 'admin', component: _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_2__["AdminComponent"] },
+    { path: 'admin', component: _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_2__["AdminComponent"],
+        children: [
+            { path: 'login', component: _components_admin_login_admin_login_admin_component__WEBPACK_IMPORTED_MODULE_8__["LoginAdminComponent"] },
+            { path: 'dashboard', component: _components_admin_dashboard_admin_dashboard_admin_component__WEBPACK_IMPORTED_MODULE_9__["DashboardAdminComponent"] },
+        ] },
     { path: '**', pathMatch: 'full', redirectTo: 'home/inicio' }
 ];
 var APP_ROUTING = _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"].forRoot(APP_ROUTES);
@@ -522,7 +539,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  admin works!\n</p>\n"
+module.exports = "<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -561,6 +578,132 @@ var AdminComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], AdminComponent);
     return AdminComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/admin/dashboard-admin/dashboard-admin.component.css":
+/*!********************************************************************************!*\
+  !*** ./src/app/components/admin/dashboard-admin/dashboard-admin.component.css ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/admin/dashboard-admin/dashboard-admin.component.html":
+/*!*********************************************************************************!*\
+  !*** ./src/app/components/admin/dashboard-admin/dashboard-admin.component.html ***!
+  \*********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  dashboard-admin works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/admin/dashboard-admin/dashboard-admin.component.ts":
+/*!*******************************************************************************!*\
+  !*** ./src/app/components/admin/dashboard-admin/dashboard-admin.component.ts ***!
+  \*******************************************************************************/
+/*! exports provided: DashboardAdminComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DashboardAdminComponent", function() { return DashboardAdminComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var DashboardAdminComponent = /** @class */ (function () {
+    function DashboardAdminComponent() {
+    }
+    DashboardAdminComponent.prototype.ngOnInit = function () {
+    };
+    DashboardAdminComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-dashboard-admin',
+            template: __webpack_require__(/*! ./dashboard-admin.component.html */ "./src/app/components/admin/dashboard-admin/dashboard-admin.component.html"),
+            styles: [__webpack_require__(/*! ./dashboard-admin.component.css */ "./src/app/components/admin/dashboard-admin/dashboard-admin.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], DashboardAdminComponent);
+    return DashboardAdminComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/admin/login-admin/login-admin.component.css":
+/*!************************************************************************!*\
+  !*** ./src/app/components/admin/login-admin/login-admin.component.css ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/admin/login-admin/login-admin.component.html":
+/*!*************************************************************************!*\
+  !*** ./src/app/components/admin/login-admin/login-admin.component.html ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<nb-layout>\n  <nb-layout-column>\n    <nb-card style=\"height: 100%\">\n      <nb-card-header class=\"text-center\">Login</nb-card-header>\n      <nb-card-body>\n        <nb-tabset fullWidth>\n          <nb-tab class=\"col-12\" tabTitle=\"Administrador\">\n\n\n\n            <form action=\"\" class=\"col-4 offset-4\" style=\"margin-top: 5%\" [formGroup]=\"\">\n              <div class=\"row justify-content-center\">\n                  <img src=\"../../../../assets/icon/boss.svg\" style=\"border-radius: 50%;width: 150px; height: 150px\" alt=\"\">\n              </div>\n\n                <div class=\"input-group-lader\">\n                  <div class=\"row\">\n                    <label class=\"col mt-2 form-control-label\" style=\"font-size: 20px\">Usuario</label>\n                  </div>\n                  <div class=\"row\">\n                    <input fullWidth fieldSize=\"large\"  nbInput>\n                  </div>\n                </div>\n\n                <div class=\"input-group-lader mt-4\">\n                  <div class=\"row\">\n                    <label class=\" col mt-2 form-control-label\" style=\"font-size: 20px\">Usuario</label>\n                  </div>\n                  <div class=\"row\">\n                    <input fullWidth fieldSize=\"large\" nbInput>\n                  </div>\n                </div>\n\n\n\n                <input fullWidth nbButton class=\"mt-4\" value=\"iniciar Sesión\" type=\"submit\" status=\"primary\">\n\n\n\n            </form>\n\n\n\n\n\n\n\n\n          </nb-tab>\n          <nb-tab class=\"col-12\" tabTitle=\"Root\">\n\n            <div class=\"col-lg-4 offset-4\" style=\"margin-top: 5%\">\n              <div class=\"row\">\n                <div class=\"col-6 offset-3\">\n                  <img src=\"../../../../assets/icon/auth.svg\" alt=\"\">\n                </div>\n              </div>\n\n                <div class=\"input-group-lader mt-4\">\n                  <div class=\"row\">\n                    <label class=\" col mt-2 form-control-label\" style=\"font-size: 20px\">Token Autenticador</label>\n                  </div>\n                  <div class=\"row\">\n                    <input fullWidth fieldSize=\"large\" nbInput>\n                  </div>\n                </div>\n\n              <input fullWidth nbButton class=\"mt-4\" value=\"iniciar Sesión\" type=\"submit\" status=\"primary\">\n              </div>\n\n\n\n\n          </nb-tab>\n        </nb-tabset>\n      </nb-card-body>\n      <nb-card-footer>By Wikipedia</nb-card-footer>\n    </nb-card>\n  </nb-layout-column>\n\n</nb-layout>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/admin/login-admin/login-admin.component.ts":
+/*!***********************************************************************!*\
+  !*** ./src/app/components/admin/login-admin/login-admin.component.ts ***!
+  \***********************************************************************/
+/*! exports provided: LoginAdminComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginAdminComponent", function() { return LoginAdminComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var LoginAdminComponent = /** @class */ (function () {
+    function LoginAdminComponent() {
+    }
+    LoginAdminComponent.prototype.ngOnInit = function () {
+    };
+    LoginAdminComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-login-admin',
+            template: __webpack_require__(/*! ./login-admin.component.html */ "./src/app/components/admin/login-admin/login-admin.component.html"),
+            styles: [__webpack_require__(/*! ./login-admin.component.css */ "./src/app/components/admin/login-admin/login-admin.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], LoginAdminComponent);
+    return LoginAdminComponent;
 }());
 
 
@@ -648,7 +791,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\" style=\"background-image: url(../../../../assets/img/contact2.jpg); background-size: cover; height:100%\" >\n  <div class=\"mask flex-center rgba-black-strong\" style=\"color:white;width: 100%; font-family: ModernSans\">\n\n  <div class=\"container\"  >\n\n  <section class=\"pb-5\"  style=\"margin-top:100px\">\n\n    <!--Section heading-->\n    <h2 class=\"h1 pt-4\">Dejanos un mensaje</h2>\n    <!--Section description-->\n    <p class=\"pb-4\">Quieres más información o necesitas un servicio en especial,\n      mándanos un mensaje y nos pondremos en contacto contigo inmediatamente</p>\n\n    <div class=\"row\">\n\n      <!--Grid column-->\n      <div class=\"col-lg-5 my-4\">\n\n        <!--Form with header-->\n        <mdb-card>\n\n          <mdb-card-header class=\"sunny-morning-gradient white-text text-center py-4\">\n            <h5>\n              <strong>Contactanos</strong>\n            </h5>\n          </mdb-card-header>\n\n          <mdb-card-body class=\"px-lg-5 pt-0\">\n\n            <form class=\"text-center\" style=\"color: #757575;\" [formGroup]=\"contactoForm\" (ngSubmit)=\"enviarRespuesta()\">\n\n              <div class=\"md-form mt-3\">\n                <input type=\"text\" formControlName=\"nombre\" id=\"contactForName\" class=\"form-control\"\n                       mdbInputDirective>\n                <label for=\"contactForName\">Nombre</label>\n              </div>\n\n              <div class=\"md-form\">\n                <input type=\"email\" formControlName=\"email\" id=\"contactForEmail\" class=\"form-control\"\n                       mdbInputDirective>\n                <label for=\"contactForEmail\">Email</label>\n              </div>\n\n              <div class=\"md-form\">\n                <input type=\"email\" formControlName=\"telefono\" id=\"contactForPhone\" class=\"form-control\"\n                       mdbInputDirective>\n                <label for=\"contactForPhone\">Telefono</label>\n              </div>\n\n              <div class=\"md-form\">\n        <textarea type=\"text\" formControlName=\"mensaje\" id=\"materialContactFormMessage\" class=\"form-control md-textarea\"\n                  mdbInputDirective></textarea>\n                <label for=\"materialContactFormMessage\">Mensaje</label>\n              </div>\n\n              <!--<div class=\"row\">-->\n                <!--<div class=\"col-md-6 mx-auto d-flex justify-content-center\">-->\n                  <!--<mdb-checkbox formControlName=\"contactFormCopy\">Quiero suscribirme al </mdb-checkbox>-->\n                <!--</div>-->\n              <!--</div>-->\n\n              <button mdbBtn  outline=\"true\" rounded=\"true\" block=\"true\" class=\"z-depth-0 my-4 waves-effect warning-color\"\n                      mdbWavesEffect type=\"submit\" [disabled]=\"!contactoForm.valid\">Enviar</button>\n\n            </form>\n\n          </mdb-card-body>\n\n        </mdb-card>\n        <!--Form with header-->\n\n      </div>\n      <!--Grid column-->\n\n      <!--Grid column-->\n      <div class=\"col-lg-7 mt-4\">\n\n        <!--Google map-->\n        <agm-map class=\"z-depth-1-half map-container\" style=\"height: 400px;\" [latitude]=\"map.lat\" [longitude]=\"map.lng\">\n          <agm-marker [latitude]=\"map.lat\" [longitude]=\"map.lng\"></agm-marker>\n        </agm-map>\n\n        <br>\n        <!--Buttons-->\n        <div class=\"row text-center\">\n          <div class=\"col-md-4\">\n            <a mdbBtn floating=\"true\" color=\"blue\" class=\"accent-1 waves-light\" mdbWavesEffect>\n              <i class=\"fa fa-map-marker\"></i>\n            </a>\n            <p>San Francisco, CA 94126</p>\n            <p>United States</p>\n          </div>\n\n          <div class=\"col-md-4\">\n            <a mdbBtn floating=\"true\" color=\"blue\" class=\"accent-1 waves-light\" mdbWavesEffect>\n              <i class=\"fa fa-phone\"></i>\n            </a>\n            <p>+ 01 234 567 89</p>\n            <p>Mon - Fri, 8:00-22:00</p>\n          </div>\n\n          <div class=\"col-md-4\">\n            <a mdbBtn floating=\"true\" color=\"blue\" class=\"accent-1 waves-light\" mdbWavesEffect>\n              <i class=\"fa fa-envelope\"></i>\n            </a>\n            <p>info@gmail.com</p>\n            <p>sale@gmail.com</p>\n          </div>\n        </div>\n\n      </div>\n      <!--Grid column-->\n\n    </div>\n\n  </section>\n  <!--Section: Contact v.1-->\n\n\n</div>\n\n  </div>\n</div>\n"
+module.exports = "<div class=\"row\" style=\"background-image: url(../../../../assets/img/contact2.jpg); background-size: cover; height:100%\" >\n  <div class=\"mask flex-center rgba-black-strong\" style=\"color:white;width: 100%; font-family: ModernSans\">\n\n  <div class=\"container\"  >\n\n  <section class=\"pb-5\"  style=\"margin-top:100px\">\n\n    <!--Section heading-->\n    <h2 class=\"h1 pt-4\">Dejanos un mensaje</h2>\n    <!--Section description-->\n    <p class=\"pb-4\">Quieres más información o necesitas un servicio en especial,\n      mándanos un mensaje y nos pondremos en contacto contigo inmediatamente</p>\n\n    <div class=\"row\">\n\n      <!--Grid column-->\n      <div class=\"col-lg-5 my-4\">\n\n        <!--Form with header-->\n        <mdb-card>\n\n          <mdb-card-header class=\"sunny-morning-gradient white-text text-center py-4\">\n            <h5>\n              <strong>Contactanos</strong>\n            </h5>\n          </mdb-card-header>\n\n          <mdb-card-body class=\"px-lg-5 pt-0\">\n\n            <form class=\"text-center\" style=\"color: #757575;\" [formGroup]=\"contactoForm\" (ngSubmit)=\"enviarRespuesta()\">\n\n              <div class=\"md-form mt-3\">\n                <input type=\"text\" formControlName=\"nombre\" id=\"contactForName\" class=\"form-control\"\n                       mdbInputDirective>\n                <label for=\"contactForName\">Nombre</label>\n              </div>\n\n              <div class=\"md-form\">\n                <input type=\"email\" formControlName=\"email\" id=\"contactForEmail\" class=\"form-control\"\n                       mdbInputDirective>\n                <label for=\"contactForEmail\">Email</label>\n              </div>\n\n              <div class=\"md-form\">\n                <input type=\"email\" formControlName=\"telefono\" id=\"contactForPhone\" class=\"form-control\"\n                       mdbInputDirective>\n                <label for=\"contactForPhone\">Telefono</label>\n              </div>\n\n              <div class=\"md-form\">\n        <textarea type=\"text\" formControlName=\"mensaje\" id=\"materialContactFormMessage\" class=\"form-control md-textarea\"\n                  mdbInputDirective></textarea>\n                <label for=\"materialContactFormMessage\">Mensaje</label>\n              </div>\n\n              <!--<div class=\"row\">-->\n                <!--<div class=\"col-md-6 mx-auto d-flex justify-content-center\">-->\n                  <!--<mdb-checkbox formControlName=\"contactFormCopy\">Quiero suscribirme al </mdb-checkbox>-->\n                <!--</div>-->\n              <!--</div>-->\n\n              <button mdbBtn  outline=\"true\" rounded=\"true\" block=\"true\" class=\"z-depth-0 my-4 waves-effect warning-color\"\n                      mdbWavesEffect type=\"submit\" [disabled]=\"!contactoForm.valid\">Enviar</button>\n\n            </form>\n\n          </mdb-card-body>\n\n        </mdb-card>\n        <!--Form with header-->\n\n      </div>\n      <!--Grid column-->\n\n      <!--Grid column-->\n      <div class=\"col-lg-7 mt-4\">\n\n        <!--Google map-->\n        <agm-map class=\"z-depth-1-half map-container\" style=\"height: 400px;\" [latitude]=\"map.lat\" [longitude]=\"map.lng\">\n          <agm-marker [latitude]=\"map.lat\" [longitude]=\"map.lng\"></agm-marker>\n        </agm-map>\n\n        <br>\n        <!--Buttons-->\n        <div class=\"row text-center\">\n          <div class=\"col-md-4\">\n              <i class=\"fa fa-map-marker\"></i>\n            <p>San Francisco, CA 94126</p>\n            <p>United States</p>\n          </div>\n\n          <div class=\"col-md-4\">\n\n              <i class=\"fa fa-phone\"></i>\n\n            <p>+ 01 234 567 89</p>\n            <p>Mon - Fri, 8:00-22:00</p>\n          </div>\n\n          <div class=\"col-md-4\">\n\n              <i class=\"fa   fa-envelope\" size=\"lg\"></i>\n\n            <p>info@gmail.com</p>\n            <p>sale@gmail.com</p>\n          </div>\n        </div>\n\n      </div>\n      <!--Grid column-->\n\n    </div>\n\n  </section>\n  <!--Section: Contact v.1-->\n\n\n</div>\n\n  </div>\n</div>\n"
 
 /***/ }),
 
