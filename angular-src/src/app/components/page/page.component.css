@@ -1,0 +1,27 @@
+.item-nav{
+  margin-left:8%;
+  font-size: 18px;
+}
+
+
+
+.intro-header {
+  height: unset !important;
+}
+
+.view {
+  height: 100vh !important;
+}
+
+
+h5 {
+  letter-spacing: 3px;
+}
+@media (max-width: 740px) {
+  .full-height,
+  .full-height body,
+  .full-height header,
+  .full-height header .view {
+    height: 700px;
+  }
+}

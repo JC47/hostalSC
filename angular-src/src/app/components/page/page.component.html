@@ -1,0 +1,205 @@
+
+
+  <!--Navbar-->
+  <mdb-navbar #navbar SideClass="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar ">
+    <mdb-navbar-brand>
+      <a class="navbar-brand" style="color:white">
+        <img src="../../../assets/icon/hotel.svg" height="50" class="d-inline-block " alt="">
+        <li class="ml-3 mt-5 mr-3 nav-item"  style="list-style: none; display: inline; font-size: 20px">Hotel Cancún</li>
+      </a>
+    </mdb-navbar-brand>
+    <links>
+      <ul class="navbar-nav " style="font-size: 18px">
+        <li class="nav-item mt-1" routerLinkActive="active">
+          <a class="nav-link waves-light"  [routerLink]="['inicio']"  mdbWavesEffect>Inicio</a>
+        </li>
+        <li class="nav-item mt-1" routerLinkActive="active">
+          <a class="nav-link waves-light" [routerLink]="['nosotros']"  mdbWavesEffect>Nosotros</a>
+        </li>
+        <li class="nav-item mt-1" routerLinkActive="active">
+          <a class="nav-link waves-light" [routerLink]="['reservacion']"  mdbWavesEffect>Reservar</a>
+        </li>
+        <li class="nav-item mt-1" routerLinkActive="active">
+          <a class="nav-link waves-light" [routerLink]="['servicios']"  mdbWavesEffect>Servicios</a>
+        </li>
+        <li class="nav-item mt-1" routerLinkActive="active">
+          <a class="nav-link waves-light"  [routerLink]="['contacto']" mdbWavesEffect>Contacto</a>
+        </li>
+
+
+
+
+      </ul>
+
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item " >
+          <button mdbBtn type="button"  rounded="true" class="waves-light white orange-text" mdbWavesEffect><b>¡REGISTRATE!</b></button>
+        </li>
+
+        <li class="nav-item ">
+          <button mdbBtn type="button"  rounded="true" class="waves-light white orange-text" mdbWavesEffect>Ingresa</button>
+        </li>
+      </ul>
+    </links>
+  </mdb-navbar>
+
+
+
+
+<router-outlet style="overflow-x:hidden" ></router-outlet>
+
+  <footer class="page-footer font-small sunny-morning-gradient pt-4">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-4 mx-auto">
+
+          <!-- Content -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Footer Content</h5>
+          <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit.</p>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Link 1</a>
+            </li>
+            <li>
+              <a href="#!">Link 2</a>
+            </li>
+            <li>
+              <a href="#!">Link 3</a>
+            </li>
+            <li>
+              <a href="#!">Link 4</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Link 1</a>
+            </li>
+            <li>
+              <a href="#!">Link 2</a>
+            </li>
+            <li>
+              <a href="#!">Link 3</a>
+            </li>
+            <li>
+              <a href="#!">Link 4</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Link 1</a>
+            </li>
+            <li>
+              <a href="#!">Link 2</a>
+            </li>
+            <li>
+              <a href="#!">Link 3</a>
+            </li>
+            <li>
+              <a href="#!">Link 4</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <hr>
+
+    <!-- Call to action -->
+    <ul class="list-unstyled list-inline text-center py-2">
+      <li class="list-inline-item">
+        <h5 class="mb-1">Registrate ahora</h5>
+      </li>
+      <li class="list-inline-item">
+        <a href="#!" mdbBtn color="danger" rounded="true" mdbWavesEffect>Inicia Sesión</a>
+      </li>
+    </ul>
+    <!-- Call to action -->
+
+    <hr>
+
+    <!-- Social buttons -->
+    <ul class="list-unstyled list-inline text-center">
+      <li class="list-inline-item">
+        <a class="btn-floating btn-fb mx-1" mdbWavesEffect>
+          <mdb-icon icon="facebook"></mdb-icon>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-tw mx-1" mdbWavesEffect>
+          <mdb-icon icon="twitter"></mdb-icon>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-gplus mx-1" mdbWavesEffect>
+          <mdb-icon icon="google-plus"></mdb-icon>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-li mx-1" mdbWavesEffect>
+          <mdb-icon icon="linkedin"></mdb-icon>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-dribbble mx-1" mdbWavesEffect>
+          <mdb-icon icon="dribbble"></mdb-icon>
+        </a>
+      </li>
+    </ul>
+    <!-- Social buttons -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a >Hotel Cancún SA. </a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
