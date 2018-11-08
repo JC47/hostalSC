@@ -1,0 +1,60 @@
+<header class="intro-header"  style="font-family: ModernSans">
+
+  <!--Navbar-->
+  <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar peach-gradient">
+    <mdb-navbar-brand>
+      <a class="navbar-brand" style="color:white">
+        <img src="../../../assets/icon/hotel.svg" height="70" class="d-inline-block " alt="">
+        <li class="ml-3 mt-3 nav-item"  style="list-style: none; display: inline; font-size: 25px">Hotel Cancún</li>
+      </a>
+    </mdb-navbar-brand>
+    <links>
+      <ul class="navbar-nav ml-auto" style="font-size: 18px">
+        <li class="nav-item mt-1" routerLinkActive="active">
+          <a class="nav-link waves-light"  [routerLink]="['inicio']"  mdbWavesEffect>Inicio</a>
+        </li>
+        <li class="nav-item mt-1" routerLinkActive="active">
+          <a class="nav-link waves-light" [routerLink]="['nosotros']"  mdbWavesEffect>Nosotros</a>
+        </li>
+        <li class="nav-item mt-1" routerLinkActive="active">
+          <a class="nav-link waves-light" [routerLink]="['reservacion']"  mdbWavesEffect>Reservar</a>
+        </li>
+        <li class="nav-item mt-1" routerLinkActive="active">
+          <a class="nav-link waves-light" [routerLink]="['servicios']"  mdbWavesEffect>Servicios</a>
+        </li>
+        <li class="nav-item mt-1" routerLinkActive="active">
+          <a class="nav-link waves-light"  [routerLink]="['contacto']" mdbWavesEffect>Contacto</a>
+        </li>
+
+        <li class="nav-item " >
+          <button mdbBtn type="button"  rounded="true" class="waves-light white orange-text" mdbWavesEffect><b>¡REGISTRATE!</b></button>
+        </li>
+
+        <li class="nav-item ">
+          <button mdbBtn type="button"  rounded="true" class="waves-light white orange-text" mdbWavesEffect>Ingresa</button>
+        </li>
+      </ul>
+    </links>
+  </mdb-navbar>
+
+
+
+</header>
+
+<router-outlet style="overflow-x:hidden "></router-outlet>
+
+<!--<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo scrolling-navbar fixed-top">-->
+
+
+
+
+  <!--<links>-->
+
+
+
+     <!--</links>-->
+
+<!--</mdb-navbar>-->
+
+
+<!--<router-outlet></router-outlet>-->

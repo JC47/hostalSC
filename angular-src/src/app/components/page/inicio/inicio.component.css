@@ -1,0 +1,43 @@
+.carousel-caption h1 {
+  color:white;
+  font-size: 5em
+}
+
+
+.carousel-caption p {
+  color:white;
+  font-size: 1.5em
+}
+
+.carousel-caption{
+  bottom: 50%;
+}
+
+.card{
+  border-radius: 10px !important;
+}
+
+
+.intro-header {
+  height: unset !important;
+}
+
+
+
+.view {
+  height: 100vh !important;
+}
+
+
+
+h5 {
+  letter-spacing: 3px;
+}
+@media (max-width: 740px) {
+  .full-height,
+  .full-height body,
+  .full-height header,
+  .full-height header .view {
+    height: 700px;
+  }
+}
