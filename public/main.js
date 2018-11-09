@@ -1229,7 +1229,7 @@ var ContactoService = /** @class */ (function () {
             'Content-Type': 'application/x-www-form-urlencoded',
             'Accept': 'application/json'
         });
-        var url = this.usrlServer + "/contactar";
+        var url = "contactar/";
         return this.http.post(url, body, { headers: headers });
     };
     ContactoService = __decorate([

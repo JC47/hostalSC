@@ -19,7 +19,7 @@ export class ContactoService {
       'Content-Type': 'application/x-www-form-urlencoded',
       'Accept':'application/json'
     });
-    let url=this.usrlServer+"/contactar";
+    let url="contactar/";
 
     return this.http.post(url,body,{headers})
   }
