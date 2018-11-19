@@ -32,3 +32,14 @@ else{
 }
 
 process.env.URLDB = urlDB;
+
+// ================================================
+// Google CLIENT_ID
+// ================================================
+
+process.env.CLIENT_ID = process.env.CLIENT_ID || '842447740012-qcsrufkjdn876qvhcbkb7qbki8ui74v0.apps.googleusercontent.com';
+
+// ================================================
+// Google SECRET
+// ================================================
+process.env.SECRET = process.env.SECRET || 'XDnZOFEyxwvBNdqsryipevwG';

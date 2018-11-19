@@ -9,8 +9,7 @@ let contactoSchema = new Schema({
   },
   email: {
     type: String,
-    required: [true, 'El mail es necesario'],
-    unique: true
+    required: [true, 'El mail es necesario']
   },
   telefono: {
     type: String,
