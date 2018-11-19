@@ -1,0 +1,25 @@
+Usuario{
+  nombre: String,
+  fechaNacimiento: Date,
+  telefono: String,
+  email: String,
+  password: String,
+  img: String,
+  role: String,
+  google: Boolean
+}
+
+Contacto{
+  nombre: String,
+  email: String,
+  telefono: String,
+  comentario: String
+}
+
+Admin{
+  nombre: String
+  email: String
+  password: String
+  role: String
+  img: String
+}
