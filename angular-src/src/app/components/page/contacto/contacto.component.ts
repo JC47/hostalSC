@@ -30,6 +30,7 @@ export class ContactoComponent implements OnInit {
   }
 
   enviarRespuesta(){
+    console.log(this.contactoForm.value)
     this._contactoService.enviarMensaje(this.contactoForm.value).subscribe(data=>{
       console.log(data)
     });

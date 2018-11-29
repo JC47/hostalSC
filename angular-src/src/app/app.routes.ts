@@ -19,7 +19,6 @@ const APP_ROUTES: Routes = [
         { path: 'reservacion', component: ReservacionComponent },
         { path: 'servicios', component: ServiciosComponent },
         { path: 'contacto', component: ContactoComponent }
-
       ]},
   { path: 'admin', component: AdminComponent,
     children:[

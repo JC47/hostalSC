@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {environment} from "../../environments/environment";
 
 
 @Injectable({
@@ -7,20 +8,19 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 })
 export class ContactoService {
 
-  usrlServer:string="localhost:3000";
+  usrlServer:string=environment.api_host;
 
   constructor(private  http:HttpClient) {
 
   }
 
   enviarMensaje(mensaje:any){
-    let body=JSON.stringify(mensaje);
+    let body=mensaje;
     let headers:HttpHeaders=new HttpHeaders({
       'Content-Type': 'application/x-www-form-urlencoded',
       'Accept':'application/json'
     });
-    let url="contactar/";
-
+    let url="contactar";
     return this.http.post(url,body,{headers})
   }
 }
