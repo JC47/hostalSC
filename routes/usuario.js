@@ -12,6 +12,7 @@ const app = express();
 
 //Agregar usuario
 app.post('/add', (req,res) => {
+  console.log("Perro",req.body);
   let usuario = new Usuario({
     nombre: req.body.nombre,
     email: req.body.email,

@@ -14,7 +14,7 @@ export class UserService {
 
   public signupUser(user_signup){
     let url=this.servidor+"/usuario/add";
-    let body=JSON.stringify(user_signup);
+    let body = JSON.parse(user_signup);
     let headers =new HttpHeaders({
       'Content-Type': 'application/x-www-form-urlencoded',
       'Accept':'application/json'

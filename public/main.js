@@ -1432,8 +1432,9 @@ var UserService = /** @class */ (function () {
         this.servidor = _environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].api_host;
     }
     UserService.prototype.signupUser = function (user_signup) {
+        console.log("Perro", user_signup);
         var url = this.servidor + "/usuario/add";
-        var body = JSON.stringify(user_signup);
+        var body = JSON.parse(JSON.stringify(user_signup));
         var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
             'Content-Type': 'application/x-www-form-urlencoded',
             'Accept': 'application/json'
@@ -1515,7 +1516,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/maccarlos/Documents/SoftCloud/hostalSC/angular-src/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/javier/Desktop/hostalSC/angular-src/src/main.ts */"./src/main.ts");
 
 
 /***/ })
