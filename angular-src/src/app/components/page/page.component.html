@@ -1,47 +1,70 @@
 
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo scrolling-navbar fixed-top">
 
-  <!--Navbar-->
-  <mdb-navbar style="background-color: red !important"  SideClass="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar ">
-    <mdb-navbar-brand>
-      <a class="navbar-brand" style="color:white">
-        <img src="../../../assets/icon/hotel.svg" height="50" class="d-inline-block " alt="">
-        <li class="ml-3 mt-5 mr-3 nav-item"  style="list-style: none; display: inline; font-size: 20px">Hotel Cancún</li>
-      </a>
-    </mdb-navbar-brand>
-    <links>
-      <ul class="navbar-nav " style="font-size: 18px">
-        <li class="nav-item mt-1" routerLinkActive="active">
-          <a class="nav-link waves-light"  [routerLink]="['inicio']"  mdbWavesEffect>Inicio</a>
-        </li>
-        <li class="nav-item mt-1" routerLinkActive="active">
-          <a class="nav-link waves-light" [routerLink]="['nosotros']"  mdbWavesEffect>Nosotros</a>
-        </li>
-        <li class="nav-item mt-1" routerLinkActive="active">
-          <a class="nav-link waves-light" [routerLink]="['reservacion']"  mdbWavesEffect>Reservar</a>
-        </li>
-        <li class="nav-item mt-1" routerLinkActive="active">
-          <a class="nav-link waves-light" [routerLink]="['servicios']"  mdbWavesEffect>Servicios</a>
-        </li>
-        <li class="nav-item mt-1" routerLinkActive="active">
-          <a class="nav-link waves-light"  [routerLink]="['contacto']" mdbWavesEffect>Contacto</a>
-        </li>
-
+  <mdb-navbar-brand class="mt-2">
+    <a class="navbar-brand" style="color:white; margin-top: -13px">
+      <img src="../../../assets/icon/hotel.svg" height="50" class="d-inline-block " alt="">
+      <a class="ml-3 mr-5"  style="list-style: none; display: inline; font-size: 20px; margin-top: 30px !important;">Hotel Cancún</a>
+    </a>
+  </mdb-navbar-brand>
+  <links>
+    <ul class="navbar-nav " style="font-size: 18px">
+      <li class="nav-item " routerLinkActive="active">
+        <a class="nav-link waves-light"  [routerLink]="['inicio']"  mdbWavesEffect>Inicio</a>
+      </li>
+      <li class="nav-item " routerLinkActive="active">
+        <a class="nav-link waves-light" [routerLink]="['nosotros']"  mdbWavesEffect>Nosotros</a>
+      </li>
+      <li class="nav-item " routerLinkActive="active">
+        <a class="nav-link waves-light" [routerLink]="['reservacion']"  mdbWavesEffect>Reservar</a>
+      </li>
+      <li class="nav-item " routerLinkActive="active">
+        <a class="nav-link waves-light" [routerLink]="['servicios']"  mdbWavesEffect>Servicios</a>
+      </li>
+      <li class="nav-item " routerLinkActive="active">
+        <a class="nav-link waves-light"  [routerLink]="['contacto']" mdbWavesEffect>Contacto</a>
+      </li>
 
 
 
-      </ul>
 
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item " >
-          <button mdbBtn type="button"  rounded="true" class="waves-light white orange-text" mdbWavesEffect><b>¡REGISTRATE!</b></button>
-        </li>
+    </ul>
 
-        <li class="nav-item ">
-          <button mdbBtn type="button"  rounded="true" class="waves-light white orange-text" (click)="login.show()" mdbWavesEffect>Ingresa</button>
-        </li>
-      </ul>
-    </links>
-  </mdb-navbar>
+    <ul class="navbar-nav ml-auto">
+
+      <li class="nav-item " *ngIf="!isValidToken()">
+        <button mdbBtn type="button"  rounded="true" class="waves-light white orange-text" (click)="login.show()" mdbWavesEffect>Ingresa</button>
+      </li>
+
+      <li class="nav-item mt-3 mr-4" *ngIf="isValidToken()">
+        <a style="color:white; font-family: 'Open Sans'">Hola {{usuario.nombre}}</a>
+      </li>
+
+
+      <li  class="nav-item avatar mt-2"  *ngIf="isValidToken()">
+
+        <div class="dropdown" mdbDropdown>
+          <a mdbDropdownToggle class=" dropdown-toggle waves-effect waves-light"><img style="height: 45px" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(27).jpg" alt="avatar mx-auto white" class="rounded-circle img-fluid">
+          </a>
+
+          <div class="dropdown-menu dropdown-primary">
+            <a class="dropdown-item" href="#">Perfil</a>
+            <a class="dropdown-item" href="#">Reservaciones</a>
+            <div class="divider dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Salir</a>
+          </div>
+        </div>
+
+
+      </li>
+
+
+
+
+    </ul>
+  </links>
+
+</mdb-navbar>
 
 
 
@@ -294,6 +317,87 @@
       <!--/.Content-->
     </div>
   </div>
+
+
+
+  <div mdbModal #succes="mdbModal" class="modal fade" id="frameModalSecond" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+       aria-hidden="true">
+    <div class="modal-dialog modal-notify modal-success" role="document">
+      <!--Content-->
+      <div class="modal-content text-center">
+        <!--Header-->
+        <div class="modal-header d-flex justify-content-center">
+          <p class="heading">¡Gracias por tu registro!</p>
+        </div>
+
+        <!--Body-->
+        <div class="modal-body">
+          <i class="fa fa-check fa-4x animated rotateIn mb-4"></i>
+          <p>Ahora puedes hacer recervaciones</p>
+        </div>
+
+        <!--Footer-->
+        <div class="modal-footer flex-center">
+          <button  mdbBtn color="success" class="waves-light" mdbWavesEffect>Aceptar</button>
+        </div>
+      </div>
+      <!--/.Content-->
+    </div>
+  </div>
+
+
+  <div mdbModal #danger="mdbModal" class="modal fade" id="frameModalThird" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+       aria-hidden="true">
+    <div class="modal-dialog modal-notify modal-success" role="document">
+      <!--Content-->
+      <div class="modal-content text-center">
+        <!--Header-->
+        <div class="modal-header d-flex justify-content-center">
+          <p class="heading">¡Upsss!</p>
+        </div>
+
+        <!--Body-->
+        <div class="modal-body">
+          <i class="fa fa-times fa-4x animated rotateIn mb-4"></i>
+          <p>No hemos podido procesa tu registro, itenta más tarde o asegurate que estas conectado a internet</p>
+        </div>
+
+        <!--Footer-->
+        <div class="modal-footer flex-center">
+          <button  mdbBtn color="danger" class="waves-light" mdbWavesEffect>Aceptar</button>
+        </div>
+      </div>
+      <!--/.Content-->
+    </div>
+  </div>
+
+
+
+<div mdbModal #success_login="mdbModal" class="modal fade" id="frameModalthird" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-info" role="document">
+    <!--Content-->
+    <div class="modal-content text-center">
+      <!--Header-->
+      <div class="modal-header d-flex justify-content-center">
+        <p class="heading">¡Bienvenido!</p>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+        <i class="fa fa-check fa-4x animated rotateIn mb-4"></i>
+        <p>¡Comienza a reservar!</p>
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer flex-center">
+        <button  mdbBtn color="info" class="waves-light" mdbWavesEffect>Aceptar</button>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+
 
 
 

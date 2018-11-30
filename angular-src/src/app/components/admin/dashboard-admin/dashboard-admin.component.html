@@ -1,3 +1,117 @@
-<p>
-  dashboard-admin works!
-</p>
+<!--Double navigation-->
+<header>
+  <!-- Sidebar navigation -->
+  <mdb-side-nav #sidenav class=" fixed" [fixed]="true">
+
+    <mdb-navbar-brand>
+      <!-- Logo -->
+      <li>
+        <div class="logo-wrapper waves-light" style="height:50%">
+          <a href="#"><img src="../../../../assets/icon/hotel.svg" style="height: 100%; margin-left: 20%" class="img-fluid flex-center"></a>
+        </div>
+      </li>
+      <!--/. Logo -->
+    </mdb-navbar-brand>
+
+    <links>
+      <!--Social-->
+      <!--/Social-->
+      <!--Search Form-->
+      <!--/.Search Form-->
+      <!-- Side navigation links -->
+      <li>
+        <ul style="color:white" class="collapsible collapsible-accordion">
+          <mdb-accordion [multiple]="false" aria-multiselectable="false">
+
+            <mdb-accordion-item class="no-collase" >
+              <mdb-accordion-item-head mdbWavesEffect [routerLink]="['administradores']" ><i style="font-size: 20px;" class="fa fa-hand-pointer-o"></i><span style="color:white;font-size: 20px">Administradores</span></mdb-accordion-item-head>
+              <mdb-accordion-item-body></mdb-accordion-item-body>
+            </mdb-accordion-item>
+
+            <mdb-accordion-item class="no-collase">
+              <mdb-accordion-item-head mdbWavesEffect [routerLink]="['usuarios']"><i style="font-size: 20px;" class="fa fa-hand-pointer-o"></i><span style="color:white;font-size: 20px">Usuarios</span></mdb-accordion-item-head>
+              <mdb-accordion-item-body></mdb-accordion-item-body>
+            </mdb-accordion-item>
+
+            <mdb-accordion-item class="no-collase">
+              <mdb-accordion-item-head mdbWavesEffect [routerLink]="['reservaciones']"><i style="font-size: 20px;" class="fa fa-hand-pointer-o"></i><span style="color:white;font-size: 20px">Reservaciones</span></mdb-accordion-item-head>
+              <mdb-accordion-item-body></mdb-accordion-item-body>
+            </mdb-accordion-item>
+
+
+            <mdb-accordion-item class="no-collase">
+              <mdb-accordion-item-head mdbWavesEffect [routerLink]="['mensajescontacto']"><i style="font-size: 20px;" class="fa fa-hand-pointer-o"></i><span style="color:white;font-size: 20px">Mensajes</span></mdb-accordion-item-head>
+              <mdb-accordion-item-body></mdb-accordion-item-body>
+            </mdb-accordion-item>
+
+            <!-- Collapsible link -->
+       <!--     <mdb-accordion-item>
+              <mdb-accordion-item-head mdbWavesEffect><i class="fa fa-eye"></i></mdb-accordion-item-head>
+              <mdb-accordion-item-body>
+                <ul>
+                  <li><a href="#" class="waves-effect" mdbWavesEffect>Link 1</a></li>
+                  <li><a href="#" class="waves-effect" mdbWavesEffect>Link 2</a></li>
+                </ul>
+              </mdb-accordion-item-body>
+            </mdb-accordion-item>-->
+
+          </mdb-accordion>
+        </ul>
+      </li>
+      <!--/. Side navigation links -->
+    </links>
+    <div class="sidenav-bg mask-strong"></div>
+  </mdb-side-nav>
+  <!--/. Sidebar navigation -->
+
+  <!-- Navbar -->
+  <mdb-navbar  SideClass="navbar primary-color-dark navbar-dark fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav" [containerInside]="false">
+
+    <navlinks style="color: white;" class="navbar-container">
+      <!-- SideNav slide-out button -->
+      <div class="float-left" >
+        <a (click)="sidenav.show()" class="button-collapse"><i class="fa fa-bars"></i></a>
+      </div>
+      <!--/. SideNav slide-out button -->
+    </navlinks>
+
+    <navlinks style="margin-top: -15px" class="ml-5">
+      <mdb-breadcrumb >
+        <mdb-breadcrumb-item class="blue-text">Home</mdb-breadcrumb-item>
+        <mdb-breadcrumb-item class="active">Library</mdb-breadcrumb-item>
+      </mdb-breadcrumb>
+    </navlinks>
+
+    <navlinks>
+      <ul class="nav navbar-nav nav-flex-icons ml-auto ie-double-nav">
+
+        <li  class="nav-item avatar mr-5 mt-2"  >
+
+          <div class="dropdown" mdbDropdown>
+            <a mdbDropdownToggle class=" dropdown-toggle waves-effect waves-light"><img style="height: 45px" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(27).jpg" alt="avatar mx-auto white" class="rounded-circle img-fluid">
+            </a>
+
+            <div class="dropdown-menu dropdown-primary">
+              <a class="dropdown-item" href="#">Perfil</a>
+              <div class="divider dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Salir</a>
+            </div>
+          </div>
+
+
+        </li>
+      </ul>
+    </navlinks>
+  </mdb-navbar>
+  <!--/. Navbar -->
+
+</header>
+<!--/.Double navigation-->
+
+<!--Main Layout-->
+<main>
+  <div class="container-fluid mt-5">
+    <router-outlet></router-outlet>
+  </div>
+</main>
+<!--/Main layout-->

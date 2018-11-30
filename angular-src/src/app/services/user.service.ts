@@ -12,11 +12,11 @@ export class UserService {
   constructor(private http:HttpClient) { }
 
 
-  public signupUser(user_signup){
+  public signupUser(user_signup:Object){
     let url=this.servidor+"/usuario/add";
-    let body = JSON.parse(user_signup);
+    let body = user_signup;
     let headers =new HttpHeaders({
-      'Content-Type': 'application/x-www-form-urlencoded',
+      'Content-Type': 'application/json',
       'Accept':'application/json'
     });
     return this.http.post(url,body,{headers})

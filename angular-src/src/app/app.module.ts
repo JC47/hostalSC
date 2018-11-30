@@ -36,8 +36,9 @@ import {
   NbCardModule, NbInputModule,
   NbLayoutModule,
   NbMenuModule,
-  NbSelectModule, NbTabsetModule,
-  NbThemeModule, NbUserModule
+  NbSelectModule, NbSidebarModule, NbTabsetModule,
+  NbThemeModule, NbUserModule,
+  NbActionsModule
 } from '@nebular/theme';
 
 //Plugins
@@ -47,10 +48,18 @@ import {JwtHelperService, JwtModule} from "@auth0/angular-jwt";
 
 
 //Bootstrap theme
-import { MDBBootstrapModulesPro,TabsModule,InputsModule,WavesModule,ModalModule,ButtonsModule, NavbarModule } from 'ng-uikit-pro-standard';
+import { MDBBootstrapModulesPro,SidenavModule, AccordionModule,
+  TabsModule,InputsModule,WavesModule,
+  ModalModule,ButtonsModule,
+  NavbarModule } from 'ng-uikit-pro-standard';
 import { MDBSpinningPreloader } from 'ng-uikit-pro-standard';
 import {AuthService} from "./guards/auth.service";
 import {AuthGuard} from "./guards/auth.guard";
+import {AuthAdminGuard} from "./guards/auth-admin.guard";
+import { AdministradoresComponent } from './components/admin/dashboard-admin/administradores/administradores.component';
+import { UsuariosComponent } from './components/admin/dashboard-admin/usuarios/usuarios.component';
+import { MensajesContactoComponent } from './components/admin/dashboard-admin/mensajes-contacto/mensajes-contacto.component';
+import { ReservacionesComponent } from './components/admin/dashboard-admin/reservaciones/reservaciones.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +73,11 @@ import {AuthGuard} from "./guards/auth.guard";
     ContactoComponent,
     ReservacionComponent,
     LoginAdminComponent,
-    DashboardAdminComponent
+    DashboardAdminComponent,
+    AdministradoresComponent,
+    UsuariosComponent,
+    MensajesContactoComponent,
+    ReservacionesComponent
   ],
   imports: [
     BrowserModule,
@@ -81,9 +94,14 @@ import {AuthGuard} from "./guards/auth.guard";
     NbLayoutModule,
     NbTabsetModule,
     WavesModule,
+    NbUserModule,
     NbSelectModule,
     HttpClientModule,
+    SidenavModule,
+    AgmCoreModule,
+    NbActionsModule,
     NbInputModule,
+    NbSidebarModule.forRoot(),
     BrowserAnimationsModule,
     NbButtonModule,
     NbUserModule,
@@ -99,6 +117,7 @@ import {AuthGuard} from "./guards/auth.guard";
     MDBSpinningPreloader,
     AuthService,
     AuthGuard,
+    AuthAdminGuard,
     HttpClient,
     JwtHelperService
   ],

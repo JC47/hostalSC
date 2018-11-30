@@ -8,6 +8,13 @@ const Admin = require('../models/admin');
 const {verificaToken,verificaTokenAdmin,verificaTokenRoot} = require('../middlewares/auth');
 const app = express();
 
+
+app.get('/get',(res)={
+
+
+
+})
+
 //Agregar admin
 app.post('/add', (req,res) => {
   let admin = new Admin({
@@ -117,6 +124,7 @@ app.post('/login', (req,res)=>{
 //Login root
 app.post('/root', (req,res) => {
   let token = req.body.token;
+  console.log(token);
 
   let verified = speakeasy.totp.verify({
   secret: process.env.SECRET,
@@ -132,7 +140,7 @@ app.post('/root', (req,res) => {
   }
 
   Admin.findOne({role:"ROOT"}, (err,adminDB) => {
-    if(!adminDB){
+    if(adminDB){
       return res.status(500).json({
         ok:false,
         err: "Root no existe"

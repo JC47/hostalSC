@@ -15,26 +15,36 @@ export class AuthService {
   constructor(private http:HttpClient) { }
 
 
-  public isAuthenticated(): boolean {
-    const token = localStorage.getItem('token');
+  public isAuthenticatedUser(): boolean {
+    const token = localStorage.getItem('token_user');
     return !this.jwtHelper.isTokenExpired(token);
   }
+
+
+  public isAuthenticatedAdmin(): boolean {
+    const token = localStorage.getItem('token_admin');
+    return !this.jwtHelper.isTokenExpired(token);
+  }
+
+
+
 
   public loginUser(user:Object){
       let url=this.servidor+"/usuario/login";
       let body=user;
       let headers =new HttpHeaders({
-        'Content-Type': 'application/x-www-form-urlencoded',
+        'Content-Type': 'application/json',
         'Accept':'application/json'
       });
       return this.http.post(url,body,{headers})
   }
 
-  public loginRoot(token:string){
+  public loginRoot(token:number){
     let url=this.servidor+"/admin/root";
     let body={token:token};
+    console.log(body);
     let headers =new HttpHeaders({
-      'Content-Type': 'application/x-www-form-urlencoded',
+      'Content-Type': 'application/json',
       'Accept':'application/json'
     });
     return this.http.post(url,body,{headers})

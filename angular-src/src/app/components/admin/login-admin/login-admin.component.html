@@ -61,15 +61,12 @@
                     <label class=" col mt-2 form-control-label" style="font-size: 20px">Token Autenticador</label>
                   </div>
                   <div class="row">
-                    <input fullWidth fieldSize="large" nbInput>
+                    <input [formControl]="token" fullWidth fieldSize="large" nbInput>
                   </div>
                 </div>
 
-              <input fullWidth nbButton class="mt-4" value="iniciar Sesión" type="submit" status="primary">
+              <input fullWidth nbButton class="mt-4" value="Iniciar Sesión" type="submit" status="primary" (click)="sendTokenGoogleAuth()">
               </div>
-
-
-
 
           </nb-tab>
         </nb-tabset>

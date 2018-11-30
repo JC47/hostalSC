@@ -703,11 +703,11 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/javier/Desktop/hostalSC/angular-src/node_modules/@nebular/theme/styles/prebuilt/default.css */"./node_modules/@nebular/theme/styles/prebuilt/default.css");
-__webpack_require__(/*! /home/javier/Desktop/hostalSC/angular-src/node_modules/font-awesome/scss/font-awesome.scss */"./node_modules/font-awesome/scss/font-awesome.scss");
-__webpack_require__(/*! /home/javier/Desktop/hostalSC/angular-src/node_modules/ng-uikit-pro-standard/assets/scss/bootstrap/bootstrap.scss */"./node_modules/ng-uikit-pro-standard/assets/scss/bootstrap/bootstrap.scss");
-__webpack_require__(/*! /home/javier/Desktop/hostalSC/angular-src/node_modules/ng-uikit-pro-standard/assets/scss/mdb.scss */"./node_modules/ng-uikit-pro-standard/assets/scss/mdb.scss");
-module.exports = __webpack_require__(/*! /home/javier/Desktop/hostalSC/angular-src/src/styles.scss */"./src/styles.scss");
+__webpack_require__(/*! /Users/maccarlos/Documents/SoftCloud/hostalSC/angular-src/node_modules/@nebular/theme/styles/prebuilt/default.css */"./node_modules/@nebular/theme/styles/prebuilt/default.css");
+__webpack_require__(/*! /Users/maccarlos/Documents/SoftCloud/hostalSC/angular-src/node_modules/font-awesome/scss/font-awesome.scss */"./node_modules/font-awesome/scss/font-awesome.scss");
+__webpack_require__(/*! /Users/maccarlos/Documents/SoftCloud/hostalSC/angular-src/node_modules/ng-uikit-pro-standard/assets/scss/bootstrap/bootstrap.scss */"./node_modules/ng-uikit-pro-standard/assets/scss/bootstrap/bootstrap.scss");
+__webpack_require__(/*! /Users/maccarlos/Documents/SoftCloud/hostalSC/angular-src/node_modules/ng-uikit-pro-standard/assets/scss/mdb.scss */"./node_modules/ng-uikit-pro-standard/assets/scss/mdb.scss");
+module.exports = __webpack_require__(/*! /Users/maccarlos/Documents/SoftCloud/hostalSC/angular-src/src/styles.scss */"./src/styles.scss");
 
 
 /***/ })

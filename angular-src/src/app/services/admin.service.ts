@@ -13,14 +13,16 @@ export class AdminService {
 
 
   public addAdmin(user_signup:any){
-    let url=this.servidor+"/admin/root";
+    let url=this.servidor+"/admin/add";
     let body=user_signup;
     let headers =new HttpHeaders({
-      'Content-Type': 'application/x-www-form-urlencoded',
+      'Content-Type': 'application/json',
       'Accept':'application/json'
     });
     return this.http.post(url,body,{headers})
   }
+
+
 
 
 }

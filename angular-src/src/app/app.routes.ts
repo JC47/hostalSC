@@ -9,6 +9,10 @@ import {ServiciosComponent} from "./components/page/servicios/servicios.componen
 import {ContactoComponent} from "./components/page/contacto/contacto.component";
 import {LoginAdminComponent} from "./components/admin/login-admin/login-admin.component";
 import {DashboardAdminComponent} from "./components/admin/dashboard-admin/dashboard-admin.component";
+import {AuthAdminGuard} from "./guards/auth-admin.guard";
+import {AdministradoresComponent} from "./components/admin/dashboard-admin/administradores/administradores.component";
+import {UsuariosComponent} from "./components/admin/dashboard-admin/usuarios/usuarios.component";
+import {MensajesContactoComponent} from "./components/admin/dashboard-admin/mensajes-contacto/mensajes-contacto.component";
 
 
 const APP_ROUTES: Routes = [
@@ -23,7 +27,14 @@ const APP_ROUTES: Routes = [
   { path: 'admin', component: AdminComponent,
     children:[
       { path: 'login', component:LoginAdminComponent  },
-      { path: 'dashboard', component: DashboardAdminComponent },
+      { path: 'dashboard', component: DashboardAdminComponent,canActivate:[AuthAdminGuard], children:[
+          { path: 'administradores', component: AdministradoresComponent },
+          { path: 'usuarios', component: UsuariosComponent },
+          { path: 'mensajescontacto', component: MensajesContactoComponent },
+          { path: 'reservaciones', component: MensajesContactoComponent },
+          { path: '**', pathMatch: 'full', redirectTo: 'administradores'}
+        ]},
+      { path: '**', pathMatch: 'full', redirectTo: 'login'}
     ] },
   { path: '**', pathMatch: 'full', redirectTo: 'home/inicio' }
 ];
