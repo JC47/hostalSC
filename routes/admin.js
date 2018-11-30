@@ -9,9 +9,9 @@ const {verificaToken,verificaTokenAdmin,verificaTokenRoot} = require('../middlew
 const app = express();
 
 //Obtener admin
-app.get('/all', verificaToken, (req,res) => {
+app.get('/all', [verificaToken, verificaTokenAdmin, verificaTokenRooot] , (req,res) => {
 
-  Usuario.find().exec((err,admins) => {
+  Admin.find().exec((err,admins) => {
     if(err != null) {
       return res.status(400).json({
         ok:false,
