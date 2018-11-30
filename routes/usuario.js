@@ -10,8 +10,8 @@ const Usuario = require('../models/usuario');
 const {verificaToken,verificaTokenAdmin,verificaTokenRoot} = require('../middlewares/auth');
 const app = express();
 
-//Obtener admin
-app.get('/all', verificaTokenAdmin, verificaTokenRoot, (req,res) => {
+//Obtener usuarios
+app.get('/all', [verificaTokenAdmin, verificaTokenRoot, verificaToken], (req,res) => {
 
   Usuario.find().exec((err,usuarios) => {
     if(err != null) {
