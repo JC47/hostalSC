@@ -8,6 +8,24 @@ const Admin = require('../models/admin');
 const {verificaToken,verificaTokenAdmin,verificaTokenRoot} = require('../middlewares/auth');
 const app = express();
 
+//Obtener admin
+app.get('/all', verificaToken, (req,res) => {
+
+  Usuario.find().exec((err,admins) => {
+    if(err != null) {
+      return res.status(400).json({
+        ok:false,
+        err
+      });
+    }
+      res.json({
+        ok:true,
+        admins
+      });
+
+  });
+});
+
 //Agregar admin
 app.post('/add', (req,res) => {
   let admin = new Admin({
