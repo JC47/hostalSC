@@ -23,3 +23,33 @@ Admin{
   role: String
   img: String
 }
+
+Hoteles{
+  nombre: String,
+  direccion: String,
+  servicios: [],
+  habitaciones: [],
+  tipo: String,
+  politicas_ninios: String,
+  max_age_children: Number
+}
+
+Habitacion{
+  tipo: String,
+  nombre: String,
+  activos: [],
+  ocupacion_max: Number,
+  descripcion: String
+  max_children: Number,
+  camas_disponibles: []
+}
+
+CamasDisp{
+  cantidad: Number,
+  cama: Cama
+}
+
+Cama{
+  tipo: String,
+  ocupacion: Number,
+}
