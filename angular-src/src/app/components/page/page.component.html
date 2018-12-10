@@ -37,7 +37,7 @@
       </li>
 
       <li class="nav-item mt-3 mr-4" *ngIf="isValidToken()">
-        <a style="color:white; font-family: 'Open Sans'">Hola {{usuario.nombre}}</a>
+        <a style="color:white; font-family: 'Open Sans'">Hola {{nombre_user}}</a>
       </li>
 
 
@@ -51,7 +51,7 @@
             <a class="dropdown-item" href="#">Perfil</a>
             <a class="dropdown-item" href="#">Reservaciones</a>
             <div class="divider dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Salir</a>
+            <a class="dropdown-item" (click)="logout()">Salir</a>
           </div>
         </div>
 
@@ -65,6 +65,95 @@
   </links>
 
 </mdb-navbar>
+<mdb-card style="padding: 0px; border-style:none !important;" cascade="true" wider="true" reverse="true" class="my-4">
+  <!--Card image-->
+  <mdb-carousel [isControls]="true" class="carousel slide carousel-fade" [animation]="'fade'">
+    <!--First slide-->
+    <mdb-carousel-item>
+      <div class="view">
+        <!--Video source-->
+        <video class="video-fluid" autoplay loop>
+          <source src="https://mdbootstrap.com/img/video/Tropical.mp4" type="video/mp4" />
+        </video>
+        <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+      </div>
+      <div class="carousel-caption" style="top:30%">
+        <h2 class="h1 display-3 mb-5 wow fadeInDown white-text" data-wow-delay="0.3s">TU <a class="orange-text font-bold">COMODIDAD</a></h2>
+        <h5 class="font-up mb-5 mt-1 font-bold wow fadeInDown white-text" data-wow-delay="0.3s">Reserva ahora con un 20% de descuento</h5>
+        <a mdbBtn  size="lg" class="wow fadeInDown waves-light peach-gradient white-text" data-wow-delay="0.3s" mdbWavesEffect>Reservar</a>
+      </div>
+    </mdb-carousel-item>
+    <!--/First slide-->
+    <!--Second slide-->
+    <mdb-carousel-item>
+      <div class="view w-100">
+        <img class="d-block w-100" src="../../../../assets/img/hotel3.jpg" alt="Second slide">
+        <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+      </div>
+      <div class="carousel-caption" style="top: 35%">
+        <h2 class="h1 display-3 mb-5 wow fadeInDown white-text" data-wow-delay="0.3s">TU <a class="orange-text font-bold">COMODIDAD</a></h2>
+        <h5 class="font-up mb-5 mt-1 font-bold wow fadeInDown white-text" data-wow-delay="0.3s">Reserva ahora con un 20% de descuento</h5>
+        <a mdbBtn  size="lg" class="wow fadeInDown waves-light peach-gradient white-text" data-wow-delay="0.3s" mdbWavesEffect>Reservar</a>
+      </div>
+    </mdb-carousel-item>
+    <!--/Second slide-->
+    <!--Third slide-->
+    <mdb-carousel-item>
+      <div class="view w-100">
+        <img class="d-block w-100" src="../../../../assets/img/hotel4.jpg" alt="Third slide">
+        <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+      </div>
+      <div class="carousel-caption" style="top: 35%">
+        <h2 class="h1 display-3 mb-5 wow fadeInDown white-text" data-wow-delay="0.3s">TU <a class="orange-text font-bold">COMODIDAD</a></h2>
+        <h5 class="font-up mb-5 mt-1 font-bold wow fadeInDown white-text" data-wow-delay="0.3s">Reserva ahora con un 20% de descuento</h5>
+        <a mdbBtn  size="lg" class="wow fadeInDown waves-light peach-gradient white-text" data-wow-delay="0.3s" mdbWavesEffect>Reservar</a>
+      </div>
+    </mdb-carousel-item>
+    <!--/Third slide-->
+  </mdb-carousel>
+  <!--/Card image-->
+
+  <!-- Card content -->
+  <mdb-card-body cascade="true" style="font-family: ModernSans" class="text-center">
+
+    <!--Title-->
+    <mdb-card-title>
+      <h2>
+        <strong>¡Reserva ahora!</strong>
+      </h2>
+    </mdb-card-title>
+
+    <mdb-card-text>
+      <div class="row align-items-center" style="color:white">
+        <div class="col-md-2 ">
+          <mdb-select class="align-middle" [options]="hotel_select" placeholder="Selecciona tu hotel" label="Hotel"></mdb-select>
+        </div>
+
+        <div class="col-md-2" >
+          <mdb-date-picker style="z-index: 100000" label="Fecha de llegada" [options]="date_options" placeholder="Selecciona la fecha" ></mdb-date-picker>
+        </div>
+
+        <div class="col-md-2" >
+          <mdb-date-picker style="z-index: 100000" label="Fecha de Salida" [options]="date_options" placeholder="Selecciona la fecha" ></mdb-date-picker>
+        </div>
+
+        <div class="col-md-2">
+          <mdb-select  [options]="number_people"  placeholder="Personas" label="Adultos"></mdb-select>
+        </div>
+
+        <div class="col-md-2">
+          <mdb-select [options]="number_people"  placeholder="Personas" label="Niños"></mdb-select>
+        </div>
+
+        <div class="col-md-2">
+          <button block="true" rounded="true" type="button" mdbBtn color="primary" mdbWavesEffect>Reservar</button>
+        </div>
+
+      </div>
+    </mdb-card-text>
+  </mdb-card-body>
+
+</mdb-card>
 
 
 
@@ -248,19 +337,19 @@
               <!--Body-->
               <div class="modal-body mb-1">
                 <form [formGroup]="login_form" (ngSubmit)="setLogin()">
-                  <div class="md-form form-sm">
+                  <div class="md-form form-sm mt-5">
                     <i class="fa fa-envelope prefix"></i>
-                    <input formControlName="email" formControlName="email" mdbInputDirective type="text" id="form22" class="form-control" >
+                    <input formControlName="email" data-error="Email Erroneo" [validateSuccess]="false" formControlName="email" mdbInputDirective type="text" id="form22" class="form-control" >
                     <label for="form22">Email</label>
                   </div>
 
-                  <div class="md-form form-sm">
+                  <div class="md-form form-sm mt-5">
                     <i class="fa fa-lock prefix"></i>
-                    <input formControlName="password" mdbInputDirective type="password" id="form23" class="form-control" >
+                    <input formControlName="password" data-error="Ingresa tu contraseña" [validateSuccess]="false" mdbInputDirective type="password" id="form23" class="form-control" >
                     <label for="form23">Contraseña</label>
                   </div>
-                  <div class="text-center mt-2">
-                    <input mdbBtn type="submit" color="info" class="waves-light" mdbWavesEffect value="Iniciar Sesión">
+                  <div class="text-center">
+                    <input mdbBtn type="submit" color="info" [disabled]="!login_form.valid" class="waves-light" mdbWavesEffect value="Iniciar Sesión">
                   </div>
                 </form>
               </div>
@@ -271,7 +360,7 @@
                     <a href="#" class="blue-text">email</a>
                   </p>
                 </div>
-                <button type="button" mdbBtn color="info" outline="true" class="ml-auto" data-dismiss="modal" (click)="login.hide()" mdbWavesEffect>Close</button>
+                <button type="button" mdbBtn color="info"  class="ml-auto" data-dismiss="modal" (click)="login.hide()" mdbWavesEffect>Cancelar</button>
               </div>
             </mdb-tab>
             <!--/.Panel 7-->
@@ -280,34 +369,34 @@
               <!--Body-->
               <div class="modal-body">
                 <form [formGroup]="signup_form" (ngSubmit)="setSignup()">
-                  <div class="md-form form-sm">
+                  <div class="md-form form-sm mt-5">
                     <i class="fa fa-user prefix"></i>
-                    <input formControlName="nombre" mdbInputDirective type="text" id="form30" class="form-control" >
+                    <input formControlName="nombre" data-error="Nombre es requerido" [validateSuccess]="false" mdbInputDirective type="text" id="form30" class="form-control" >
                     <label for="form30">Nombre</label>
                   </div>
-                  <div class="md-form form-sm">
+                  <div class="md-form form-sm mt-5">
                     <i class="fa fa-envelope prefix"></i>
-                    <input formControlName="email" mdbInputDirective type="text" id="form24" class="form-control" >
+                    <input formControlName="email" data-error="Ingresa un email válido" [validateSuccess]="false" mdbInputDirective type="text" id="form24" class="form-control" >
                     <label for="form24">Email</label>
                   </div>
-                  <div class="md-form form-sm">
+                  <div class="md-form form-sm mt-5">
                     <i class="fa fa-lock prefix"></i>
-                    <input formControlName="password" mdbInputDirective type="password" id="form25" class="form-control" >
+                    <input formControlName="password" data-error="Tu password debe contener por lo menos 6 caracteres, letras y números" [validateSuccess]="false" mdbInputDirective type="password" id="form25" class="form-control" >
                     <label for="form25">Password</label>
                   </div>
-                  <div class="md-form form-sm">
+                  <div class="md-form form-sm mt-5">
                     <i class="fa fa-lock prefix"></i>
-                    <input formControlName="confirm_password" mdbInputDirective type="password" id="form26" class="form-control" >
+                    <input formControlName="confirm_password" data-error="Las contraseñas no coinciden" [validateSuccess]="false" mdbInputDirective type="password" id="form26" class="form-control" >
                     <label for="form26">Confirma tu Contraseña</label>
                   </div>
-                  <div class="text-center form-sm mt-2">
+                  <div class="text-center form-sm mt-5">
                     <input type="submit" value="Registrar" mdbBtn color="info" class="waves-light" mdbWavesEffect>
                   </div>
                 </form>
               </div>
               <!--Footer-->
               <div class="modal-footer">
-                <button type="button" mdbBtn color="info" outline="true" class="ml-auto" data-dismiss="modal" (click)="login.hide()" mdbWavesEffect>Close</button>
+                <button type="button" mdbBtn color="info" outline="true" class="ml-auto" data-dismiss="modal" (click)="login.hide()" mdbWavesEffect>Cancelar</button>
               </div>
             </mdb-tab>
             <!--/.Panel 8-->
@@ -338,7 +427,7 @@
 
         <!--Footer-->
         <div class="modal-footer flex-center">
-          <button  mdbBtn color="success" class="waves-light" mdbWavesEffect>Aceptar</button>
+          <button  mdbBtn color="success" (click)="success_modal.hide()" class="waves-light" mdbWavesEffect>Aceptar</button>
         </div>
       </div>
       <!--/.Content-->
@@ -348,7 +437,7 @@
 
   <div mdbModal #danger="mdbModal" class="modal fade" id="frameModalThird" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
        aria-hidden="true">
-    <div class="modal-dialog modal-notify modal-success" role="document">
+    <div class="modal-dialog modal-notify modal-danger" role="document">
       <!--Content-->
       <div class="modal-content text-center">
         <!--Header-->
@@ -358,7 +447,7 @@
 
         <!--Body-->
         <div class="modal-body">
-          <i class="fa fa-times fa-4x animated rotateIn mb-4"></i>
+          <i class="fa fa-times fa-4x animated rotateIn mb-4 danger"></i>
           <p>No hemos podido procesa tu registro, itenta más tarde o asegurate que estas conectado a internet</p>
         </div>
 
@@ -373,7 +462,7 @@
 
 
 
-<div mdbModal #success_login="mdbModal" class="modal fade" id="frameModalthird" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+<div mdbModal #success_login="mdbModal" class="modal fade" id="moda_login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
      aria-hidden="true">
   <div class="modal-dialog modal-notify modal-info" role="document">
     <!--Content-->
@@ -391,7 +480,7 @@
 
       <!--Footer-->
       <div class="modal-footer flex-center">
-        <button  mdbBtn color="info" class="waves-light" mdbWavesEffect>Aceptar</button>
+        <button  mdbBtn color="info" class="waves-light" (click)="success_modal.hide()" mdbWavesEffect>Aceptar</button>
       </div>
     </div>
     <!--/.Content-->

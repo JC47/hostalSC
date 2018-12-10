@@ -60,6 +60,10 @@ import { AdministradoresComponent } from './components/admin/dashboard-admin/adm
 import { UsuariosComponent } from './components/admin/dashboard-admin/usuarios/usuarios.component';
 import { MensajesContactoComponent } from './components/admin/dashboard-admin/mensajes-contacto/mensajes-contacto.component';
 import { ReservacionesComponent } from './components/admin/dashboard-admin/reservaciones/reservaciones.component';
+import {UserService} from "./services/user.service";
+import { ModalDeleteItemComponent } from './components/modal-delete-item/modal-delete-item.component';
+import { ModalDeleteArrayComponent } from './components/modal-delete-array/modal-delete-array.component';
+import { SureDeleteComponent } from './components/sure-delete/sure-delete.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +81,10 @@ import { ReservacionesComponent } from './components/admin/dashboard-admin/reser
     AdministradoresComponent,
     UsuariosComponent,
     MensajesContactoComponent,
-    ReservacionesComponent
+    ReservacionesComponent,
+    ModalDeleteItemComponent,
+    ModalDeleteArrayComponent,
+    SureDeleteComponent
   ],
   imports: [
     BrowserModule,
@@ -116,6 +123,7 @@ import { ReservacionesComponent } from './components/admin/dashboard-admin/reser
     ContactoService,
     MDBSpinningPreloader,
     AuthService,
+    UserService,
     AuthGuard,
     AuthAdminGuard,
     HttpClient,

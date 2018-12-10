@@ -18,10 +18,6 @@
 }
 
 
-.intro-header {
-
-}
-
 carousel-caption{
   font-family: ModernSans;
 }
@@ -35,7 +31,7 @@ carousel-caption{
 
 
 .view {
-  height: 65vh !important;
+  height: 70vh !important;
 }
 
 .modulo-reserva{

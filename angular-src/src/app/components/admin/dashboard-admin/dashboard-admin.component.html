@@ -1,7 +1,7 @@
 <!--Double navigation-->
 <header>
   <!-- Sidebar navigation -->
-  <mdb-side-nav #sidenav class=" fixed" [fixed]="true">
+  <mdb-side-nav #sidenav class="fixed" [fixed]="true">
 
     <mdb-navbar-brand>
       <!-- Logo -->
@@ -20,7 +20,7 @@
       <!--/.Search Form-->
       <!-- Side navigation links -->
       <li>
-        <ul style="color:white" class="collapsible collapsible-accordion">
+        <ul style="color:white; padding-left: 0px !important;" class="collapsible collapsible-accordion">
           <mdb-accordion [multiple]="false" aria-multiselectable="false">
 
             <mdb-accordion-item class="no-collase" >
@@ -75,12 +75,6 @@
       <!--/. SideNav slide-out button -->
     </navlinks>
 
-    <navlinks style="margin-top: -15px" class="ml-5">
-      <mdb-breadcrumb >
-        <mdb-breadcrumb-item class="blue-text">Home</mdb-breadcrumb-item>
-        <mdb-breadcrumb-item class="active">Library</mdb-breadcrumb-item>
-      </mdb-breadcrumb>
-    </navlinks>
 
     <navlinks>
       <ul class="nav navbar-nav nav-flex-icons ml-auto ie-double-nav">

@@ -1,3 +1,191 @@
-<p>
-  usuarios works!
-</p>
+<div class="card card-cascade narrower">
+
+  <!--Card image-->
+  <div class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-4 mb-3 d-flex justify-content-between align-items-center">
+
+    <div>
+      <button (click)="table_view=false" type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
+        <mdb-icon icon="th-large" class="mt-0"></mdb-icon>
+      </button>
+      <button (click)="table_view=true" type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
+        <mdb-icon icon="columns" class="mt-0"></mdb-icon>
+      </button>
+    </div>
+
+    <a href="" class="white-text mx-3">Usuarios Registrados</a>
+
+    <div >
+      <button (click)="openEditUserSection()" type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
+        <mdb-icon icon="pencil" class="mt-0"></mdb-icon>
+      </button>
+      <button (click)="confirmDeletedUsers()" type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
+        <mdb-icon icon="remove" class="mt-0"></mdb-icon>
+      </button>
+      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
+        <mdb-icon icon="info-circle" class="mt-0"></mdb-icon>
+      </button>
+    </div>
+
+
+  </div>
+
+  <!--/Card image-->
+
+  <div class="px-4">
+      <div style="margin-top: 50px;margin-bottom: 50px" *ngIf="load_table" class="flex-center">
+          <mdb-spinner spinnerColor="blue" spinnerType="big"></mdb-spinner>
+      </div>
+    <div class="row"  *ngIf="!load_table && !table_view">
+      <div class="col-md-3" *ngFor="let usuario of usuarios" style="margin-bottom: 20px">
+
+        <mdb-card class="testimonial-card" style="border-style: solid; border-color:black;">
+          <!--Bacground color-->
+          <div style="height: 80px" class="card-up indigo lighten-1">
+          </div>
+
+          <!--Avatar-->
+          <div class="avatar mx-auto">
+            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2810%29.jpg" class="rounded-circle">
+          </div>
+
+          <mdb-card-body>
+            <!--Name-->
+            <mdb-card-title>
+              <h4>{{usuario.nombre}}</h4>
+            </mdb-card-title>
+
+            <!--Quotation-->
+            <p>{{usuario.email}}</p>
+          </mdb-card-body>
+        </mdb-card>
+
+      </div>
+      <!--Grid column-->
+    </div>
+
+
+    <div class="table-wrapper" *ngIf="!load_table && table_view" style="overflow-y:auto;max-height: 650px">
+      <!--Table-->
+      <table  class="table table-hover mb-0">
+
+        <!--Table head-->
+        <thead>
+        <tr>
+          <th>
+            <mdb-checkbox (change)="usuarios=_utilerias.checkAllItems(usuarios,$event.checked)"></mdb-checkbox>
+          </th>
+          <th class="th-lg">
+            <a (click)="sorted=_utilerias.sortBy('nombre',usuarios,sorted).sorted;
+                        usuarios=_utilerias.sortBy('nombre',usuarios,sorted).usuarios"
+            >Nombre
+              <mdb-icon icon="sort" class="ml-1"></mdb-icon>
+            </a>
+          </th>
+          <th class="th-lg">
+            <a (click)="sorted=_utilerias.sortBy('email',usuarios,sorted).sorted;
+               usuarios=_utilerias.sortBy('email',usuarios,sorted).usuarios"
+            >Email
+              <mdb-icon icon="sort" class="ml-1"></mdb-icon>
+            </a>
+          </th>
+        </tr>
+        </thead>
+        <!--Table head-->
+
+        <!--Table body-->
+        <tbody >
+        <tr *ngFor="let row of usuarios;let i = index"
+        [ngClass]="{'selected':row._id==selected_user._id}"
+        >
+          <th scope="row">
+            <mdb-checkbox [checked]="row.check" (change)="toggleCheckUser($event,i)"></mdb-checkbox>
+          </th>
+          <td (click)="selectUser(row)">{{row.nombre}}</td>
+          <td (click)="selectUser(row)">{{row.email}}</td>
+        </tr>
+        </tbody>
+        <!--Table body-->
+      </table>
+      <!--Table-->
+    </div>
+  </div>
+</div>
+
+
+
+<div mdbModal #edit_modal="mdbModal" class="modal fade right" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel"
+     [config]='{backdrop: false, ignoreBackdropClick: true}'   aria-hidden="true">
+  <div class="modal-dialog modal-full-height modal-right" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="edit_modal.hide()">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title w-100" id="myModalLabel">Editar Usuario</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-6 offset-3 mt-2 mb-4">
+            <div class="avatar mx-auto white"><img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(27).jpg"
+                                                   alt="avatar mx-auto white" class="rounded-circle img-fluid">
+            </div>
+          </div>
+        </div>
+          <form [formGroup]="edit_user_form" class="pl-4 pr-4">
+            <div class="row">
+              <div class="col-12">
+                <div class="md-form">
+                  <input data-error="Se requiere el nombbre" [validateSuccess]="false" type="text" formControlName="nombre" id="edit_name" class="form-control" mdbInputDirective>
+                  <label for="edit_name">Nombre</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="md-form">
+                  <input type="email" formControlName="email" [validateSuccess]="false" data-error="Email inválido" id="edit_email" class="form-control" mdbInputDirective>
+                  <label for="edit_email">Email</label>
+                </div>
+              </div>
+            </div>
+          </form>
+
+
+<!--          <div class="form-group">
+            <input mdbInputDirective type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+            <label for="inputAddress2">Address 2</label>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <input mdbInputDirective type="text" class="form-control" id="inputCity" placeholder="New York City">
+              <label for="inputCity">City</label>
+            </div>
+            <div class="form-group col-md-6">
+              <input mdbInputDirective type="text" class="form-control" id="inputZip" placeholder="11206-1117">
+              <label for="inputZip">Zip</label>
+            </div>
+          </div>-->
+      </div>
+      <div class="modal-footer">
+        <a [block]="true"  mdbBtn color="primary" class="waves-light mt-2" mdbWavesEffect (click)="editUser()">Guardar</a>
+        <a [block]="true"  type="button" mdbBtn color="primary" class="waves-light" (click)="edit_modal.hide()" mdbWavesEffect data-dismiss="modal">Cancelar</a>
+      </div>
+    </div>
+  </div>
+</div >
+
+
+<modal-delete-array #moda_delte_array
+                    [notDeletedArray]="array_not_deleted"
+                    [deletedArray]="array_deleted"
+                    (close)="initSelected()"
+                    itemType="usuarios">
+</modal-delete-array>
+
+<sure-delete #modal_sure_delete
+             [arrayDelete]="array_selected"
+             (acceptDelete)="deleteUser(array_selected)"
+             itemTypeSingular="usuario"
+             itemTypePlural="usuarios">
+</sure-delete>
