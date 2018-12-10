@@ -11,7 +11,7 @@ const {verificaToken,verificaTokenAdmin,verificaTokenRoot} = require('../middlew
 const app = express();
 
 //Obtener usuarios
-app.get('/all', [verificaTokenAdmin, verificaTokenRoot, verificaToken], (req,res) => {
+app.get('/all', [verificaToken, verificaTokenAdmin], (req,res) => {
 
   Usuario.find().exec((err,usuarios) => {
     if(err != null) {
@@ -79,7 +79,7 @@ app.put('/update/:id', [verificaToken], (req,res) => {
 });
 
 //Borrar usuario
-app.delete('/delete/:id', [verificaToken, verificaTokenAdmin, verificaTokenRoot], (req,res) => {
+app.delete('/delete/:id', [verificaToken, verificaTokenAdmin], (req,res) => {
   let id = req.params.id;
 
   Usuario.findOneAndRemove({_id:id}, (err, usuarioX) => {

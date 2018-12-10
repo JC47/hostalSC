@@ -9,7 +9,7 @@ const {verificaToken,verificaTokenAdmin,verificaTokenRoot} = require('../middlew
 const app = express();
 
 //Obtener admin
-app.get('/all', [verificaToken, verificaTokenAdmin, verificaTokenRooot] , (req,res) => {
+app.get('/all', [verificaToken, verificaTokenAdmin] , (req,res) => {
 
   Admin.find().exec((err,admins) => {
     if(err != null) {
@@ -27,7 +27,7 @@ app.get('/all', [verificaToken, verificaTokenAdmin, verificaTokenRooot] , (req,r
 });
 
 //Agregar admin
-app.post('/add', (req,res) => {
+app.post('/add', [verificaToken, verificaTokenRoot] , (req,res) => {
   let admin = new Admin({
     nombre: req.body.nombre,
     email: req.body.email,
@@ -51,7 +51,7 @@ app.post('/add', (req,res) => {
 });
 
 //Editicion de admin
-app.put('/update/:id', [verificaToken,verificaTokenAdmin,verificaTokenRoot], (req,res) => {
+app.put('/update/:id', [verificaToken,verificaTokenRoot], (req,res) => {
   let id = req.params.id;
   let body = _.pick(req.body,["nombre","email","img"]);
 

@@ -14,8 +14,18 @@ let verificaToken = (req,res,next) => {
         err
       });
     }
-
-    req.usuario = decoded.usuario;
+    if (decoded.usuario != undefined){
+      req.usuario = decoded.usuario;
+    }
+    else if (decoded.admin != undefined){
+      req.admin = decoded.admin;
+    }
+    else{
+      return res.status(401).json({
+        ok: false,
+        err
+      });
+    }
 
     next();
   });
@@ -26,8 +36,8 @@ let verificaToken = (req,res,next) => {
 // ==================
 
 let verificaTokenAdmin = (req,res,next) => {
-  let usuario = req.usuario;
-  if(usuario.role != "ADMIN_ROLE"){
+  let admin = req.admin;
+  if (admin.role != "ADMIN_ROLE" && admin.role != "ROOT"){
     return res.status(401).json({
       ok:false,
       err:{msg:"Usuario no autorizado"}
@@ -42,8 +52,8 @@ let verificaTokenAdmin = (req,res,next) => {
 // ==================
 
 let verificaTokenRoot = (req,res,next) => {
-  let usuario = req.usuario;
-  if(suario.role != "ROOT"){
+  let admin = req.admin;
+  if(admin.role != "ROOT"){
     return res.status(401).json({
       ok:false,
       err:{msg:"Usuario no autorizado"}
