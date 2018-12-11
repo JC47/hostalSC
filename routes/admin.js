@@ -2,6 +2,7 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const _ = require('underscore');
 const speakeasy = require('speakeasy');
 //Importaciones locales
 const Admin = require('../models/admin');

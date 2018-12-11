@@ -50,6 +50,12 @@ CamasDisp{
 }
 
 Cama{
-  tipo: String,
+  nombre: String,
   ocupacion: Number,
+}
+
+Activo{
+  nombre: String,
+  precio: Number,
+  descripcion: String
 }

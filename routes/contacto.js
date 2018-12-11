@@ -1,6 +1,4 @@
 const express = require('express');
-const bcrypt = require('bcryptjs');
-const _ = require('underscore');
 const nodemailer = require('nodemailer');
 const Contacto = require('../models/contacto');
 const app = express();

@@ -2,12 +2,13 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const _ = require('underscore');
 //Para google
 const {OAuth2Client} = require('google-auth-library');
 const client =  new OAuth2Client(process.env.CLIENT_ID);
 //Importaciones locales
 const Usuario = require('../models/usuario');
-const {verificaToken,verificaTokenAdmin,verificaTokenRoot} = require('../middlewares/auth');
+const {verificaToken,verificaTokenAdmin} = require('../middlewares/auth');
 const app = express();
 
 //Obtener usuarios
