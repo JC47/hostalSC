@@ -4,10 +4,12 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const _ = require('underscore');
 const speakeasy = require('speakeasy');
+const _ = require('underscore');
 //Importaciones locales
 const Admin = require('../models/admin');
 const {verificaToken,verificaTokenAdmin,verificaTokenRoot} = require('../middlewares/auth');
 const app = express();
+
 
 //Obtener admin
 app.get('/all', [verificaToken, verificaTokenAdmin] , (req,res) => {
@@ -136,6 +138,7 @@ app.post('/login', (req,res)=>{
 //Login root
 app.post('/root', (req,res) => {
   let token = req.body.token;
+  console.log(token);
 
   let verified = speakeasy.totp.verify({
   secret: process.env.SECRET,

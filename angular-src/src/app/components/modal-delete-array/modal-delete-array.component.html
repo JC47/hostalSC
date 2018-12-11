@@ -1,0 +1,41 @@
+<div mdbModal #modal="mdbModal" class="modal fade" id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true" (close)="onCloseModal()">
+  <div class="modal-dialog modal-notify modal-info" role="document">
+    <!--Content-->
+    <div class="modal-content text-center">
+      <!--Header-->
+      <div class="modal-header d-flex justify-content-center">
+        <p class="heading">Confirmación</p>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+        <div class="row">
+          <i class="fa fa-trash fa-4x animated rotateIn mb-4"></i>
+        </div>
+
+        <div class="row ml-3" *ngIf="deletedArray.length>0">
+          <span>Se han eliminado los siguientes {{itemType}}:</span>
+        </div>
+        <div class="row ml-5 align-items-center mt-3" *ngFor="let item of deletedArray" >
+          <i class="fa fa-check animated fa-2x rotateIn mr-3 green-text"></i>
+          <h5>{{item.show}}</h5>
+        </div>
+
+        <div class="row ml-3" *ngIf="notDeletedArray.length>0">
+          <span>No se han eliminado los siguientes  {{itemType}}:</span>
+        </div>
+        <div class="row ml-5 align-items-center mt-3" *ngFor="let item of notDeletedArray">
+          <i class="fa fa-times animated fa-2x rotateIn mr-3 red-text"></i>
+          <h5>{{item.show}}</h5>
+        </div>
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer">
+          <button [block]="true" type="button" mdbBtn color="primary" class="waves-light" mdbWavesEffect data-dismiss="modal" (click)="modal.hide()">Aceptar</button>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>

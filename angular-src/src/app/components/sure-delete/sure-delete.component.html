@@ -1,0 +1,38 @@
+
+
+
+<div mdbModal #modal="mdbModal" class="modal fade" id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-info" role="document">
+    <!--Content-->
+    <div class="modal-content text-center">
+      <!--Header-->
+      <div class="modal-header d-flex justify-content-center">
+        <p class="heading">Confirmación</p>
+      </div>
+      <!--Body-->
+      <div class="modal-body" *ngIf="util.isElement(arrayDelete)">
+        <i class="fa fa-question-circle fa-4x animated rotateIn mb-4"></i>
+        <p>Estas seguro de que deseas eliminar el {{itemTypeSingular}} <b> "{{arrayDelete[0].show}}"</b>   </p>
+      </div>
+      <div class="modal-body" *ngIf="!util.isElement(arrayDelete)">
+        <i class="fa fa-question-circle fa-4x animated rotateIn mb-4"></i>
+        <p>Estas seguro de que deseas eliminar los siguientes {{itemTypePlural}}</p>
+        <div class="row ml-5 align-items-center" *ngFor="let item of arrayDelete" >
+            <i class="fa fa-info-circle animated fa-2x rotateIn mr-3"></i>
+            <span>{{item.show}}</span>
+        </div>
+      </div>
+      <!--Footer-->
+      <div class="modal-footer ">
+
+          <a [block]="true" (click)="aceptEvent()" mdbBtn color="primary" class="waves-light mt-2" mdbWavesEffect>Si</a>
+
+
+          <a [block]="true"  type="button" mdbBtn color="primary" class="waves-light" mdbWavesEffect data-dismiss="modal" (click)="modal.hide()">No</a>
+
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+  </div>

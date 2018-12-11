@@ -370,33 +370,50 @@ var AppComponent = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _nebular_theme__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @nebular/theme */ "./node_modules/@nebular/theme/index.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _app_routes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.routes */ "./src/app/app.routes.ts");
-/* harmony import */ var _components_page_page_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/page/page.component */ "./src/app/components/page/page.component.ts");
-/* harmony import */ var _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/admin/admin.component */ "./src/app/components/admin/admin.component.ts");
-/* harmony import */ var _components_page_inicio_inicio_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/page/inicio/inicio.component */ "./src/app/components/page/inicio/inicio.component.ts");
-/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
-/* harmony import */ var _components_page_nosotros_nosotros_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/page/nosotros/nosotros.component */ "./src/app/components/page/nosotros/nosotros.component.ts");
-/* harmony import */ var _components_page_servicios_servicios_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/page/servicios/servicios.component */ "./src/app/components/page/servicios/servicios.component.ts");
-/* harmony import */ var _components_page_contacto_contacto_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/page/contacto/contacto.component */ "./src/app/components/page/contacto/contacto.component.ts");
-/* harmony import */ var _components_page_reservacion_reservacion_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/page/reservacion/reservacion.component */ "./src/app/components/page/reservacion/reservacion.component.ts");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
-/* harmony import */ var angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! angular-bootstrap-md */ "./node_modules/angular-bootstrap-md/esm5/angular-bootstrap-md.es5.js");
-/* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @agm/core */ "./node_modules/@agm/core/index.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _app_routes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.routes */ "./src/app/app.routes.ts");
+/* harmony import */ var _components_page_page_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/page/page.component */ "./src/app/components/page/page.component.ts");
+/* harmony import */ var _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/admin/admin.component */ "./src/app/components/admin/admin.component.ts");
+/* harmony import */ var _components_page_inicio_inicio_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/page/inicio/inicio.component */ "./src/app/components/page/inicio/inicio.component.ts");
+/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
+/* harmony import */ var _components_page_nosotros_nosotros_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/page/nosotros/nosotros.component */ "./src/app/components/page/nosotros/nosotros.component.ts");
+/* harmony import */ var _components_page_servicios_servicios_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/page/servicios/servicios.component */ "./src/app/components/page/servicios/servicios.component.ts");
+/* harmony import */ var _components_page_contacto_contacto_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/page/contacto/contacto.component */ "./src/app/components/page/contacto/contacto.component.ts");
+/* harmony import */ var _components_page_reservacion_reservacion_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/page/reservacion/reservacion.component */ "./src/app/components/page/reservacion/reservacion.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _components_admin_login_admin_login_admin_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/admin/login-admin/login-admin.component */ "./src/app/components/admin/login-admin/login-admin.component.ts");
+/* harmony import */ var _components_admin_dashboard_admin_dashboard_admin_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/admin/dashboard-admin/dashboard-admin.component */ "./src/app/components/admin/dashboard-admin/dashboard-admin.component.ts");
 /* harmony import */ var _services_contacto_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./services/contacto.service */ "./src/app/services/contacto.service.ts");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _components_admin_login_admin_login_admin_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/admin/login-admin/login-admin.component */ "./src/app/components/admin/login-admin/login-admin.component.ts");
-/* harmony import */ var _components_admin_dashboard_admin_dashboard_admin_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/admin/dashboard-admin/dashboard-admin.component */ "./src/app/components/admin/dashboard-admin/dashboard-admin.component.ts");
+/* harmony import */ var _nebular_theme__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @nebular/theme */ "./node_modules/@nebular/theme/index.js");
+/* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @agm/core */ "./node_modules/@agm/core/index.js");
+/* harmony import */ var _auth0_angular_jwt__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @auth0/angular-jwt */ "./node_modules/@auth0/angular-jwt/index.js");
+/* harmony import */ var ng_uikit_pro_standard__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ng-uikit-pro-standard */ "./node_modules/ng-uikit-pro-standard/esm5/ng-uikit-pro-standard.es5.js");
+/* harmony import */ var _guards_auth_service__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./guards/auth.service */ "./src/app/guards/auth.service.ts");
+/* harmony import */ var _guards_auth_guard__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./guards/auth.guard */ "./src/app/guards/auth.guard.ts");
+/* harmony import */ var _guards_auth_admin_guard__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./guards/auth-admin.guard */ "./src/app/guards/auth-admin.guard.ts");
+/* harmony import */ var _components_admin_dashboard_admin_administradores_administradores_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/admin/dashboard-admin/administradores/administradores.component */ "./src/app/components/admin/dashboard-admin/administradores/administradores.component.ts");
+/* harmony import */ var _components_admin_dashboard_admin_usuarios_usuarios_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./components/admin/dashboard-admin/usuarios/usuarios.component */ "./src/app/components/admin/dashboard-admin/usuarios/usuarios.component.ts");
+/* harmony import */ var _components_admin_dashboard_admin_mensajes_contacto_mensajes_contacto_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./components/admin/dashboard-admin/mensajes-contacto/mensajes-contacto.component */ "./src/app/components/admin/dashboard-admin/mensajes-contacto/mensajes-contacto.component.ts");
+/* harmony import */ var _components_admin_dashboard_admin_reservaciones_reservaciones_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./components/admin/dashboard-admin/reservaciones/reservaciones.component */ "./src/app/components/admin/dashboard-admin/reservaciones/reservaciones.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+//Angular components
+
+
+
+
+
+//Rutas
+
+//Components
 
 
 
@@ -408,7 +425,14 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+//Servicios
 
+//Nebular theme
+
+//Plugins
+
+
+//Bootstrap theme
 
 
 
@@ -422,45 +446,67 @@ var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_4__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
-                _components_page_page_component__WEBPACK_IMPORTED_MODULE_5__["PageComponent"],
-                _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_6__["AdminComponent"],
-                _components_page_inicio_inicio_component__WEBPACK_IMPORTED_MODULE_7__["InicioComponent"],
-                _components_home_home_component__WEBPACK_IMPORTED_MODULE_8__["HomeComponent"],
-                _components_page_nosotros_nosotros_component__WEBPACK_IMPORTED_MODULE_9__["NosotrosComponent"],
-                _components_page_servicios_servicios_component__WEBPACK_IMPORTED_MODULE_10__["ServiciosComponent"],
-                _components_page_contacto_contacto_component__WEBPACK_IMPORTED_MODULE_11__["ContactoComponent"],
-                _components_page_reservacion_reservacion_component__WEBPACK_IMPORTED_MODULE_12__["ReservacionComponent"],
-                _components_admin_login_admin_login_admin_component__WEBPACK_IMPORTED_MODULE_19__["LoginAdminComponent"],
-                _components_admin_dashboard_admin_dashboard_admin_component__WEBPACK_IMPORTED_MODULE_20__["DashboardAdminComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_1__["AppComponent"],
+                _components_page_page_component__WEBPACK_IMPORTED_MODULE_6__["PageComponent"],
+                _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_7__["AdminComponent"],
+                _components_page_inicio_inicio_component__WEBPACK_IMPORTED_MODULE_8__["InicioComponent"],
+                _components_home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"],
+                _components_page_nosotros_nosotros_component__WEBPACK_IMPORTED_MODULE_10__["NosotrosComponent"],
+                _components_page_servicios_servicios_component__WEBPACK_IMPORTED_MODULE_11__["ServiciosComponent"],
+                _components_page_contacto_contacto_component__WEBPACK_IMPORTED_MODULE_12__["ContactoComponent"],
+                _components_page_reservacion_reservacion_component__WEBPACK_IMPORTED_MODULE_13__["ReservacionComponent"],
+                _components_admin_login_admin_login_admin_component__WEBPACK_IMPORTED_MODULE_15__["LoginAdminComponent"],
+                _components_admin_dashboard_admin_dashboard_admin_component__WEBPACK_IMPORTED_MODULE_16__["DashboardAdminComponent"],
+                _components_admin_dashboard_admin_administradores_administradores_component__WEBPACK_IMPORTED_MODULE_25__["AdministradoresComponent"],
+                _components_admin_dashboard_admin_usuarios_usuarios_component__WEBPACK_IMPORTED_MODULE_26__["UsuariosComponent"],
+                _components_admin_dashboard_admin_mensajes_contacto_mensajes_contacto_component__WEBPACK_IMPORTED_MODULE_27__["MensajesContactoComponent"],
+                _components_admin_dashboard_admin_reservaciones_reservaciones_component__WEBPACK_IMPORTED_MODULE_28__["ReservacionesComponent"]
             ],
             imports: [
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                _nebular_theme__WEBPACK_IMPORTED_MODULE_2__["NbMenuModule"],
-                _app_routes__WEBPACK_IMPORTED_MODULE_4__["APP_ROUTING"],
-                angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_14__["MDBBootstrapModule"].forRoot(),
-                _nebular_theme__WEBPACK_IMPORTED_MODULE_2__["NbThemeModule"].forRoot(),
-                _nebular_theme__WEBPACK_IMPORTED_MODULE_2__["NbLayoutModule"],
-                _nebular_theme__WEBPACK_IMPORTED_MODULE_2__["NbTabsetModule"],
-                _nebular_theme__WEBPACK_IMPORTED_MODULE_2__["NbSelectModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_18__["HttpClientModule"],
-                _nebular_theme__WEBPACK_IMPORTED_MODULE_2__["NbInputModule"],
-                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_13__["BrowserAnimationsModule"],
-                _nebular_theme__WEBPACK_IMPORTED_MODULE_2__["NbButtonModule"],
-                _nebular_theme__WEBPACK_IMPORTED_MODULE_2__["NbUserModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_16__["ReactiveFormsModule"],
-                _nebular_theme__WEBPACK_IMPORTED_MODULE_2__["NbCardModule"],
-                _agm_core__WEBPACK_IMPORTED_MODULE_15__["AgmCoreModule"].forRoot({
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["BrowserModule"],
+                _nebular_theme__WEBPACK_IMPORTED_MODULE_18__["NbMenuModule"],
+                _app_routes__WEBPACK_IMPORTED_MODULE_5__["APP_ROUTING"],
+                ng_uikit_pro_standard__WEBPACK_IMPORTED_MODULE_21__["TabsModule"],
+                ng_uikit_pro_standard__WEBPACK_IMPORTED_MODULE_21__["InputsModule"],
+                ng_uikit_pro_standard__WEBPACK_IMPORTED_MODULE_21__["NavbarModule"],
+                ng_uikit_pro_standard__WEBPACK_IMPORTED_MODULE_21__["ModalModule"],
+                ng_uikit_pro_standard__WEBPACK_IMPORTED_MODULE_21__["ButtonsModule"],
+                _auth0_angular_jwt__WEBPACK_IMPORTED_MODULE_20__["JwtModule"],
+                ng_uikit_pro_standard__WEBPACK_IMPORTED_MODULE_21__["MDBBootstrapModulesPro"].forRoot(),
+                _nebular_theme__WEBPACK_IMPORTED_MODULE_18__["NbThemeModule"].forRoot(),
+                _nebular_theme__WEBPACK_IMPORTED_MODULE_18__["NbLayoutModule"],
+                _nebular_theme__WEBPACK_IMPORTED_MODULE_18__["NbTabsetModule"],
+                ng_uikit_pro_standard__WEBPACK_IMPORTED_MODULE_21__["WavesModule"],
+                _nebular_theme__WEBPACK_IMPORTED_MODULE_18__["NbUserModule"],
+                _nebular_theme__WEBPACK_IMPORTED_MODULE_18__["NbSelectModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClientModule"],
+                ng_uikit_pro_standard__WEBPACK_IMPORTED_MODULE_21__["SidenavModule"],
+                _agm_core__WEBPACK_IMPORTED_MODULE_19__["AgmCoreModule"],
+                _nebular_theme__WEBPACK_IMPORTED_MODULE_18__["NbActionsModule"],
+                _nebular_theme__WEBPACK_IMPORTED_MODULE_18__["NbInputModule"],
+                _nebular_theme__WEBPACK_IMPORTED_MODULE_18__["NbSidebarModule"].forRoot(),
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"],
+                _nebular_theme__WEBPACK_IMPORTED_MODULE_18__["NbButtonModule"],
+                _nebular_theme__WEBPACK_IMPORTED_MODULE_18__["NbUserModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_14__["ReactiveFormsModule"],
+                _nebular_theme__WEBPACK_IMPORTED_MODULE_18__["NbCardModule"],
+                _agm_core__WEBPACK_IMPORTED_MODULE_19__["AgmCoreModule"].forRoot({
                     apiKey: "AIzaSyBp9oQFtlc8ldsDWQcCqQ7yPCinm0LRoFw"
                 })
             ],
             providers: [
-                _services_contacto_service__WEBPACK_IMPORTED_MODULE_17__["ContactoService"]
+                _services_contacto_service__WEBPACK_IMPORTED_MODULE_17__["ContactoService"],
+                ng_uikit_pro_standard__WEBPACK_IMPORTED_MODULE_21__["MDBSpinningPreloader"],
+                _guards_auth_service__WEBPACK_IMPORTED_MODULE_22__["AuthService"],
+                _guards_auth_guard__WEBPACK_IMPORTED_MODULE_23__["AuthGuard"],
+                _guards_auth_admin_guard__WEBPACK_IMPORTED_MODULE_24__["AuthAdminGuard"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"],
+                _auth0_angular_jwt__WEBPACK_IMPORTED_MODULE_20__["JwtHelperService"]
             ],
             schemas: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_1__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -490,6 +536,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_page_contacto_contacto_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/page/contacto/contacto.component */ "./src/app/components/page/contacto/contacto.component.ts");
 /* harmony import */ var _components_admin_login_admin_login_admin_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/admin/login-admin/login-admin.component */ "./src/app/components/admin/login-admin/login-admin.component.ts");
 /* harmony import */ var _components_admin_dashboard_admin_dashboard_admin_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/admin/dashboard-admin/dashboard-admin.component */ "./src/app/components/admin/dashboard-admin/dashboard-admin.component.ts");
+/* harmony import */ var _guards_auth_admin_guard__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./guards/auth-admin.guard */ "./src/app/guards/auth-admin.guard.ts");
+/* harmony import */ var _components_admin_dashboard_admin_administradores_administradores_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/admin/dashboard-admin/administradores/administradores.component */ "./src/app/components/admin/dashboard-admin/administradores/administradores.component.ts");
+/* harmony import */ var _components_admin_dashboard_admin_usuarios_usuarios_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/admin/dashboard-admin/usuarios/usuarios.component */ "./src/app/components/admin/dashboard-admin/usuarios/usuarios.component.ts");
+/* harmony import */ var _components_admin_dashboard_admin_mensajes_contacto_mensajes_contacto_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/admin/dashboard-admin/mensajes-contacto/mensajes-contacto.component */ "./src/app/components/admin/dashboard-admin/mensajes-contacto/mensajes-contacto.component.ts");
+
+
+
+
 
 
 
@@ -512,7 +566,14 @@ var APP_ROUTES = [
     { path: 'admin', component: _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_2__["AdminComponent"],
         children: [
             { path: 'login', component: _components_admin_login_admin_login_admin_component__WEBPACK_IMPORTED_MODULE_8__["LoginAdminComponent"] },
-            { path: 'dashboard', component: _components_admin_dashboard_admin_dashboard_admin_component__WEBPACK_IMPORTED_MODULE_9__["DashboardAdminComponent"] },
+            { path: 'dashboard', component: _components_admin_dashboard_admin_dashboard_admin_component__WEBPACK_IMPORTED_MODULE_9__["DashboardAdminComponent"], canActivate: [_guards_auth_admin_guard__WEBPACK_IMPORTED_MODULE_10__["AuthAdminGuard"]], children: [
+                    { path: 'administradores', component: _components_admin_dashboard_admin_administradores_administradores_component__WEBPACK_IMPORTED_MODULE_11__["AdministradoresComponent"] },
+                    { path: 'usuarios', component: _components_admin_dashboard_admin_usuarios_usuarios_component__WEBPACK_IMPORTED_MODULE_12__["UsuariosComponent"] },
+                    { path: 'mensajescontacto', component: _components_admin_dashboard_admin_mensajes_contacto_mensajes_contacto_component__WEBPACK_IMPORTED_MODULE_13__["MensajesContactoComponent"] },
+                    { path: 'reservaciones', component: _components_admin_dashboard_admin_mensajes_contacto_mensajes_contacto_component__WEBPACK_IMPORTED_MODULE_13__["MensajesContactoComponent"] },
+                    { path: '**', pathMatch: 'full', redirectTo: 'administradores' }
+                ] },
+            { path: '**', pathMatch: 'full', redirectTo: 'login' }
         ] },
     { path: '**', pathMatch: 'full', redirectTo: 'home/inicio' }
 ];
@@ -584,6 +645,69 @@ var AdminComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/components/admin/dashboard-admin/administradores/administradores.component.css":
+/*!************************************************************************************************!*\
+  !*** ./src/app/components/admin/dashboard-admin/administradores/administradores.component.css ***!
+  \************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/admin/dashboard-admin/administradores/administradores.component.html":
+/*!*************************************************************************************************!*\
+  !*** ./src/app/components/admin/dashboard-admin/administradores/administradores.component.html ***!
+  \*************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  administradores works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/admin/dashboard-admin/administradores/administradores.component.ts":
+/*!***********************************************************************************************!*\
+  !*** ./src/app/components/admin/dashboard-admin/administradores/administradores.component.ts ***!
+  \***********************************************************************************************/
+/*! exports provided: AdministradoresComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdministradoresComponent", function() { return AdministradoresComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AdministradoresComponent = /** @class */ (function () {
+    function AdministradoresComponent() {
+    }
+    AdministradoresComponent.prototype.ngOnInit = function () {
+    };
+    AdministradoresComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-administradores',
+            template: __webpack_require__(/*! ./administradores.component.html */ "./src/app/components/admin/dashboard-admin/administradores/administradores.component.html"),
+            styles: [__webpack_require__(/*! ./administradores.component.css */ "./src/app/components/admin/dashboard-admin/administradores/administradores.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], AdministradoresComponent);
+    return AdministradoresComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/components/admin/dashboard-admin/dashboard-admin.component.css":
 /*!********************************************************************************!*\
   !*** ./src/app/components/admin/dashboard-admin/dashboard-admin.component.css ***!
@@ -602,7 +726,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  dashboard-admin works!\n</p>\n"
+module.exports = "<!--Double navigation-->\n<header>\n  <!-- Sidebar navigation -->\n  <mdb-side-nav #sidenav class=\" fixed\" [fixed]=\"true\">\n\n    <mdb-navbar-brand>\n      <!-- Logo -->\n      <li>\n        <div class=\"logo-wrapper waves-light\" style=\"height:50%\">\n          <a href=\"#\"><img src=\"../../../../assets/icon/hotel.svg\" style=\"height: 100%; margin-left: 20%\" class=\"img-fluid flex-center\"></a>\n        </div>\n      </li>\n      <!--/. Logo -->\n    </mdb-navbar-brand>\n\n    <links>\n      <!--Social-->\n      <!--/Social-->\n      <!--Search Form-->\n      <!--/.Search Form-->\n      <!-- Side navigation links -->\n      <li>\n        <ul style=\"color:white\" class=\"collapsible collapsible-accordion\">\n          <mdb-accordion [multiple]=\"false\" aria-multiselectable=\"false\">\n\n            <mdb-accordion-item class=\"no-collase\" >\n              <mdb-accordion-item-head mdbWavesEffect [routerLink]=\"['administradores']\" ><i style=\"font-size: 20px;\" class=\"fa fa-hand-pointer-o\"></i><span style=\"color:white;font-size: 20px\">Administradores</span></mdb-accordion-item-head>\n              <mdb-accordion-item-body></mdb-accordion-item-body>\n            </mdb-accordion-item>\n\n            <mdb-accordion-item class=\"no-collase\">\n              <mdb-accordion-item-head mdbWavesEffect [routerLink]=\"['usuarios']\"><i style=\"font-size: 20px;\" class=\"fa fa-hand-pointer-o\"></i><span style=\"color:white;font-size: 20px\">Usuarios</span></mdb-accordion-item-head>\n              <mdb-accordion-item-body></mdb-accordion-item-body>\n            </mdb-accordion-item>\n\n            <mdb-accordion-item class=\"no-collase\">\n              <mdb-accordion-item-head mdbWavesEffect [routerLink]=\"['reservaciones']\"><i style=\"font-size: 20px;\" class=\"fa fa-hand-pointer-o\"></i><span style=\"color:white;font-size: 20px\">Reservaciones</span></mdb-accordion-item-head>\n              <mdb-accordion-item-body></mdb-accordion-item-body>\n            </mdb-accordion-item>\n\n\n            <mdb-accordion-item class=\"no-collase\">\n              <mdb-accordion-item-head mdbWavesEffect [routerLink]=\"['mensajescontacto']\"><i style=\"font-size: 20px;\" class=\"fa fa-hand-pointer-o\"></i><span style=\"color:white;font-size: 20px\">Mensajes</span></mdb-accordion-item-head>\n              <mdb-accordion-item-body></mdb-accordion-item-body>\n            </mdb-accordion-item>\n\n            <!-- Collapsible link -->\n       <!--     <mdb-accordion-item>\n              <mdb-accordion-item-head mdbWavesEffect><i class=\"fa fa-eye\"></i></mdb-accordion-item-head>\n              <mdb-accordion-item-body>\n                <ul>\n                  <li><a href=\"#\" class=\"waves-effect\" mdbWavesEffect>Link 1</a></li>\n                  <li><a href=\"#\" class=\"waves-effect\" mdbWavesEffect>Link 2</a></li>\n                </ul>\n              </mdb-accordion-item-body>\n            </mdb-accordion-item>-->\n\n          </mdb-accordion>\n        </ul>\n      </li>\n      <!--/. Side navigation links -->\n    </links>\n    <div class=\"sidenav-bg mask-strong\"></div>\n  </mdb-side-nav>\n  <!--/. Sidebar navigation -->\n\n  <!-- Navbar -->\n  <mdb-navbar  SideClass=\"navbar primary-color-dark navbar-dark fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav\" [containerInside]=\"false\">\n\n    <navlinks style=\"color: white;\" class=\"navbar-container\">\n      <!-- SideNav slide-out button -->\n      <div class=\"float-left\" >\n        <a (click)=\"sidenav.show()\" class=\"button-collapse\"><i class=\"fa fa-bars\"></i></a>\n      </div>\n      <!--/. SideNav slide-out button -->\n    </navlinks>\n\n    <navlinks style=\"margin-top: -15px\" class=\"ml-5\">\n      <mdb-breadcrumb >\n        <mdb-breadcrumb-item class=\"blue-text\">Home</mdb-breadcrumb-item>\n        <mdb-breadcrumb-item class=\"active\">Library</mdb-breadcrumb-item>\n      </mdb-breadcrumb>\n    </navlinks>\n\n    <navlinks>\n      <ul class=\"nav navbar-nav nav-flex-icons ml-auto ie-double-nav\">\n\n        <li  class=\"nav-item avatar mr-5 mt-2\"  >\n\n          <div class=\"dropdown\" mdbDropdown>\n            <a mdbDropdownToggle class=\" dropdown-toggle waves-effect waves-light\"><img style=\"height: 45px\" src=\"https://mdbootstrap.com/img/Photos/Avatars/img%20(27).jpg\" alt=\"avatar mx-auto white\" class=\"rounded-circle img-fluid\">\n            </a>\n\n            <div class=\"dropdown-menu dropdown-primary\">\n              <a class=\"dropdown-item\" href=\"#\">Perfil</a>\n              <div class=\"divider dropdown-divider\"></div>\n              <a class=\"dropdown-item\" href=\"#\">Salir</a>\n            </div>\n          </div>\n\n\n        </li>\n      </ul>\n    </navlinks>\n  </mdb-navbar>\n  <!--/. Navbar -->\n\n</header>\n<!--/.Double navigation-->\n\n<!--Main Layout-->\n<main>\n  <div class=\"container-fluid mt-5\">\n    <router-outlet></router-outlet>\n  </div>\n</main>\n<!--/Main layout-->\n"
 
 /***/ }),
 
@@ -647,6 +771,195 @@ var DashboardAdminComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/components/admin/dashboard-admin/mensajes-contacto/mensajes-contacto.component.css":
+/*!****************************************************************************************************!*\
+  !*** ./src/app/components/admin/dashboard-admin/mensajes-contacto/mensajes-contacto.component.css ***!
+  \****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/admin/dashboard-admin/mensajes-contacto/mensajes-contacto.component.html":
+/*!*****************************************************************************************************!*\
+  !*** ./src/app/components/admin/dashboard-admin/mensajes-contacto/mensajes-contacto.component.html ***!
+  \*****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  mensajes-contacto works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/admin/dashboard-admin/mensajes-contacto/mensajes-contacto.component.ts":
+/*!***************************************************************************************************!*\
+  !*** ./src/app/components/admin/dashboard-admin/mensajes-contacto/mensajes-contacto.component.ts ***!
+  \***************************************************************************************************/
+/*! exports provided: MensajesContactoComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MensajesContactoComponent", function() { return MensajesContactoComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var MensajesContactoComponent = /** @class */ (function () {
+    function MensajesContactoComponent() {
+    }
+    MensajesContactoComponent.prototype.ngOnInit = function () {
+    };
+    MensajesContactoComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-mensajes-contacto',
+            template: __webpack_require__(/*! ./mensajes-contacto.component.html */ "./src/app/components/admin/dashboard-admin/mensajes-contacto/mensajes-contacto.component.html"),
+            styles: [__webpack_require__(/*! ./mensajes-contacto.component.css */ "./src/app/components/admin/dashboard-admin/mensajes-contacto/mensajes-contacto.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], MensajesContactoComponent);
+    return MensajesContactoComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/admin/dashboard-admin/reservaciones/reservaciones.component.css":
+/*!********************************************************************************************!*\
+  !*** ./src/app/components/admin/dashboard-admin/reservaciones/reservaciones.component.css ***!
+  \********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/admin/dashboard-admin/reservaciones/reservaciones.component.html":
+/*!*********************************************************************************************!*\
+  !*** ./src/app/components/admin/dashboard-admin/reservaciones/reservaciones.component.html ***!
+  \*********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  reservaciones works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/admin/dashboard-admin/reservaciones/reservaciones.component.ts":
+/*!*******************************************************************************************!*\
+  !*** ./src/app/components/admin/dashboard-admin/reservaciones/reservaciones.component.ts ***!
+  \*******************************************************************************************/
+/*! exports provided: ReservacionesComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReservacionesComponent", function() { return ReservacionesComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ReservacionesComponent = /** @class */ (function () {
+    function ReservacionesComponent() {
+    }
+    ReservacionesComponent.prototype.ngOnInit = function () {
+    };
+    ReservacionesComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-reservaciones',
+            template: __webpack_require__(/*! ./reservaciones.component.html */ "./src/app/components/admin/dashboard-admin/reservaciones/reservaciones.component.html"),
+            styles: [__webpack_require__(/*! ./reservaciones.component.css */ "./src/app/components/admin/dashboard-admin/reservaciones/reservaciones.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], ReservacionesComponent);
+    return ReservacionesComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/admin/dashboard-admin/usuarios/usuarios.component.css":
+/*!**********************************************************************************!*\
+  !*** ./src/app/components/admin/dashboard-admin/usuarios/usuarios.component.css ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/admin/dashboard-admin/usuarios/usuarios.component.html":
+/*!***********************************************************************************!*\
+  !*** ./src/app/components/admin/dashboard-admin/usuarios/usuarios.component.html ***!
+  \***********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  usuarios works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/admin/dashboard-admin/usuarios/usuarios.component.ts":
+/*!*********************************************************************************!*\
+  !*** ./src/app/components/admin/dashboard-admin/usuarios/usuarios.component.ts ***!
+  \*********************************************************************************/
+/*! exports provided: UsuariosComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UsuariosComponent", function() { return UsuariosComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var UsuariosComponent = /** @class */ (function () {
+    function UsuariosComponent() {
+    }
+    UsuariosComponent.prototype.ngOnInit = function () {
+    };
+    UsuariosComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-usuarios',
+            template: __webpack_require__(/*! ./usuarios.component.html */ "./src/app/components/admin/dashboard-admin/usuarios/usuarios.component.html"),
+            styles: [__webpack_require__(/*! ./usuarios.component.css */ "./src/app/components/admin/dashboard-admin/usuarios/usuarios.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], UsuariosComponent);
+    return UsuariosComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/components/admin/login-admin/login-admin.component.css":
 /*!************************************************************************!*\
   !*** ./src/app/components/admin/login-admin/login-admin.component.css ***!
@@ -665,7 +978,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nb-layout>\n  <nb-layout-column>\n    <nb-card style=\"height: 100%\">\n      <nb-card-header class=\"text-center\">Login</nb-card-header>\n      <nb-card-body>\n        <nb-tabset fullWidth>\n          <nb-tab class=\"col-12\" tabTitle=\"Administrador\">\n\n\n\n            <form action=\"\" class=\"col-4 offset-4\" style=\"margin-top: 5%\" [formGroup]=\"\">\n              <div class=\"row justify-content-center\">\n                  <img src=\"../../../../assets/icon/boss.svg\" style=\"border-radius: 50%;width: 150px; height: 150px\" alt=\"\">\n              </div>\n\n                <div class=\"input-group-lader\">\n                  <div class=\"row\">\n                    <label class=\"col mt-2 form-control-label\" style=\"font-size: 20px\">Usuario</label>\n                  </div>\n                  <div class=\"row\">\n                    <input fullWidth fieldSize=\"large\"  nbInput>\n                  </div>\n                </div>\n\n                <div class=\"input-group-lader mt-4\">\n                  <div class=\"row\">\n                    <label class=\" col mt-2 form-control-label\" style=\"font-size: 20px\">Usuario</label>\n                  </div>\n                  <div class=\"row\">\n                    <input fullWidth fieldSize=\"large\" nbInput>\n                  </div>\n                </div>\n\n\n\n                <input fullWidth nbButton class=\"mt-4\" value=\"iniciar Sesión\" type=\"submit\" status=\"primary\">\n\n\n\n            </form>\n\n\n\n\n\n\n\n\n          </nb-tab>\n          <nb-tab class=\"col-12\" tabTitle=\"Root\">\n\n            <div class=\"col-lg-4 offset-4\" style=\"margin-top: 5%\">\n              <div class=\"row\">\n                <div class=\"col-6 offset-3\">\n                  <img src=\"../../../../assets/icon/auth.svg\" alt=\"\">\n                </div>\n              </div>\n\n                <div class=\"input-group-lader mt-4\">\n                  <div class=\"row\">\n                    <label class=\" col mt-2 form-control-label\" style=\"font-size: 20px\">Token Autenticador</label>\n                  </div>\n                  <div class=\"row\">\n                    <input fullWidth fieldSize=\"large\" nbInput>\n                  </div>\n                </div>\n\n              <input fullWidth nbButton class=\"mt-4\" value=\"iniciar Sesión\" type=\"submit\" status=\"primary\">\n              </div>\n\n\n\n\n          </nb-tab>\n        </nb-tabset>\n      </nb-card-body>\n      <nb-card-footer>By Wikipedia</nb-card-footer>\n    </nb-card>\n  </nb-layout-column>\n\n</nb-layout>\n"
+module.exports = "<nb-layout>\n  <nb-layout-column>\n    <nb-card style=\"height: 100%\">\n      <nb-card-header class=\"text-center\">Login</nb-card-header>\n      <nb-card-body>\n        <nb-tabset fullWidth>\n          <nb-tab class=\"col-12\" tabTitle=\"Administrador\">\n\n\n\n            <form action=\"\" class=\"col-4 offset-4\" style=\"margin-top: 5%\" [formGroup]=\"\">\n              <div class=\"row justify-content-center\">\n                  <img src=\"../../../../assets/icon/boss.svg\" style=\"border-radius: 50%;width: 150px; height: 150px\" alt=\"\">\n              </div>\n\n                <div class=\"input-group-lader\">\n                  <div class=\"row\">\n                    <label class=\"col mt-2 form-control-label\" style=\"font-size: 20px\">Usuario</label>\n                  </div>\n                  <div class=\"row\">\n                    <input fullWidth fieldSize=\"large\"  nbInput>\n                  </div>\n                </div>\n\n                <div class=\"input-group-lader mt-4\">\n                  <div class=\"row\">\n                    <label class=\" col mt-2 form-control-label\" style=\"font-size: 20px\">Usuario</label>\n                  </div>\n                  <div class=\"row\">\n                    <input fullWidth fieldSize=\"large\" nbInput>\n                  </div>\n                </div>\n\n\n\n                <input fullWidth nbButton class=\"mt-4\" value=\"iniciar Sesión\" type=\"submit\" status=\"primary\">\n\n\n\n            </form>\n\n\n\n\n\n\n\n\n          </nb-tab>\n          <nb-tab class=\"col-12\" tabTitle=\"Root\">\n\n            <div class=\"col-lg-4 offset-4\" style=\"margin-top: 5%\">\n              <div class=\"row\">\n                <div class=\"col-6 offset-3\">\n                  <img src=\"../../../../assets/icon/auth.svg\" alt=\"\">\n                </div>\n              </div>\n\n                <div class=\"input-group-lader mt-4\">\n                  <div class=\"row\">\n                    <label class=\" col mt-2 form-control-label\" style=\"font-size: 20px\">Token Autenticador</label>\n                  </div>\n                  <div class=\"row\">\n                    <input [formControl]=\"token\" fullWidth fieldSize=\"large\" nbInput>\n                  </div>\n                </div>\n\n              <input fullWidth nbButton class=\"mt-4\" value=\"Iniciar Sesión\" type=\"submit\" status=\"primary\" (click)=\"sendTokenGoogleAuth()\">\n              </div>\n\n          </nb-tab>\n        </nb-tabset>\n      </nb-card-body>\n      <nb-card-footer>By Wikipedia</nb-card-footer>\n    </nb-card>\n  </nb-layout-column>\n\n</nb-layout>\n"
 
 /***/ }),
 
@@ -680,6 +993,9 @@ module.exports = "<nb-layout>\n  <nb-layout-column>\n    <nb-card style=\"height
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginAdminComponent", function() { return LoginAdminComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _guards_auth_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../guards/auth.service */ "./src/app/guards/auth.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -690,10 +1006,26 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
 var LoginAdminComponent = /** @class */ (function () {
-    function LoginAdminComponent() {
+    function LoginAdminComponent(_authService, router) {
+        this._authService = _authService;
+        this.router = router;
+        this.token = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required);
     }
     LoginAdminComponent.prototype.ngOnInit = function () {
+    };
+    LoginAdminComponent.prototype.sendTokenGoogleAuth = function () {
+        var _this = this;
+        console.log(this.token.value);
+        this._authService.loginRoot(parseInt(this.token.value)).subscribe(function (data) {
+            localStorage.setItem("token_admin", data.token);
+            _this.router.navigate(['/admin', 'dashboard']);
+        }, function (err) {
+            console.log(err);
+        });
     };
     LoginAdminComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -701,7 +1033,8 @@ var LoginAdminComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./login-admin.component.html */ "./src/app/components/admin/login-admin/login-admin.component.html"),
             styles: [__webpack_require__(/*! ./login-admin.component.css */ "./src/app/components/admin/login-admin/login-admin.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_guards_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
     ], LoginAdminComponent);
     return LoginAdminComponent;
 }());
@@ -837,6 +1170,7 @@ var ContactoComponent = /** @class */ (function () {
     ContactoComponent.prototype.ngOnInit = function () {
     };
     ContactoComponent.prototype.enviarRespuesta = function () {
+        console.log(this.contactoForm.value);
         this._contactoService.enviarMensaje(this.contactoForm.value).subscribe(function (data) {
             console.log(data);
         });
@@ -863,7 +1197,7 @@ var ContactoComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".carousel-caption h1 {\n  color:white;\n  font-size: 5em\n}\n\n\n.carousel-caption p {\n  color:white;\n  font-size: 1.5em\n}\n\n\n.carousel-caption{\n  bottom: 50%;\n}\n\n\n.card{\n  border-radius: 10px !important;\n}\n\n\n.intro-header {\n\n}\n\n\ncarousel-caption{\n  font-family: ModernSans;\n}\n\n\n.descripcion-breve{\n  font-family: ModernSans;\n  color:white;\n  font-size: 30px;\n}\n\n\n.view {\n  height: 100vh !important;\n}\n\n\nh5 {\n  letter-spacing: 3px;\n}\n\n\n@media (max-width: 740px) {\n  .full-height,\n  .full-height body,\n  .full-height header,\n  .full-height header .view {\n    height: 700px;\n  }\n}\n"
+module.exports = ".carousel-caption h1 {\n  color:white;\n  font-size: 5em\n}\n\n\n.carousel-caption p {\n  color:white;\n  font-size: 1.5em\n}\n\n\n.carousel-caption{\n  bottom: 50%;\n}\n\n\n.card{\n  border-radius: 10px !important;\n}\n\n\n.intro-header {\n\n}\n\n\ncarousel-caption{\n  font-family: ModernSans;\n}\n\n\n.descripcion-breve{\n  font-family: ModernSans;\n  color:white;\n  font-size: 30px;\n}\n\n\n.view {\n  height: 65vh !important;\n}\n\n\n.modulo-reserva{\n  height: 35vh !important;\n  background-color: cornflowerblue;\n}\n\n\nh5 {\n  letter-spacing: 3px;\n}\n\n\n@media (max-width: 740px) {\n  .full-height,\n  .full-height body,\n  .full-height header,\n  .full-height header .view {\n    height: 700px;\n  }\n}\n\n\n.form-elegant .font-small {\n  font-size: 0.8rem; }\n\n\n.form-elegant .z-depth-1a {\n  box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25); }\n\n\n.form-elegant .z-depth-1-half,\n.form-elegant .btn:hover {\n  box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15); }\n\n\n.form-elegant .modal-header {\n  border-bottom: none; }\n\n\n.modal-dialog .form-elegant .btn .fa {\n  color: #2196f3!important; }\n\n\n.form-elegant .modal-body, .form-elegant .modal-footer {\n  font-weight: 400; }\n"
 
 /***/ }),
 
@@ -874,7 +1208,7 @@ module.exports = ".carousel-caption h1 {\n  color:white;\n  font-size: 5em\n}\n\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mdb-carousel [isControls]=\"true\" class=\"carousel slide carousel-fade\" [animation]=\"'fade'\">\n  <!--First slide-->\n  <mdb-carousel-item>\n    <div class=\"view\">\n      <!--Video source-->\n      <video class=\"video-fluid\" autoplay loop>\n        <source src=\"https://mdbootstrap.com/img/video/Tropical.mp4\" type=\"video/mp4\" />\n      </video>\n      <div class=\"mask rgba-black-strong waves-light\" mdbWavesEffect></div>\n    </div>\n    <div class=\"carousel-caption mt-1\" style=\"top: 35%\">\n      <h2 class=\"h1 display-3 mb-5 wow fadeInDown white-text\" data-wow-delay=\"0.3s\">TU <a class=\"orange-text font-bold\">COMODIDAD</a></h2>\n      <h5 class=\"font-up mb-5 mt-1 font-bold wow fadeInDown white-text\" data-wow-delay=\"0.3s\">Reserva ahora con un 20% de descuento</h5>\n      <a mdbBtn  size=\"lg\" class=\"wow fadeInDown waves-light peach-gradient white-text\" data-wow-delay=\"0.3s\" mdbWavesEffect>Reservar</a>\n    </div>\n  </mdb-carousel-item>\n  <!--/First slide-->\n  <!--Second slide-->\n  <mdb-carousel-item>\n    <div class=\"view w-100\">\n      <img class=\"d-block w-100\" src=\"../../../../assets/img/hotel3.jpg\" alt=\"Second slide\">\n      <div class=\"mask rgba-black-strong waves-light\" mdbWavesEffect></div>\n    </div>\n    <div class=\"carousel-caption\" style=\"top: 35%\">\n      <h2 class=\"h1 display-3 mb-5 wow fadeInDown white-text\" data-wow-delay=\"0.3s\">TU <a class=\"orange-text font-bold\">COMODIDAD</a></h2>\n      <h5 class=\"font-up mb-5 mt-1 font-bold wow fadeInDown white-text\" data-wow-delay=\"0.3s\">Reserva ahora con un 20% de descuento</h5>\n      <a mdbBtn  size=\"lg\" class=\"wow fadeInDown waves-light peach-gradient white-text\" data-wow-delay=\"0.3s\" mdbWavesEffect>Reservar</a>\n    </div>\n  </mdb-carousel-item>\n  <!--/Second slide-->\n  <!--Third slide-->\n  <mdb-carousel-item>\n    <div class=\"view w-100\">\n      <img class=\"d-block w-100\" src=\"../../../../assets/img/hotel4.jpg\" alt=\"Third slide\">\n      <div class=\"mask rgba-black-strong waves-light\" mdbWavesEffect></div>\n    </div>\n    <div class=\"carousel-caption\" style=\"top: 35%\">\n      <h2 class=\"h1 display-3 mb-5 wow fadeInDown white-text\" data-wow-delay=\"0.3s\">TU <a class=\"orange-text font-bold\">COMODIDAD</a></h2>\n      <h5 class=\"font-up mb-5 mt-1 font-bold wow fadeInDown white-text\" data-wow-delay=\"0.3s\">Reserva ahora con un 20% de descuento</h5>\n      <a mdbBtn  size=\"lg\" class=\"wow fadeInDown waves-light peach-gradient white-text\" data-wow-delay=\"0.3s\" mdbWavesEffect>Reservar</a>\n    </div>\n  </mdb-carousel-item>\n  <!--/Third slide-->\n</mdb-carousel>\n<!--/.Carousel Wrapper-->\n\n\n  <div class=\"row descripcion-breve peach-gradient\">\n    <!--Grid column-->\n      <div class=\"container\">\n        <div class=\"col-md-12 text-center my-5\">\n          <h1 class=\"h1 font-bold mb-5 mt-5\" style=\"color: white\"><b>Hotel Cancún</b></h1>\n          <div class=\"row align-items-center\">\n            <div class=\"col-lg-3\">\n              <img src=\"../../../../assets/icon/hotel.svg\" alt=\"\">\n            </div>\n            <div class=\"col-lg-9\" style=\"padding-left: 50px; padding-right: 50px\">\n              <div class=\"row \" >\n\n                  <b> <p align=\"justify\" >Aqui va una descripción breve consectetur quis elit. Perspiciatis\n                    commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet,\n                    veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit.  </p></b>\n\n\n              </div>\n              <div class=\"row justify-content-center\">\n                <button mdbBtn type=\"button\" size=\"lg\"   rounded=\"true\" class=\"waves-light bg-white orange-text\" mdbWavesEffect><b>Conocenos</b></button>\n              </div>\n            </div>\n\n          </div>\n        </div>\n        <!--Grid column-->\n      </div>\n    </div>\n  <!--Grid row-->\n\n\n<div class=\"view intro\" style=\"background-image: url(../../../../assets/img/hotel9.jpg); background-attachment: fixed; background-size: cover; min-height: 700px\">\n  <div class=\"full-bg-img mask rgba-pink-slight\">\n  </div>\n</div>\n\n<div class=\"view intro\" style=\"background-image: url(../../../../assets/img/hotel7.jpg); background-size: cover; background-attachment: fixed; min-height: 700px\">\n  <div class=\"full-bg-img mask rgba-purple-slight\">\n    <div class=\"container\">\n      <div class=\"d-flex align-items-center d-flex justify-content-center\" style=\"height: 700px\">\n        <div class=\"row mt-5\">\n          <div class=\"col-md-12 wow fadeIn mb-3\">\n            <div class=\"intro-info-content text-center\" style=\"font-family: ModernSans\">\n              <h2 class=\"h1 display-1 white-text mb-2 wow fadeInDown\" data-wow-delay=\"0.3s\">Comparte tu habitación</h2>\n              <h4 class=\"mb-3 mt-1 white-text font-bold wow fadeIn\" data-wow-delay=\"0.4s\">¡Paga menos!</h4>\n              <a mdbBtn  size=\"lg\" class=\"wow fadeIn waves-light peach-gradient text-white\" mdbWavesEffect data-wow-delay=\"0.4s\">Ver cómo</a>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div class=\"row mt-5 mb-5 \" >\n  <div class=\"col text-center orange-text\"  style=\"font-family: ModernSans\">\n    <h1><b>¿Qué ofrecemos?</b></h1>\n  </div>\n\n</div>\n    <div class=\"row fadein\" style=\"padding-right: 50px; padding-left: 50px\">\n\n\n      <div class=\"col-lg-4\" >\n        <div class=\"card card-image mt-3 mb-3\" style=\"background-image: url(../../../../assets/img/hotel1.jpg);\">\n\n          <!-- Content -->\n          <div class=\"text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4\">\n            <div>\n              <h5 class=\"orange-text\"><i class=\"fa fa-pie-chart\"></i> Item 1</h5>\n              <h3 class=\"card-title pt-2\"><strong>This is card title</strong></h3>\n              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,\n                optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.\n                Odit sed qui, dolorum!.</p>\n              <a mdbBtn  class=\"waves-light \" color=\"warning\" mdbWavesEffect><i class=\"fa fa-clone left\"></i> Ver detalles</a>\n            </div>\n          </div>\n          <!-- Content -->\n        </div>\n      </div>\n\n      <div class=\"col-lg-4\">\n        <div class=\"card card-image mt-3 mb-3\" style=\"background-image: url(../../../../assets/img/hotel8.jpg);\">\n\n          <!-- Content -->\n          <div class=\"text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4\">\n            <div>\n              <h5 class=\"orange-text\"><i class=\"fa fa-pie-chart\"></i> Item 2</h5>\n              <h3 class=\"card-title pt-2\"><strong>This is card title</strong></h3>\n              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,\n                optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.\n                Odit sed qui, dolorum!.</p>\n              <a mdbBtn color=\"warning\" class=\"waves-light\" mdbWavesEffect><i class=\"fa fa-clone left\"></i> Ver detalles</a>\n            </div>\n          </div>\n          <!-- Content -->\n        </div>\n      </div>\n\n      <div class=\"col-lg-4\">\n        <div class=\"card card-image mt-3 mb-3\" style=\"background-image: url(../../../../assets/img/hotel5.jpg);\">\n\n          <!-- Content -->\n          <div class=\"text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4\">\n            <div>\n              <h5 class=\"orange-text\"><i class=\"fa fa-pie-chart\"></i> Item 3</h5>\n              <h3 class=\"card-title pt-2\"><strong>This is card title</strong></h3>\n              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,\n                optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.\n                Odit sed qui, dolorum!.</p>\n              <a mdbBtn color=\"warning\" class=\"waves-light\" mdbWavesEffect><i class=\"fa fa-clone left\"></i> Ver detalles</a>\n            </div>\n          </div>\n          <!-- Content -->\n        </div>\n      </div>\n    </div>\n\n\n\n\n\n"
+module.exports = "\n<!--/.Carousel Wrapper-->\n\n<mdb-card style=\"padding: 0px; border-style:none !important;\" cascade=\"true\" wider=\"true\" reverse=\"true\" class=\"my-4\">\n  <!--Card image-->\n  <mdb-carousel [isControls]=\"true\" class=\"carousel slide carousel-fade\" [animation]=\"'fade'\">\n    <!--First slide-->\n    <mdb-carousel-item>\n      <div class=\"view\">\n        <!--Video source-->\n        <video class=\"video-fluid\" autoplay loop>\n          <source src=\"https://mdbootstrap.com/img/video/Tropical.mp4\" type=\"video/mp4\" />\n        </video>\n        <div class=\"mask rgba-black-strong waves-light\" mdbWavesEffect></div>\n      </div>\n      <div class=\"carousel-caption mt-1\" style=\"top: 35%\">\n        <h2 class=\"h1 display-3 mb-5 wow fadeInDown white-text\" data-wow-delay=\"0.3s\">TU <a class=\"orange-text font-bold\">COMODIDAD</a></h2>\n        <h5 class=\"font-up mb-5 mt-1 font-bold wow fadeInDown white-text\" data-wow-delay=\"0.3s\">Reserva ahora con un 20% de descuento</h5>\n        <a mdbBtn  size=\"lg\" class=\"wow fadeInDown waves-light peach-gradient white-text\" data-wow-delay=\"0.3s\" mdbWavesEffect>Reservar</a>\n      </div>\n    </mdb-carousel-item>\n    <!--/First slide-->\n    <!--Second slide-->\n    <mdb-carousel-item>\n      <div class=\"view w-100\">\n        <img class=\"d-block w-100\" src=\"../../../../assets/img/hotel3.jpg\" alt=\"Second slide\">\n        <div class=\"mask rgba-black-strong waves-light\" mdbWavesEffect></div>\n      </div>\n      <div class=\"carousel-caption\" style=\"top: 35%\">\n        <h2 class=\"h1 display-3 mb-5 wow fadeInDown white-text\" data-wow-delay=\"0.3s\">TU <a class=\"orange-text font-bold\">COMODIDAD</a></h2>\n        <h5 class=\"font-up mb-5 mt-1 font-bold wow fadeInDown white-text\" data-wow-delay=\"0.3s\">Reserva ahora con un 20% de descuento</h5>\n        <a mdbBtn  size=\"lg\" class=\"wow fadeInDown waves-light peach-gradient white-text\" data-wow-delay=\"0.3s\" mdbWavesEffect>Reservar</a>\n      </div>\n    </mdb-carousel-item>\n    <!--/Second slide-->\n    <!--Third slide-->\n    <mdb-carousel-item>\n      <div class=\"view w-100\">\n        <img class=\"d-block w-100\" src=\"../../../../assets/img/hotel4.jpg\" alt=\"Third slide\">\n        <div class=\"mask rgba-black-strong waves-light\" mdbWavesEffect></div>\n      </div>\n      <div class=\"carousel-caption\" style=\"top: 35%\">\n        <h2 class=\"h1 display-3 mb-5 wow fadeInDown white-text\" data-wow-delay=\"0.3s\">TU <a class=\"orange-text font-bold\">COMODIDAD</a></h2>\n        <h5 class=\"font-up mb-5 mt-1 font-bold wow fadeInDown white-text\" data-wow-delay=\"0.3s\">Reserva ahora con un 20% de descuento</h5>\n        <a mdbBtn  size=\"lg\" class=\"wow fadeInDown waves-light peach-gradient white-text\" data-wow-delay=\"0.3s\" mdbWavesEffect>Reservar</a>\n      </div>\n    </mdb-carousel-item>\n    <!--/Third slide-->\n  </mdb-carousel>\n  <!--/Card image-->\n\n  <!-- Card content -->\n  <mdb-card-body cascade=\"true\" style=\"font-family: ModernSans\" class=\"text-center\">\n\n    <!--Title-->\n    <mdb-card-title>\n      <h2>\n        <strong>¡Reserva tu habitación ahora!</strong>\n      </h2>\n    </mdb-card-title>\n\n    <mdb-card-text>\n      Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem\n      aperiam.\n    </mdb-card-text>\n\n    <!--Linkedin-->\n\n  </mdb-card-body>\n\n</mdb-card>\n\n  <div class=\"row descripcion-breve peach-gradient\">\n    <!--Grid column-->\n      <div class=\"container\">\n        <div class=\"col-md-12 text-center my-5\">\n          <h1 class=\"h1 font-bold mb-5 mt-5\" style=\"color: white\"><b>Hotel Cancún</b></h1>\n          <div class=\"row align-items-center\">\n            <div class=\"col-lg-3\">\n              <img src=\"../../../../assets/icon/hotel.svg\" alt=\"\">\n            </div>\n            <div class=\"col-lg-9\" style=\"padding-left: 50px; padding-right: 50px\">\n              <div class=\"row \" >\n\n                  <b> <p align=\"justify\" >Aqui va una descripción breve consectetur quis elit. Perspiciatis\n                    commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet,\n                    veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit.  </p></b>\n\n\n              </div>\n              <div class=\"row justify-content-center\">\n                <button mdbBtn type=\"button\" size=\"lg\"   rounded=\"true\" class=\"waves-light bg-white orange-text\" mdbWavesEffect><b>Conocenos</b></button>\n              </div>\n            </div>\n\n          </div>\n        </div>\n        <!--Grid column-->\n      </div>\n    </div>\n  <!--Grid row-->\n\n\n<div class=\"view intro\" style=\"background-image: url(../../../../assets/img/hotel9.jpg); background-attachment: fixed; background-size: cover; min-height: 700px\">\n  <div class=\"full-bg-img mask rgba-pink-slight\">\n  </div>\n</div>\n\n<div class=\"view intro\" style=\"background-image: url(../../../../assets/img/hotel7.jpg); background-size: cover; background-attachment: fixed; min-height: 700px\">\n  <div class=\"full-bg-img mask rgba-purple-slight\">\n    <div class=\"container\">\n      <div class=\"d-flex align-items-center d-flex justify-content-center\" style=\"height: 700px\">\n        <div class=\"row mt-5\">\n          <div class=\"col-md-12 wow fadeIn mb-3\">\n            <div class=\"intro-info-content text-center\" style=\"font-family: ModernSans\">\n              <h2 class=\"h1 display-1 white-text mb-2 wow fadeInDown\" data-wow-delay=\"0.3s\">Comparte tu habitación</h2>\n              <h4 class=\"mb-3 mt-1 white-text font-bold wow fadeIn\" data-wow-delay=\"0.4s\">¡Paga menos!</h4>\n              <a mdbBtn  size=\"lg\" class=\"wow fadeIn waves-light peach-gradient text-white\" mdbWavesEffect data-wow-delay=\"0.4s\">Ver cómo</a>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div class=\"row mt-5 mb-5 \" >\n  <div class=\"col text-center orange-text\"  style=\"font-family: ModernSans\">\n    <h1><b>¿Qué ofrecemos?</b></h1>\n  </div>\n\n</div>\n    <div class=\"row fadein\" style=\"padding-right: 50px; padding-left: 50px\">\n\n\n      <div class=\"col-lg-4\" >\n        <div class=\"card card-image mt-3 mb-3\" style=\"background-image: url(../../../../assets/img/hotel1.jpg);\">\n\n          <!-- Content -->\n          <div class=\"text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4\">\n            <div>\n              <h5 class=\"orange-text\"><i class=\"fa fa-pie-chart\"></i> Item 1</h5>\n              <h3 class=\"card-title pt-2\"><strong>This is card title</strong></h3>\n              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,\n                optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.\n                Odit sed qui, dolorum!.</p>\n              <a mdbBtn  class=\"waves-light \" color=\"warning\" mdbWavesEffect><i class=\"fa fa-clone left\"></i> Ver detalles</a>\n            </div>\n          </div>\n          <!-- Content -->\n        </div>\n      </div>\n\n      <div class=\"col-lg-4\">\n        <div class=\"card card-image mt-3 mb-3\" style=\"background-image: url(../../../../assets/img/hotel8.jpg);\">\n\n          <!-- Content -->\n          <div class=\"text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4\">\n            <div>\n              <h5 class=\"orange-text\"><i class=\"fa fa-pie-chart\"></i> Item 2</h5>\n              <h3 class=\"card-title pt-2\"><strong>This is card title</strong></h3>\n              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,\n                optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.\n                Odit sed qui, dolorum!.</p>\n              <a mdbBtn color=\"warning\" class=\"waves-light\" mdbWavesEffect><i class=\"fa fa-clone left\"></i> Ver detalles</a>\n            </div>\n          </div>\n          <!-- Content -->\n        </div>\n      </div>\n\n      <div class=\"col-lg-4\">\n        <div class=\"card card-image mt-3 mb-3\" style=\"background-image: url(../../../../assets/img/hotel5.jpg);\">\n\n          <!-- Content -->\n          <div class=\"text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4\">\n            <div>\n              <h5 class=\"orange-text\"><i class=\"fa fa-pie-chart\"></i> Item 3</h5>\n              <h3 class=\"card-title pt-2\"><strong>This is card title</strong></h3>\n              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,\n                optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.\n                Odit sed qui, dolorum!.</p>\n              <a mdbBtn color=\"warning\" class=\"waves-light\" mdbWavesEffect><i class=\"fa fa-clone left\"></i> Ver detalles</a>\n            </div>\n          </div>\n          <!-- Content -->\n        </div>\n      </div>\n    </div>\n\n\n\n\n\n"
 
 /***/ }),
 
@@ -989,7 +1323,7 @@ var NosotrosComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".item-nav{\n  margin-left:8%;\n  font-size: 18px;\n}\n\n\n\n.intro-header {\n  height: unset !important;\n}\n\n\n\n.view {\n  height: 100vh !important;\n}\n\n\n\nh5 {\n  letter-spacing: 3px;\n}\n\n\n\n@media (max-width: 740px) {\n  .full-height,\n  .full-height body,\n  .full-height header,\n  .full-height header .view {\n    height: 700px;\n  }\n}\n"
+module.exports = ".item-nav{\n  margin-left:8%;\n  font-size: 18px;\n}\n\n\n\n.intro-header {\n  height: unset !important;\n}\n\n\n\nh5 {\n  letter-spacing: 3px;\n}\n\n\n\n.intro-header {\n  height: unset !important;\n}\n\n\n\n.intro-2 {\n  background: url(\"https://mdbootstrap.com/img/Photos/Others/architecture.jpg\")no-repeat center center;\n  background-size: cover;\n}\n\n\n\n.btn .fa {\n  margin-left: 3px;\n}\n\n\n\n.top-nav-collapse {\n  background-color: #424f95 !important;\n}\n\n\n\n.navbar:not(.top-nav-collapse) {\n  background: #424f95 !important;\n}\n\n\n\n@media (max-width: 768px) {\n  .navbar:not(.top-nav-collapse) {\n    background: #424f95 !important;\n  }\n}\n\n\n\nh6 {\n  line-height: 1.7;\n}\n\n\n\n.rgba-gradient .full-bg-img {\n  background: linear-gradient(45deg, rgba(42, 27, 161, 0.6), rgba(29, 210, 177, 0.6) 100%);\n}\n\n\n\n@media (max-width: 450px) {\n  .margins {\n    margin-right: 1rem;\n    margin-left: 1rem;\n  }\n}\n"
 
 /***/ }),
 
@@ -1000,7 +1334,7 @@ module.exports = ".item-nav{\n  margin-left:8%;\n  font-size: 18px;\n}\n\n\n\n.i
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n\n  <!--Navbar-->\n  <mdb-navbar #navbar SideClass=\"navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar \">\n    <mdb-navbar-brand>\n      <a class=\"navbar-brand\" style=\"color:white\">\n        <img src=\"../../../assets/icon/hotel.svg\" height=\"50\" class=\"d-inline-block \" alt=\"\">\n        <li class=\"ml-3 mt-5 mr-3 nav-item\"  style=\"list-style: none; display: inline; font-size: 20px\">Hotel Cancún</li>\n      </a>\n    </mdb-navbar-brand>\n    <links>\n      <ul class=\"navbar-nav \" style=\"font-size: 18px\">\n        <li class=\"nav-item mt-1\" routerLinkActive=\"active\">\n          <a class=\"nav-link waves-light\"  [routerLink]=\"['inicio']\"  mdbWavesEffect>Inicio</a>\n        </li>\n        <li class=\"nav-item mt-1\" routerLinkActive=\"active\">\n          <a class=\"nav-link waves-light\" [routerLink]=\"['nosotros']\"  mdbWavesEffect>Nosotros</a>\n        </li>\n        <li class=\"nav-item mt-1\" routerLinkActive=\"active\">\n          <a class=\"nav-link waves-light\" [routerLink]=\"['reservacion']\"  mdbWavesEffect>Reservar</a>\n        </li>\n        <li class=\"nav-item mt-1\" routerLinkActive=\"active\">\n          <a class=\"nav-link waves-light\" [routerLink]=\"['servicios']\"  mdbWavesEffect>Servicios</a>\n        </li>\n        <li class=\"nav-item mt-1\" routerLinkActive=\"active\">\n          <a class=\"nav-link waves-light\"  [routerLink]=\"['contacto']\" mdbWavesEffect>Contacto</a>\n        </li>\n\n\n\n\n      </ul>\n\n      <ul class=\"navbar-nav ml-auto\">\n        <li class=\"nav-item \" >\n          <button mdbBtn type=\"button\"  rounded=\"true\" class=\"waves-light white orange-text\" mdbWavesEffect><b>¡REGISTRATE!</b></button>\n        </li>\n\n        <li class=\"nav-item \">\n          <button mdbBtn type=\"button\"  rounded=\"true\" class=\"waves-light white orange-text\" mdbWavesEffect>Ingresa</button>\n        </li>\n      </ul>\n    </links>\n  </mdb-navbar>\n\n\n\n\n<router-outlet style=\"overflow-x:hidden\" ></router-outlet>\n\n  <footer class=\"page-footer font-small sunny-morning-gradient pt-4\">\n\n    <!-- Footer Links -->\n    <div class=\"container text-center text-md-left\">\n\n      <!-- Grid row -->\n      <div class=\"row\">\n\n        <!-- Grid column -->\n        <div class=\"col-md-4 mx-auto\">\n\n          <!-- Content -->\n          <h5 class=\"font-weight-bold text-uppercase mt-3 mb-4\">Footer Content</h5>\n          <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing\n            elit.</p>\n\n        </div>\n        <!-- Grid column -->\n\n        <hr class=\"clearfix w-100 d-md-none\">\n\n        <!-- Grid column -->\n        <div class=\"col-md-2 mx-auto\">\n\n          <!-- Links -->\n          <h5 class=\"font-weight-bold text-uppercase mt-3 mb-4\">Links</h5>\n\n          <ul class=\"list-unstyled\">\n            <li>\n              <a href=\"#!\">Link 1</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 2</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 3</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 4</a>\n            </li>\n          </ul>\n\n        </div>\n        <!-- Grid column -->\n\n        <hr class=\"clearfix w-100 d-md-none\">\n\n        <!-- Grid column -->\n        <div class=\"col-md-2 mx-auto\">\n\n          <!-- Links -->\n          <h5 class=\"font-weight-bold text-uppercase mt-3 mb-4\">Links</h5>\n\n          <ul class=\"list-unstyled\">\n            <li>\n              <a href=\"#!\">Link 1</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 2</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 3</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 4</a>\n            </li>\n          </ul>\n\n        </div>\n        <!-- Grid column -->\n\n        <hr class=\"clearfix w-100 d-md-none\">\n\n        <!-- Grid column -->\n        <div class=\"col-md-2 mx-auto\">\n\n          <!-- Links -->\n          <h5 class=\"font-weight-bold text-uppercase mt-3 mb-4\">Links</h5>\n\n          <ul class=\"list-unstyled\">\n            <li>\n              <a href=\"#!\">Link 1</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 2</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 3</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 4</a>\n            </li>\n          </ul>\n\n        </div>\n        <!-- Grid column -->\n\n      </div>\n      <!-- Grid row -->\n\n    </div>\n    <!-- Footer Links -->\n\n    <hr>\n\n    <!-- Call to action -->\n    <ul class=\"list-unstyled list-inline text-center py-2\">\n      <li class=\"list-inline-item\">\n        <h5 class=\"mb-1\">Registrate ahora</h5>\n      </li>\n      <li class=\"list-inline-item\">\n        <a href=\"#!\" mdbBtn color=\"danger\" rounded=\"true\" mdbWavesEffect>Inicia Sesión</a>\n      </li>\n    </ul>\n    <!-- Call to action -->\n\n    <hr>\n\n    <!-- Social buttons -->\n    <ul class=\"list-unstyled list-inline text-center\">\n      <li class=\"list-inline-item\">\n        <a class=\"btn-floating btn-fb mx-1\" mdbWavesEffect>\n          <mdb-icon icon=\"facebook\"></mdb-icon>\n        </a>\n      </li>\n      <li class=\"list-inline-item\">\n        <a class=\"btn-floating btn-tw mx-1\" mdbWavesEffect>\n          <mdb-icon icon=\"twitter\"></mdb-icon>\n        </a>\n      </li>\n      <li class=\"list-inline-item\">\n        <a class=\"btn-floating btn-gplus mx-1\" mdbWavesEffect>\n          <mdb-icon icon=\"google-plus\"></mdb-icon>\n        </a>\n      </li>\n      <li class=\"list-inline-item\">\n        <a class=\"btn-floating btn-li mx-1\" mdbWavesEffect>\n          <mdb-icon icon=\"linkedin\"></mdb-icon>\n        </a>\n      </li>\n      <li class=\"list-inline-item\">\n        <a class=\"btn-floating btn-dribbble mx-1\" mdbWavesEffect>\n          <mdb-icon icon=\"dribbble\"></mdb-icon>\n        </a>\n      </li>\n    </ul>\n    <!-- Social buttons -->\n\n    <!-- Copyright -->\n    <div class=\"footer-copyright text-center py-3\">© 2018 Copyright:\n      <a >Hotel Cancún SA. </a>\n    </div>\n    <!-- Copyright -->\n\n  </footer>\n"
+module.exports = "\n<mdb-navbar SideClass=\"navbar navbar-expand-lg navbar-dark indigo scrolling-navbar fixed-top\">\n\n  <mdb-navbar-brand class=\"mt-2\">\n    <a class=\"navbar-brand\" style=\"color:white; margin-top: -13px\">\n      <img src=\"../../../assets/icon/hotel.svg\" height=\"50\" class=\"d-inline-block \" alt=\"\">\n      <a class=\"ml-3 mr-5\"  style=\"list-style: none; display: inline; font-size: 20px; margin-top: 30px !important;\">Hotel Cancún</a>\n    </a>\n  </mdb-navbar-brand>\n  <links>\n    <ul class=\"navbar-nav \" style=\"font-size: 18px\">\n      <li class=\"nav-item \" routerLinkActive=\"active\">\n        <a class=\"nav-link waves-light\"  [routerLink]=\"['inicio']\"  mdbWavesEffect>Inicio</a>\n      </li>\n      <li class=\"nav-item \" routerLinkActive=\"active\">\n        <a class=\"nav-link waves-light\" [routerLink]=\"['nosotros']\"  mdbWavesEffect>Nosotros</a>\n      </li>\n      <li class=\"nav-item \" routerLinkActive=\"active\">\n        <a class=\"nav-link waves-light\" [routerLink]=\"['reservacion']\"  mdbWavesEffect>Reservar</a>\n      </li>\n      <li class=\"nav-item \" routerLinkActive=\"active\">\n        <a class=\"nav-link waves-light\" [routerLink]=\"['servicios']\"  mdbWavesEffect>Servicios</a>\n      </li>\n      <li class=\"nav-item \" routerLinkActive=\"active\">\n        <a class=\"nav-link waves-light\"  [routerLink]=\"['contacto']\" mdbWavesEffect>Contacto</a>\n      </li>\n\n\n\n\n    </ul>\n\n    <ul class=\"navbar-nav ml-auto\">\n\n      <li class=\"nav-item \" *ngIf=\"!isValidToken()\">\n        <button mdbBtn type=\"button\"  rounded=\"true\" class=\"waves-light white orange-text\" (click)=\"login.show()\" mdbWavesEffect>Ingresa</button>\n      </li>\n\n      <li class=\"nav-item mt-3 mr-4\" *ngIf=\"isValidToken()\">\n        <a style=\"color:white; font-family: 'Open Sans'\">Hola {{usuario.nombre}}</a>\n      </li>\n\n\n      <li  class=\"nav-item avatar mt-2\"  *ngIf=\"isValidToken()\">\n\n        <div class=\"dropdown\" mdbDropdown>\n          <a mdbDropdownToggle class=\" dropdown-toggle waves-effect waves-light\"><img style=\"height: 45px\" src=\"https://mdbootstrap.com/img/Photos/Avatars/img%20(27).jpg\" alt=\"avatar mx-auto white\" class=\"rounded-circle img-fluid\">\n          </a>\n\n          <div class=\"dropdown-menu dropdown-primary\">\n            <a class=\"dropdown-item\" href=\"#\">Perfil</a>\n            <a class=\"dropdown-item\" href=\"#\">Reservaciones</a>\n            <div class=\"divider dropdown-divider\"></div>\n            <a class=\"dropdown-item\" href=\"#\">Salir</a>\n          </div>\n        </div>\n\n\n      </li>\n\n\n\n\n    </ul>\n  </links>\n\n</mdb-navbar>\n\n\n\n\n\n\n<router-outlet style=\"overflow-x:hidden\" ></router-outlet>\n\n  <footer class=\"page-footer font-small sunny-morning-gradient pt-4\">\n\n    <!-- Footer Links -->\n    <div class=\"container text-center text-md-left\">\n\n      <!-- Grid row -->\n      <div class=\"row\">\n\n        <!-- Grid column -->\n        <div class=\"col-md-4 mx-auto\">\n\n          <!-- Content -->\n          <h5 class=\"font-weight-bold text-uppercase mt-3 mb-4\">Footer Content</h5>\n          <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing\n            elit.</p>\n\n        </div>\n        <!-- Grid column -->\n\n        <hr class=\"clearfix w-100 d-md-none\">\n\n        <!-- Grid column -->\n        <div class=\"col-md-2 mx-auto\">\n\n          <!-- Links -->\n          <h5 class=\"font-weight-bold text-uppercase mt-3 mb-4\">Links</h5>\n\n          <ul class=\"list-unstyled\">\n            <li>\n              <a href=\"#!\">Link 1</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 2</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 3</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 4</a>\n            </li>\n          </ul>\n\n        </div>\n        <!-- Grid column -->\n\n        <hr class=\"clearfix w-100 d-md-none\">\n\n        <!-- Grid column -->\n        <div class=\"col-md-2 mx-auto\">\n\n          <!-- Links -->\n          <h5 class=\"font-weight-bold text-uppercase mt-3 mb-4\">Links</h5>\n\n          <ul class=\"list-unstyled\">\n            <li>\n              <a href=\"#!\">Link 1</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 2</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 3</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 4</a>\n            </li>\n          </ul>\n\n        </div>\n        <!-- Grid column -->\n\n        <hr class=\"clearfix w-100 d-md-none\">\n\n        <!-- Grid column -->\n        <div class=\"col-md-2 mx-auto\">\n\n          <!-- Links -->\n          <h5 class=\"font-weight-bold text-uppercase mt-3 mb-4\">Links</h5>\n\n          <ul class=\"list-unstyled\">\n            <li>\n              <a href=\"#!\">Link 1</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 2</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 3</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 4</a>\n            </li>\n          </ul>\n\n        </div>\n        <!-- Grid column -->\n\n      </div>\n      <!-- Grid row -->\n\n    </div>\n    <!-- Footer Links -->\n\n    <hr>\n\n    <!-- Call to action -->\n    <ul class=\"list-unstyled list-inline text-center py-2\">\n      <li class=\"list-inline-item\">\n        <h5 class=\"mb-1\">Registrate ahora</h5>\n      </li>\n      <li class=\"list-inline-item\">\n        <a href=\"#!\" mdbBtn color=\"danger\" rounded=\"true\" mdbWavesEffect>Inicia Sesión</a>\n      </li>\n    </ul>\n    <!-- Call to action -->\n\n    <hr>\n\n    <!-- Social buttons -->\n    <ul class=\"list-unstyled list-inline text-center\">\n      <li class=\"list-inline-item\">\n        <a class=\"btn-floating btn-fb mx-1\" mdbWavesEffect>\n          <mdb-icon icon=\"facebook\"></mdb-icon>\n        </a>\n      </li>\n      <li class=\"list-inline-item\">\n        <a class=\"btn-floating btn-tw mx-1\" mdbWavesEffect>\n          <mdb-icon icon=\"twitter\"></mdb-icon>\n        </a>\n      </li>\n      <li class=\"list-inline-item\">\n        <a class=\"btn-floating btn-gplus mx-1\" mdbWavesEffect>\n          <mdb-icon icon=\"google-plus\"></mdb-icon>\n        </a>\n      </li>\n      <li class=\"list-inline-item\">\n        <a class=\"btn-floating btn-li mx-1\" mdbWavesEffect>\n          <mdb-icon icon=\"linkedin\"></mdb-icon>\n        </a>\n      </li>\n      <li class=\"list-inline-item\">\n        <a class=\"btn-floating btn-dribbble mx-1\" mdbWavesEffect>\n          <mdb-icon icon=\"dribbble\"></mdb-icon>\n        </a>\n      </li>\n    </ul>\n    <!-- Social buttons -->\n\n    <!-- Copyright -->\n    <div class=\"footer-copyright text-center py-3\">© 2018 Copyright:\n      <a >Hotel Cancún SA. </a>\n    </div>\n    <!-- Copyright -->\n\n  </footer>\n\n\n\n  <!-- Modal para iniciar sesión y registrarse\n       Variable ligada #login\n  -->\n  <div mdbModal #login=\"mdbModal\" class=\"modal fade top\" id=\"frameModalTop\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\"\n       aria-hidden=\"true\">\n    <div class=\"modal-dialog cascading-modal\" role=\"document\">\n      <!--Content-->\n      <div class=\"modal-content\">\n        <!--Modal cascading tabs-->\n        <div class=\"modal-c-tabs\">\n          <!-- Tab panels -->\n          <mdb-tabset #staticTabs [buttonClass]=\"'nav md-tabs tabs-2 light-blue darken-3'\" [contentClass]=\"''\" class=\"tab-content\">\n            <!--Panel 7-->\n            <mdb-tab class=\"tab-pane fade in show active\" id=\"panel7\" role=\"tabpanel\" heading=\"<i class='fa fa-user mr-1'></i> Login\">\n              <!--Body-->\n              <div class=\"modal-body mb-1\">\n                <form [formGroup]=\"login_form\" (ngSubmit)=\"setLogin()\">\n                  <div class=\"md-form form-sm\">\n                    <i class=\"fa fa-envelope prefix\"></i>\n                    <input formControlName=\"email\" formControlName=\"email\" mdbInputDirective type=\"text\" id=\"form22\" class=\"form-control\" >\n                    <label for=\"form22\">Email</label>\n                  </div>\n\n                  <div class=\"md-form form-sm\">\n                    <i class=\"fa fa-lock prefix\"></i>\n                    <input formControlName=\"password\" mdbInputDirective type=\"password\" id=\"form23\" class=\"form-control\" >\n                    <label for=\"form23\">Contraseña</label>\n                  </div>\n                  <div class=\"text-center mt-2\">\n                    <input mdbBtn type=\"submit\" color=\"info\" class=\"waves-light\" mdbWavesEffect value=\"Iniciar Sesión\">\n                  </div>\n                </form>\n              </div>\n              <!--Footer-->\n              <div class=\"modal-footer display-footer\">\n                <div class=\"options text-center text-md-right mt-1\">\n                  <p>Olvidaste tu\n                    <a href=\"#\" class=\"blue-text\">email</a>\n                  </p>\n                </div>\n                <button type=\"button\" mdbBtn color=\"info\" outline=\"true\" class=\"ml-auto\" data-dismiss=\"modal\" (click)=\"login.hide()\" mdbWavesEffect>Close</button>\n              </div>\n            </mdb-tab>\n            <!--/.Panel 7-->\n            <!--Panel 8-->\n            <mdb-tab class=\"tab-pane fade\" id=\"panel8\" role=\"tabpanel\" heading=\"<i class='fa fa-user-plus mr-1'></i> Register\">\n              <!--Body-->\n              <div class=\"modal-body\">\n                <form [formGroup]=\"signup_form\" (ngSubmit)=\"setSignup()\">\n                  <div class=\"md-form form-sm\">\n                    <i class=\"fa fa-user prefix\"></i>\n                    <input formControlName=\"nombre\" mdbInputDirective type=\"text\" id=\"form30\" class=\"form-control\" >\n                    <label for=\"form30\">Nombre</label>\n                  </div>\n                  <div class=\"md-form form-sm\">\n                    <i class=\"fa fa-envelope prefix\"></i>\n                    <input formControlName=\"email\" mdbInputDirective type=\"text\" id=\"form24\" class=\"form-control\" >\n                    <label for=\"form24\">Email</label>\n                  </div>\n                  <div class=\"md-form form-sm\">\n                    <i class=\"fa fa-lock prefix\"></i>\n                    <input formControlName=\"password\" mdbInputDirective type=\"password\" id=\"form25\" class=\"form-control\" >\n                    <label for=\"form25\">Password</label>\n                  </div>\n                  <div class=\"md-form form-sm\">\n                    <i class=\"fa fa-lock prefix\"></i>\n                    <input formControlName=\"confirm_password\" mdbInputDirective type=\"password\" id=\"form26\" class=\"form-control\" >\n                    <label for=\"form26\">Confirma tu Contraseña</label>\n                  </div>\n                  <div class=\"text-center form-sm mt-2\">\n                    <input type=\"submit\" value=\"Registrar\" mdbBtn color=\"info\" class=\"waves-light\" mdbWavesEffect>\n                  </div>\n                </form>\n              </div>\n              <!--Footer-->\n              <div class=\"modal-footer\">\n                <button type=\"button\" mdbBtn color=\"info\" outline=\"true\" class=\"ml-auto\" data-dismiss=\"modal\" (click)=\"login.hide()\" mdbWavesEffect>Close</button>\n              </div>\n            </mdb-tab>\n            <!--/.Panel 8-->\n          </mdb-tabset>\n        </div>\n      </div>\n      <!--/.Content-->\n    </div>\n  </div>\n\n\n\n  <div mdbModal #succes=\"mdbModal\" class=\"modal fade\" id=\"frameModalSecond\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\"\n       aria-hidden=\"true\">\n    <div class=\"modal-dialog modal-notify modal-success\" role=\"document\">\n      <!--Content-->\n      <div class=\"modal-content text-center\">\n        <!--Header-->\n        <div class=\"modal-header d-flex justify-content-center\">\n          <p class=\"heading\">¡Gracias por tu registro!</p>\n        </div>\n\n        <!--Body-->\n        <div class=\"modal-body\">\n          <i class=\"fa fa-check fa-4x animated rotateIn mb-4\"></i>\n          <p>Ahora puedes hacer recervaciones</p>\n        </div>\n\n        <!--Footer-->\n        <div class=\"modal-footer flex-center\">\n          <button  mdbBtn color=\"success\" class=\"waves-light\" mdbWavesEffect>Aceptar</button>\n        </div>\n      </div>\n      <!--/.Content-->\n    </div>\n  </div>\n\n\n  <div mdbModal #danger=\"mdbModal\" class=\"modal fade\" id=\"frameModalThird\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\"\n       aria-hidden=\"true\">\n    <div class=\"modal-dialog modal-notify modal-success\" role=\"document\">\n      <!--Content-->\n      <div class=\"modal-content text-center\">\n        <!--Header-->\n        <div class=\"modal-header d-flex justify-content-center\">\n          <p class=\"heading\">¡Upsss!</p>\n        </div>\n\n        <!--Body-->\n        <div class=\"modal-body\">\n          <i class=\"fa fa-times fa-4x animated rotateIn mb-4\"></i>\n          <p>No hemos podido procesa tu registro, itenta más tarde o asegurate que estas conectado a internet</p>\n        </div>\n\n        <!--Footer-->\n        <div class=\"modal-footer flex-center\">\n          <button  mdbBtn color=\"danger\" class=\"waves-light\" mdbWavesEffect>Aceptar</button>\n        </div>\n      </div>\n      <!--/.Content-->\n    </div>\n  </div>\n\n\n\n<div mdbModal #success_login=\"mdbModal\" class=\"modal fade\" id=\"frameModalthird\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\"\n     aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-notify modal-info\" role=\"document\">\n    <!--Content-->\n    <div class=\"modal-content text-center\">\n      <!--Header-->\n      <div class=\"modal-header d-flex justify-content-center\">\n        <p class=\"heading\">¡Bienvenido!</p>\n      </div>\n\n      <!--Body-->\n      <div class=\"modal-body\">\n        <i class=\"fa fa-check fa-4x animated rotateIn mb-4\"></i>\n        <p>¡Comienza a reservar!</p>\n      </div>\n\n      <!--Footer-->\n      <div class=\"modal-footer flex-center\">\n        <button  mdbBtn color=\"info\" class=\"waves-light\" mdbWavesEffect>Aceptar</button>\n      </div>\n    </div>\n    <!--/.Content-->\n  </div>\n</div>\n\n\n\n\n\n\n"
 
 /***/ }),
 
@@ -1015,6 +1349,9 @@ module.exports = "\n\n  <!--Navbar-->\n  <mdb-navbar #navbar SideClass=\"navbar 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PageComponent", function() { return PageComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _guards_auth_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../guards/auth.service */ "./src/app/guards/auth.service.ts");
+/* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/user.service */ "./src/app/services/user.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1025,42 +1362,95 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
 var PageComponent = /** @class */ (function () {
-    function PageComponent() {
-        this.items = [
-            {
-                title: 'Profile',
-                link: [],
-            },
-            {
-                title: 'Change Password',
-                link: [],
-            },
-            {
-                title: 'Privacy Policy',
-                link: [],
-            },
-            {
-                title: 'Logout',
-                link: [],
-            },
-        ];
+    function PageComponent(_authService, _userService) {
+        this._authService = _authService;
+        this._userService = _userService;
+        this.usuario = {
+            nombre: null,
+            email: null
+        };
+        this.initUser();
+        console.log(this.usuario);
+        this.login_form = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroup"]({
+            email: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required),
+            password: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required)
+        });
+        this.signup_form = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroup"]({
+            nombre: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required),
+            email: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required),
+            password: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required)
+        });
     }
     PageComponent.prototype.ngOnInit = function () {
-        this.navbar.SideClass = "";
-        console.log(this.navbar);
+    };
+    PageComponent.prototype.setSignup = function () {
+        var _this = this;
+        console.log(this.signup_form.value);
+        this._userService.signupUser(this.signup_form.value).subscribe(function (data) {
+            _this.success_modal.show();
+            _this.login_modal.hide();
+            localStorage.setItem("token_user", data.token);
+        }, function (err) {
+            console.log(err);
+            _this.login_modal.hide();
+            _this.error_modal.show();
+        });
+    };
+    PageComponent.prototype.setLogin = function () {
+        var _this = this;
+        this._authService.loginUser(this.login_form.value).subscribe(function (data) {
+            console.log(data);
+            localStorage.setItem("user", data.usuario);
+            localStorage.setItem("token_user", data.token);
+            localStorage.setItem("user_name", data.usuario.nombre);
+            localStorage.setItem("user_email", data.usuario.email);
+            _this.usuario = data.usuario;
+            _this.succes_login_modal.show();
+        }, function (err) {
+            console.log(err);
+        });
+    };
+    PageComponent.prototype.initUser = function () {
+        this.usuario.nombre = this.getUserName();
+        this.usuario.email = this.getEmailUser();
+    };
+    PageComponent.prototype.getUserName = function () {
+        return localStorage.getItem('user_name');
+    };
+    PageComponent.prototype.getEmailUser = function () {
+        return localStorage.getItem('user_email');
+    };
+    PageComponent.prototype.isValidToken = function () {
+        return this._authService.isAuthenticatedUser();
     };
     __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('navbar'),
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('succes'),
         __metadata("design:type", Object)
-    ], PageComponent.prototype, "navbar", void 0);
+    ], PageComponent.prototype, "success_modal", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('danger'),
+        __metadata("design:type", Object)
+    ], PageComponent.prototype, "error_modal", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('login'),
+        __metadata("design:type", Object)
+    ], PageComponent.prototype, "login_modal", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('success_login'),
+        __metadata("design:type", Object)
+    ], PageComponent.prototype, "succes_login_modal", void 0);
     PageComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-page',
             template: __webpack_require__(/*! ./page.component.html */ "./src/app/components/page/page.component.html"),
             styles: [__webpack_require__(/*! ./page.component.css */ "./src/app/components/page/page.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_guards_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"],
+            _services_user_service__WEBPACK_IMPORTED_MODULE_3__["UserService"]])
     ], PageComponent);
     return PageComponent;
 }());
@@ -1195,6 +1585,179 @@ var ServiciosComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/guards/auth-admin.guard.ts":
+/*!********************************************!*\
+  !*** ./src/app/guards/auth-admin.guard.ts ***!
+  \********************************************/
+/*! exports provided: AuthAdminGuard */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthAdminGuard", function() { return AuthAdminGuard; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./auth.service */ "./src/app/guards/auth.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var AuthAdminGuard = /** @class */ (function () {
+    function AuthAdminGuard(auth, router) {
+        this.auth = auth;
+        this.router = router;
+    }
+    AuthAdminGuard.prototype.canActivate = function () {
+        if (!this.auth.isAuthenticatedAdmin()) {
+            this.router.navigate(['/admin', 'login']);
+            return false;
+        }
+        return true;
+    };
+    AuthAdminGuard = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
+    ], AuthAdminGuard);
+    return AuthAdminGuard;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/guards/auth.guard.ts":
+/*!**************************************!*\
+  !*** ./src/app/guards/auth.guard.ts ***!
+  \**************************************/
+/*! exports provided: AuthGuard */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthGuard", function() { return AuthGuard; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./auth.service */ "./src/app/guards/auth.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var AuthGuard = /** @class */ (function () {
+    function AuthGuard(auth, router) {
+        this.auth = auth;
+        this.router = router;
+    }
+    AuthGuard.prototype.canActivate = function () {
+        if (!this.auth.isAuthenticatedUser()) {
+            this.router.navigate(['inicio']);
+            return false;
+        }
+        return true;
+    };
+    AuthGuard = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
+    ], AuthGuard);
+    return AuthGuard;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/guards/auth.service.ts":
+/*!****************************************!*\
+  !*** ./src/app/guards/auth.service.ts ***!
+  \****************************************/
+/*! exports provided: AuthService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthService", function() { return AuthService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _auth0_angular_jwt__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @auth0/angular-jwt */ "./node_modules/@auth0/angular-jwt/index.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var AuthService = /** @class */ (function () {
+    function AuthService(http) {
+        this.http = http;
+        this.servidor = _environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].api_host;
+        this.jwtHelper = new _auth0_angular_jwt__WEBPACK_IMPORTED_MODULE_1__["JwtHelperService"]();
+    }
+    AuthService.prototype.isAuthenticatedUser = function () {
+        var token = localStorage.getItem('token_user');
+        return !this.jwtHelper.isTokenExpired(token);
+    };
+    AuthService.prototype.isAuthenticatedAdmin = function () {
+        var token = localStorage.getItem('token_admin');
+        return !this.jwtHelper.isTokenExpired(token);
+    };
+    AuthService.prototype.loginUser = function (user) {
+        var url = this.servidor + "/usuario/login";
+        var body = user;
+        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpHeaders"]({
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        });
+        return this.http.post(url, body, { headers: headers });
+    };
+    AuthService.prototype.loginRoot = function (token) {
+        var url = this.servidor + "/admin/root";
+        var body = { token: token };
+        console.log(body);
+        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpHeaders"]({
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        });
+        return this.http.post(url, body, { headers: headers });
+    };
+    AuthService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]])
+    ], AuthService);
+    return AuthService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/services/contacto.service.ts":
 /*!**********************************************!*\
   !*** ./src/app/services/contacto.service.ts ***!
@@ -1207,6 +1770,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContactoService", function() { return ContactoService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../environments/environment */ "./src/environments/environment.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1218,18 +1782,19 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
 var ContactoService = /** @class */ (function () {
     function ContactoService(http) {
         this.http = http;
-        this.usrlServer = "localhost:3000";
+        this.usrlServer = _environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].api_host;
     }
     ContactoService.prototype.enviarMensaje = function (mensaje) {
-        var body = JSON.stringify(mensaje);
+        var body = mensaje;
         var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
             'Content-Type': 'application/x-www-form-urlencoded',
             'Accept': 'application/json'
         });
-        var url = "contactar/";
+        var url = "contactar";
         return this.http.post(url, body, { headers: headers });
     };
     ContactoService = __decorate([
@@ -1239,6 +1804,58 @@ var ContactoService = /** @class */ (function () {
         __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
     ], ContactoService);
     return ContactoService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/user.service.ts":
+/*!******************************************!*\
+  !*** ./src/app/services/user.service.ts ***!
+  \******************************************/
+/*! exports provided: UserService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserService", function() { return UserService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../environments/environment */ "./src/environments/environment.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var UserService = /** @class */ (function () {
+    function UserService(http) {
+        this.http = http;
+        this.servidor = _environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].api_host;
+    }
+    UserService.prototype.signupUser = function (user_signup) {
+        var url = this.servidor + "/usuario/add";
+        var body = user_signup;
+        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        });
+        return this.http.post(url, body, { headers: headers });
+    };
+    UserService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+    ], UserService);
+    return UserService;
 }());
 
 
@@ -1259,7 +1876,8 @@ __webpack_require__.r(__webpack_exports__);
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 var environment = {
-    production: false
+    production: false,
+    api_host: "http://localhost:3000"
 };
 /*
  * For easier debugging in development mode, you can import the following file
