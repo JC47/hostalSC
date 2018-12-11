@@ -13,6 +13,9 @@ import {AuthAdminGuard} from "./guards/auth-admin.guard";
 import {AdministradoresComponent} from "./components/admin/dashboard-admin/administradores/administradores.component";
 import {UsuariosComponent} from "./components/admin/dashboard-admin/usuarios/usuarios.component";
 import {MensajesContactoComponent} from "./components/admin/dashboard-admin/mensajes-contacto/mensajes-contacto.component";
+import {HotelesComponent} from "./components/admin/dashboard-admin/hoteles/hoteles.component";
+import {ActivosCamasComponent} from "./components/admin/dashboard-admin/activos-camas/activos-camas.component";
+import {HabitacionesComponent} from "./components/admin/dashboard-admin/habitaciones/habitaciones.component";
 
 
 const APP_ROUTES: Routes = [
@@ -32,6 +35,9 @@ const APP_ROUTES: Routes = [
           { path: 'usuarios', component: UsuariosComponent },
           { path: 'mensajescontacto', component: MensajesContactoComponent },
           { path: 'reservaciones', component: MensajesContactoComponent },
+          { path: 'hoteles', component: HotelesComponent },
+          { path: 'activoscamas', component: ActivosCamasComponent },
+          { path: 'habitaciones', component: HabitacionesComponent },
           { path: '**', pathMatch: 'full', redirectTo: 'administradores'}
         ]},
       { path: '**', pathMatch: 'full', redirectTo: 'login'}

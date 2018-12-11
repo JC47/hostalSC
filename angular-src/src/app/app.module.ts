@@ -65,6 +65,9 @@ import { ModalDeleteItemComponent } from './components/modal-delete-item/modal-d
 import { ModalDeleteArrayComponent } from './components/modal-delete-array/modal-delete-array.component';
 import { SureDeleteComponent } from './components/sure-delete/sure-delete.component';
 import {AdminService} from "./services/admin.service";
+import { HotelesComponent } from './components/admin/dashboard-admin/hoteles/hoteles.component';
+import { HabitacionesComponent } from './components/admin/dashboard-admin/habitaciones/habitaciones.component';
+import { ActivosCamasComponent } from './components/admin/dashboard-admin/activos-camas/activos-camas.component';
 
 @NgModule({
   declarations: [
@@ -85,7 +88,10 @@ import {AdminService} from "./services/admin.service";
     ReservacionesComponent,
     ModalDeleteItemComponent,
     ModalDeleteArrayComponent,
-    SureDeleteComponent
+    SureDeleteComponent,
+    HotelesComponent,
+    HabitacionesComponent,
+    ActivosCamasComponent
   ],
   imports: [
     BrowserModule,

@@ -4,18 +4,8 @@
     <list default="true" id="bde5ce20-ca5f-41a3-8c78-e99ff4272479" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/angular-src/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/administradores/administradores.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/administradores/administradores.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/administradores/administradores.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/administradores/administradores.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/administradores/administradores.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/administradores/administradores.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/usuarios/usuarios.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/usuarios/usuarios.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/usuarios/usuarios.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/usuarios/usuarios.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/modal-delete-array/modal-delete-array.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/components/modal-delete-array/modal-delete-array.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/page/page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/components/page/page.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-src/src/app/services/admin.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/services/admin.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-src/src/app/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/services/user.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-src/src/app/services/utileria.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/services/utileria.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/usuario.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/usuario.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-src/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/app.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/dashboard-admin.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/dashboard-admin.component.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,27 +30,27 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="39" />
-          <entry key="html" value="76" />
+          <entry key="css" value="40" />
+          <entry key="html" value="78" />
           <entry key="js" value="37" />
-          <entry key="json" value="18" />
+          <entry key="json" value="19" />
           <entry key="md" value="1" />
           <entry key="scss" value="3" />
           <entry key="svg" value="1" />
-          <entry key="ts" value="114" />
-          <entry key="txt" value="4" />
+          <entry key="ts" value="115" />
+          <entry key="txt" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="39" />
-          <entry key="HTML" value="76" />
-          <entry key="JSON" value="17" />
+          <entry key="CSS" value="40" />
+          <entry key="HTML" value="78" />
+          <entry key="JSON" value="18" />
           <entry key="JavaScript" value="37" />
-          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="PLAIN_TEXT" value="6" />
           <entry key="SCSS" value="3" />
           <entry key="SVG" value="1" />
-          <entry key="TypeScript" value="114" />
+          <entry key="TypeScript" value="115" />
           <entry key="tsconfig" value="1" />
         </counts>
       </usages-collector>
@@ -71,24 +61,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="388" />
-          <entry key="html" value="13818" />
+          <entry key="css" value="445" />
+          <entry key="html" value="13998" />
           <entry key="js" value="97" />
           <entry key="json" value="26" />
           <entry key="scss" value="2" />
-          <entry key="ts" value="13883" />
+          <entry key="ts" value="13938" />
           <entry key="txt" value="93" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="388" />
-          <entry key="HTML" value="13814" />
+          <entry key="CSS" value="445" />
+          <entry key="HTML" value="13994" />
           <entry key="JSON" value="26" />
           <entry key="JavaScript" value="101" />
           <entry key="PLAIN_TEXT" value="93" />
           <entry key="SCSS" value="2" />
-          <entry key="TypeScript" value="13883" />
+          <entry key="TypeScript" value="13938" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -99,103 +89,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/administradores/administradores.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="177" column="125" selection-start-line="177" selection-start-column="125" selection-end-line="177" selection-end-column="125" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/modal-delete-array/modal-delete-array.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="24" column="45" lean-forward="true" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/admin.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/administradores/administradores.component.ts">
+        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/activos-camas/activos-camas.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="165" selection-start-line="165" selection-end-line="165" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="122">
+              <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/usuarios/usuarios.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="231" selection-start-line="231" selection-end-line="237" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#mdb-card#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#mdb-card#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/page/page.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="65" column="3" lean-forward="true" selection-start-line="65" selection-end-line="66" />
-              <folding>
-                <element signature="e#0#71#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/usuarios/usuarios.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="922">
-              <caret line="124" column="32" selection-start-line="124" selection-start-column="32" selection-end-line="124" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/admin.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/user.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="54" selection-start-line="54" selection-end-line="54" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/activos-camas/activos-camas.component.css">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -231,9 +136,10 @@
       <find>modal</find>
       <find>success</find>
       <find>succ</find>
-      <find>vali</find>
-      <find>succes</find>
       <find>danger</find>
+      <find>succes</find>
+      <find>vali</find>
+      <find>.card</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/angular-src/src/assets</dir>
@@ -245,8 +151,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/page/reservacion/reservacion.component.css" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/page/reservacion/reservacion.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/page/servicios/servicios.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/page/contacto/contacto.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/admin/admin.component.html" />
@@ -265,7 +169,6 @@
         <option value="$PROJECT_DIR$/angular-src/src/app/guards/auth-admin.guard.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/admin/login-admin/login-admin.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/angular.json" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/app.routes.ts" />
         <option value="$PROJECT_DIR$/models/admin.js" />
         <option value="$PROJECT_DIR$/middlewares/auth.js" />
         <option value="$PROJECT_DIR$/angular-src/src/app/modal-delete-array/modal-delete-array.component.html" />
@@ -281,7 +184,6 @@
         <option value="$PROJECT_DIR$/angular-src/src/app/components/modal-delete-array/modal-delete-array.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/sure-delete/sure-delete.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/usuarios/usuarios.component.css" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/dashboard-admin.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/services/utileria.service.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/usuarios/usuarios.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/page/page.component.html" />
@@ -291,11 +193,15 @@
         <option value="$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/usuarios/usuarios.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/page/page.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/services/admin.service.ts" />
-        <option value="$PROJECT_DIR$/routes/admin.js" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/modal-delete-array/modal-delete-array.component.html" />
         <option value="$PROJECT_DIR$/routes/usuario.js" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/administradores/administradores.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/administradores/administradores.component.ts" />
+        <option value="$PROJECT_DIR$/routes/admin.js" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/dashboard-admin.component.html" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/app.routes.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/activos-camas/activos-camas.component.css" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/activos-camas/activos-camas.component.html" />
       </list>
     </option>
   </component>
@@ -365,7 +271,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="modal-delete-array" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hostalSC" type="b2602c69:ProjectViewProjectNode" />
@@ -374,7 +280,8 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="page" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboard-admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hostalSC" type="b2602c69:ProjectViewProjectNode" />
@@ -382,22 +289,15 @@
               <item name="angular-src" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboard-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="activos-camas" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hostalSC" type="b2602c69:ProjectViewProjectNode" />
               <item name="hostalSC" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hostalSC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hostalSC" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hostalSC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hostalSC" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -423,8 +323,8 @@
       <recent name="$PROJECT_DIR$/angular-src/src/assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/angular-src/src/app/components" />
       <recent name="$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin" />
+      <recent name="$PROJECT_DIR$/angular-src/src/app/components" />
       <recent name="$PROJECT_DIR$/angular-src/src/app/components/admin" />
       <recent name="$PROJECT_DIR$/angular-src/src/assets/icon" />
       <recent name="$PROJECT_DIR$/angular-src/src/app/components/page" />
@@ -461,12 +361,12 @@
       <workItem from="1543348124772" duration="27873000" />
       <workItem from="1543593089457" duration="23002000" />
       <workItem from="1543910031458" duration="33742000" />
-      <workItem from="1544213006450" duration="50105000" />
+      <workItem from="1544213006450" duration="54185000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="235425000" />
+    <option name="totallyTimeSpent" value="239505000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -481,7 +381,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4984127" visible="true" weight="0.24947146" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4984127" visible="true" weight="0.24947146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50158733" side_tool="true" weight="0.24947146" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -494,7 +394,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32923833" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32923833" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -528,20 +428,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/angular-src/node_modules/@auth0/angular-jwt/src/jwthelper.service.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/admin/login-admin/login-admin.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="63" column="39" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
@@ -596,16 +482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/app.routes.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="32" column="77" selection-start-line="32" selection-start-column="77" selection-end-line="32" selection-end-column="77" />
-          <folding>
-            <element signature="e#1#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-440">
@@ -644,13 +520,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
           <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/node_modules/ng-uikit-pro-standard/ng-uikit-pro-standard.metadata.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret column="219101" selection-start-column="219101" selection-end-column="219101" />
         </state>
       </provider>
     </entry>
@@ -735,27 +604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/dashboard-admin.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#li#0;n#mdb-navbar-brand#0;n#mdb-side-nav#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#li#0;n#mdb-navbar-brand#0;n#mdb-side-nav#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#li#0;n#links#0;n#mdb-side-nav#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#mdb-accordion-item-head#0;n#mdb-accordion-item#0;n#mdb-accordion#0;n#ul#0;n#li#0;n#links#0;n#mdb-side-nav#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#mdb-accordion-item-head#0;n#mdb-accordion-item#0;n#mdb-accordion#0;n#ul#0;n#li#0;n#links#0;n#mdb-side-nav#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#mdb-accordion-item-head#0;n#mdb-accordion-item#1;n#mdb-accordion#0;n#ul#0;n#li#0;n#links#0;n#mdb-side-nav#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#mdb-accordion-item-head#0;n#mdb-accordion-item#1;n#mdb-accordion#0;n#ul#0;n#li#0;n#links#0;n#mdb-side-nav#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#mdb-accordion-item-head#0;n#mdb-accordion-item#2;n#mdb-accordion#0;n#ul#0;n#li#0;n#links#0;n#mdb-side-nav#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#mdb-accordion-item-head#0;n#mdb-accordion-item#2;n#mdb-accordion#0;n#ul#0;n#li#0;n#links#0;n#mdb-side-nav#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#mdb-accordion-item-head#0;n#mdb-accordion-item#3;n#mdb-accordion#0;n#ul#0;n#li#0;n#links#0;n#mdb-side-nav#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#mdb-accordion-item-head#0;n#mdb-accordion-item#3;n#mdb-accordion#0;n#ul#0;n#li#0;n#links#0;n#mdb-side-nav#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#navlinks#0;n#mdb-navbar#0;n#header#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/sure-delete/sure-delete.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="387">
@@ -788,13 +636,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/diccionario.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -842,26 +683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/user.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/admin.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/admin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="473">
@@ -869,13 +690,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/page/page.component.ts">
+    <entry file="file://$PROJECT_DIR$/routes/usuario.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="65" column="3" lean-forward="true" selection-start-line="65" selection-end-line="66" />
+        <state relative-caret-position="-191">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-939">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/administradores/administradores.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="28" column="8" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/modal-delete-array/modal-delete-array.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/administradores/administradores.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="164" selection-start-line="164" selection-end-line="164" />
           <folding>
-            <element signature="e#0#71#0" expanded="true" />
+            <element signature="e#0#50#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/dashboard-admin.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="58" column="206" selection-start-line="58" selection-start-column="206" selection-end-line="58" selection-end-column="206" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#li#0;n#mdb-navbar-brand#0;n#mdb-side-nav#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#li#0;n#mdb-navbar-brand#0;n#mdb-side-nav#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#li#0;n#links#0;n#mdb-side-nav#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#mdb-accordion-item-head#0;n#mdb-accordion-item#0;n#mdb-accordion#0;n#ul#0;n#li#0;n#links#0;n#mdb-side-nav#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#mdb-accordion-item-head#0;n#mdb-accordion-item#0;n#mdb-accordion#0;n#ul#0;n#li#0;n#links#0;n#mdb-side-nav#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#mdb-accordion-item-head#0;n#mdb-accordion-item#1;n#mdb-accordion#0;n#ul#0;n#li#0;n#links#0;n#mdb-side-nav#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#mdb-accordion-item-head#0;n#mdb-accordion-item#1;n#mdb-accordion#0;n#ul#0;n#li#0;n#links#0;n#mdb-side-nav#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#mdb-accordion-item-head#0;n#mdb-accordion-item#2;n#mdb-accordion#0;n#ul#0;n#li#0;n#links#0;n#mdb-side-nav#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#mdb-accordion-item-head#0;n#mdb-accordion-item#2;n#mdb-accordion#0;n#ul#0;n#li#0;n#links#0;n#mdb-side-nav#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#mdb-accordion-item-head#0;n#mdb-accordion-item#3;n#mdb-accordion#0;n#ul#0;n#li#0;n#links#0;n#mdb-side-nav#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#mdb-accordion-item-head#0;n#mdb-accordion-item#3;n#mdb-accordion#0;n#ul#0;n#li#0;n#links#0;n#mdb-side-nav#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#mdb-accordion-item-head#0;n#mdb-accordion-item#4;n#mdb-accordion#0;n#ul#0;n#li#0;n#links#0;n#mdb-side-nav#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#mdb-accordion-item-head#0;n#mdb-accordion-item#4;n#mdb-accordion#0;n#ul#0;n#li#0;n#links#0;n#mdb-side-nav#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#mdb-accordion-item-head#0;n#mdb-accordion-item#5;n#mdb-accordion#0;n#ul#0;n#li#0;n#links#0;n#mdb-side-nav#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#mdb-accordion-item-head#0;n#mdb-accordion-item#5;n#mdb-accordion#0;n#ul#0;n#li#0;n#links#0;n#mdb-side-nav#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#mdb-accordion-item-head#0;n#mdb-accordion-item#6;n#mdb-accordion#0;n#ul#0;n#li#0;n#links#0;n#mdb-side-nav#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#mdb-accordion-item-head#0;n#mdb-accordion-item#6;n#mdb-accordion#0;n#ul#0;n#li#0;n#links#0;n#mdb-side-nav#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#navlinks#0;n#mdb-navbar#0;n#header#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/app.routes.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="38" column="69" lean-forward="true" selection-start-line="38" selection-start-column="69" selection-end-line="38" selection-end-column="69" />
+          <folding>
+            <element signature="e#1#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/diccionario.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-217">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
@@ -892,6 +785,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/page/page.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="65" column="3" selection-start-line="65" selection-end-line="66" />
+          <folding>
+            <element signature="e#0#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/usuarios/usuarios.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="922">
@@ -899,41 +802,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/usuario.js">
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/admin.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-191">
-          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/modal-delete-array/modal-delete-array.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="24" column="45" lean-forward="true" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/administradores/administradores.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="177" column="125" selection-start-line="177" selection-start-column="125" selection-end-line="177" selection-end-column="125" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/administradores/administradores.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="165" selection-start-line="165" selection-end-line="165" />
+        <state relative-caret-position="296">
+          <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
           <folding>
-            <element signature="e#0#50#0" expanded="true" />
+            <element signature="e#0#43#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/user.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/node_modules/ng-uikit-pro-standard/ng-uikit-pro-standard.metadata.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret column="17770" selection-start-column="17770" selection-end-column="17770" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/activos-camas/activos-camas.component.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/admin/dashboard-admin/activos-camas/activos-camas.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
         </state>
       </provider>
     </entry>
