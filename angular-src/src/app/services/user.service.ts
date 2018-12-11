@@ -53,7 +53,6 @@ export class UserService {
   public edit(usuario:any){
     let url=this.servidor+"/usuario/update/"+usuario._id;
     let body=usuario;
-    delete body._id;
     let headers =new HttpHeaders({
       'Content-Type': 'application/json',
       'Accept':'application/json',

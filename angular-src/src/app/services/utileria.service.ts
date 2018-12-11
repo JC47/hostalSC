@@ -20,6 +20,7 @@ export class UtileriaService {
     let items_checked:any[] = items;
     for(let item in items_checked)
       items_checked[item].check = verified ?  true:false;
+
     return items_checked;
   }
 

@@ -64,6 +64,7 @@ import {UserService} from "./services/user.service";
 import { ModalDeleteItemComponent } from './components/modal-delete-item/modal-delete-item.component';
 import { ModalDeleteArrayComponent } from './components/modal-delete-array/modal-delete-array.component';
 import { SureDeleteComponent } from './components/sure-delete/sure-delete.component';
+import {AdminService} from "./services/admin.service";
 
 @NgModule({
   declarations: [
@@ -127,7 +128,8 @@ import { SureDeleteComponent } from './components/sure-delete/sure-delete.compon
     AuthGuard,
     AuthAdminGuard,
     HttpClient,
-    JwtHelperService
+    JwtHelperService,
+    AdminService
   ],
   schemas:[],
   bootstrap: [AppComponent]

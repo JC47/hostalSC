@@ -11,13 +11,13 @@
       <!--Body-->
       <div class="modal-body">
         <div class="row">
-          <i class="fa fa-trash-alt fa-4x animated rotateIn mb-4"></i>
+          <i class="fa fa-trash fa-4x animated rotateIn mb-4"></i>
         </div>
 
         <div class="row ml-3" *ngIf="deletedArray.length>0">
           <span>Se han eliminado los siguientes {{itemType}}:</span>
         </div>
-        <div class="row ml-5 align-items-center" *ngFor="let item of deletedArray" >
+        <div class="row ml-5 align-items-center mt-3" *ngFor="let item of deletedArray" >
           <i class="fa fa-check animated fa-2x rotateIn mr-3 green-text"></i>
           <h5>{{item.show}}</h5>
         </div>
@@ -25,7 +25,7 @@
         <div class="row ml-3" *ngIf="notDeletedArray.length>0">
           <span>No se han eliminado los siguientes  {{itemType}}:</span>
         </div>
-        <div class="row ml-5 align-items-center" *ngFor="let item of notDeletedArray">
+        <div class="row ml-5 align-items-center mt-3" *ngFor="let item of notDeletedArray">
           <i class="fa fa-times animated fa-2x rotateIn mr-3 red-text"></i>
           <h5>{{item.show}}</h5>
         </div>

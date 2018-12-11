@@ -176,6 +176,59 @@
 </div >
 
 
+
+<div mdbModal #succes="mdbModal" class="modal fade" id="frameModalSecond" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-success" role="document">
+    <!--Content-->
+    <div class="modal-content text-center">
+      <!--Header-->
+      <div class="modal-header d-flex justify-content-center">
+        <p class="heading">Confirmación</p>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+        <i class="fa fa-check fa-4x animated rotateIn mb-4"></i>
+        <p>Has editado a el usuario "{{edit_user_form.get('nombre').value}}" exitosamente</p>
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer flex-center">
+        <button  mdbBtn color="success" (click)="success_modal.hide()" class="waves-light" mdbWavesEffect>Aceptar</button>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+
+
+<div mdbModal #danger="mdbModal" class="modal fade" id="frameModalThird" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-danger" role="document">
+    <!--Content-->
+    <div class="modal-content text-center">
+      <!--Header-->
+      <div class="modal-header d-flex justify-content-center">
+        <p class="heading">¡Upsss!</p>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+        <i class="fa fa-times fa-4x animated rotateIn mb-4 danger"></i>
+        <p>No hemos podido procesa tu petición, itenta más tarde o asegurate que estas conectado a internet</p>
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer flex-center">
+        <button  mdbBtn color="danger" class="waves-light" (click)="danger.hide()" mdbWavesEffect>Aceptar</button>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+
+
 <modal-delete-array #moda_delte_array
                     [notDeletedArray]="array_not_deleted"
                     [deletedArray]="array_deleted"

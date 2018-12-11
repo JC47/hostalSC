@@ -26,6 +26,8 @@ export class UsuariosComponent implements OnInit {
   @ViewChild('moda_delte') modal_delete:any;
   @ViewChild('moda_delte_array') modal_delete_array:any;
   @ViewChild('modal_sure_delete')modal_sure_delete:any;
+  @ViewChild('success') success_modal:any;
+  @ViewChild('danger') danger:any;
   constructor(private _userService:UserService,
               public _utilerias:UtileriaService) {
     this.array_deleted=[];
@@ -43,7 +45,12 @@ export class UsuariosComponent implements OnInit {
   private async updateUsers(){
     this.load_table=true;
     this.usuarios= await this._userService.getUsers().toPromise();
-    this.usuarios=this._utilerias.addCheckItem(this.usuarios);
+    console.log(this.usuarios);
+    if(!this.usuarios){
+      console.log("Try later")
+      this.usuarios=[];
+    }
+    this.usuarios=this._utilerias.addCheckItem(this.usuarios.usuarios);
     this.load_table=false;
     console.log(this.usuarios)
   }
@@ -76,12 +83,9 @@ export class UsuariosComponent implements OnInit {
         this.array_selected.push({_id: this.selected_user._id, show: this.selected_user.nombre})
         this.modal_sure_delete.openModal();
       }
-
     }else{
       this.modal_sure_delete.openModal();
     }
-
-
   }
 
   openEditUserSection(){
@@ -103,11 +107,14 @@ export class UsuariosComponent implements OnInit {
     }
   }
 
-  async editUser(){
-    let editedRequest;
+  editUser(){
     console.log(this.edit_user_form.value)
-    editedRequest= await this._userService.edit(this.edit_user_form.value).toPromise();
-    console.log(editedRequest);
+    this._userService.edit(this.edit_user_form.value).subscribe(data=>{
+      console.log(data);
+      this.success_modal.show();
+    },err=>{
+      this.danger.show();
+    });
   }
 
   async deleteUser(delete_users:any[]){

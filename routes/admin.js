@@ -3,10 +3,12 @@ const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const speakeasy = require('speakeasy');
+const _ = require('underscore');
 //Importaciones locales
 const Admin = require('../models/admin');
 const {verificaToken,verificaTokenAdmin,verificaTokenRoot} = require('../middlewares/auth');
 const app = express();
+
 
 //Obtener admin
 app.get('/all', [verificaToken, verificaTokenAdmin] , (req,res) => {
@@ -151,7 +153,7 @@ app.post('/root', (req,res) => {
   }
 
   Admin.findOne({role:"ROOT"}, (err,adminDB) => {
-    if(adminDB){
+    if(!adminDB){
       return res.status(500).json({
         ok:false,
         err: "Root no existe"
