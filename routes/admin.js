@@ -4,7 +4,6 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const _ = require('underscore');
 const speakeasy = require('speakeasy');
-const _ = require('underscore');
 //Importaciones locales
 const Admin = require('../models/admin');
 const {verificaToken,verificaTokenAdmin,verificaTokenRoot} = require('../middlewares/auth');
