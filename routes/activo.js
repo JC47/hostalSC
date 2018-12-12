@@ -49,7 +49,7 @@ app.get('/all', [verificaToken, verificaTokenAdmin], (req, res) => {
 //Editar activo
 app.put('/update/:id', [verificaToken, verificaTokenAdmin], (req, res) => {
     let id = req.params.id;
-    let body = _.pick(req.body, ["nombre", "ocupacion"]);
+    let body = _.pick(req.body, ["nombre", "precio","descripcion"]);
 
     Activo.findOneAndUpdate(id, body, { new: true }, (err, activo) => {
         if (err != null) {
