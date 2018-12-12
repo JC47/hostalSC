@@ -1,0 +1,233 @@
+<div class="card card-cascade narrower">
+
+  <!--Card image-->
+  <div class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-4 mb-3 d-flex justify-content-between align-items-center">
+
+    <div>
+      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
+        <mdb-icon icon="th-large" class="mt-0"></mdb-icon>
+      </button>
+      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
+        <mdb-icon icon="columns" class="mt-0"></mdb-icon>
+      </button>
+    </div>
+
+    <a href="" class="white-text mx-3">Administradores</a>
+
+    <div>
+      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2" (click)="openEditAdminModal()">
+        <mdb-icon icon="pencil" class="mt-0"></mdb-icon>
+      </button>
+      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2" (click)="confirmUsersDelete()">
+        <mdb-icon icon="remove" class="mt-0"></mdb-icon>
+      </button>
+      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2" (click)="openNewAdminModal()">
+        <mdb-icon icon="plus" class="mt-0"></mdb-icon>
+      </button>
+    </div>
+
+  </div>
+  <!--/Card image-->
+
+  <div class="px-4">
+
+    <div class="table-wrapper">
+      <!--Table-->
+      <table class="table table-hover mb-0">
+
+        <!--Table head-->
+        <thead>
+        <tr>
+          <th>
+            <mdb-checkbox></mdb-checkbox>
+          </th>
+          <th class="th-lg">
+            <a (click)="sorted=_utilerias.sortBy('nombre',admins,sorted).sorted;
+                        admins=_utilerias.sortBy('nombre',admins,sorted).usuarios">Nombre
+              <mdb-icon icon="sort" class="ml-1"></mdb-icon>
+            </a>
+          </th>
+          <th class="th-lg">
+            <a (click)="sorted=_utilerias.sortBy('email',admins,sorted).sorted;
+                        admins=_utilerias.sortBy('email',admins,sorted).usuarios">Email
+              <mdb-icon icon="sort" class="ml-1"></mdb-icon>
+            </a>
+          </th>
+        </tr>
+        </thead>
+        <!--Table head-->
+
+        <!--Table body-->
+        <tbody>
+        <tr *ngFor="let row of admins;let i = index"
+            [ngClass]="{'selected':row._id==selected_admin._id}">
+          <th scope="row">
+            <mdb-checkbox [checked]="row.check" (change)="toggleCheckAdmin($event,i)"> </mdb-checkbox>
+          </th>
+          <td (click)="selectAdmin(row)">{{row.nombre}}</td>
+          <td (click)="selectAdmin(row)">{{row.email}}</td>
+        </tr>
+        </tbody>
+        <!--Table body-->
+      </table>
+      <!--Table-->
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div mdbModal #data_modal="mdbModal" class="modal fade right" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel"
+     [config]='{backdrop: false, ignoreBackdropClick: true}'   aria-hidden="true">
+  <div class="modal-dialog modal-full-height modal-right" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="data_modal.hide()">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title w-100" id="titleLabelEdit" *ngIf="data_modal_flag=='editar'">Editar Usuario</h4>
+        <h4 class="modal-title w-100" id="titleLabelNew" *ngIf="data_modal_flag=='nuevo'">Agregar Usuario</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-6 offset-3 mt-2 mb-4">
+            <div class="avatar mx-auto white"><img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(27).jpg"
+                                                   alt="avatar mx-auto white" class="rounded-circle img-fluid">
+            </div>
+          </div>
+        </div>
+        <form [formGroup]="admin_form" class="pl-4 pr-4">
+          <div class="row">
+            <div class="col-12">
+              <div class="md-form">
+                <input data-error="Se requiere el nombbre" [validateSuccess]="false" type="text" formControlName="nombre" id="edit_name" class="form-control" mdbInputDirective>
+                <label for="edit_name">Nombre</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <div class="md-form">
+                <input type="email" formControlName="email" [validateSuccess]="false" data-error="Email inválido" id="edit_email" class="form-control" mdbInputDirective>
+                <label for="edit_email">Email</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row" *ngIf="data_modal_flag=='nuevo'">
+            <div class="col-12">
+              <div class="md-form">
+                <input type="password" formControlName="password" [validateSuccess]="false" data-error="Contraseña inválida" id="password" class="form-control" mdbInputDirective>
+                <label for="password">Contraseña</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row" *ngIf="data_modal_flag=='nuevo'">
+            <div class="col-12">
+              <div class="md-form">
+                <input type="password" formControlName="confirm_password" [validateSuccess]="false" data-error="Contraseña inválida" id="confirm_password" class="form-control" mdbInputDirective>
+                <label for="confirm_password">Confirma la contraseña</label>
+              </div>
+            </div>
+          </div>
+        </form>
+        <!--          <div class="form-group">
+                    <input mdbInputDirective type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                    <label for="inputAddress2">Address 2</label>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <input mdbInputDirective type="text" class="form-control" id="inputCity" placeholder="New York City">
+                      <label for="inputCity">City</label>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <input mdbInputDirective type="text" class="form-control" id="inputZip" placeholder="11206-1117">
+                      <label for="inputZip">Zip</label>
+                    </div>
+                  </div>-->
+      </div>
+      <div class="modal-footer">
+        <a [block]="true"  mdbBtn color="primary" class="waves-light mt-2" mdbWavesEffect (click)="saveDataModal()">Guardar</a>
+        <a [block]="true"  type="button" mdbBtn color="primary" class="waves-light" (click)="data_modal.hide()" mdbWavesEffect data-dismiss="modal">Cancelar</a>
+      </div>
+    </div>
+  </div>
+</div >
+
+
+
+
+
+<div mdbModal #success="mdbModal" class="modal fade" id="frameModalSecond" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-success" role="document">
+    <!--Content-->
+    <div class="modal-content text-center">
+      <!--Header-->
+      <div class="modal-header d-flex justify-content-center">
+        <p class="heading">Confirmación</p>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+        <i class="fa fa-check fa-4x animated rotateIn mb-4"></i>
+        <p>Has <span *ngIf="data_modal_flag=='nuevo'">agregado</span> <span *ngIf="data_modal_flag=='editar'">editado</span> a el usuario "{{admin_form.get('nombre').value}}" exitosamente</p>
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer flex-center">
+        <button  mdbBtn color="success" (click)="success_modal.hide()" class="waves-light" mdbWavesEffect>Aceptar</button>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+
+
+
+<div mdbModal #danger="mdbModal" class="modal fade" id="frameModalThird" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-danger" role="document">
+    <!--Content-->
+    <div class="modal-content text-center">
+      <!--Header-->
+      <div class="modal-header d-flex justify-content-center">
+        <p class="heading">¡Upsss!</p>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+        <i class="fa fa-times fa-4x animated rotateIn mb-4 danger"></i>
+        <p>No hemos podido procesa tu petición, itenta más tarde o asegurate que estas conectado a internet</p>
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer flex-center">
+        <button  mdbBtn color="danger" class="waves-light" (click)="danger.hide()" mdbWavesEffect>Aceptar</button>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+
+
+<sure-delete #modal_sure_delete
+             [arrayDelete]="array_selected"
+             (acceptDelete)="deleteAdmin(array_selected)"
+             itemTypeSingular="administrador"
+             itemTypePlural="administradores">
+</sure-delete>
+
+
+<modal-delete-array #modal_delete_array
+                    [notDeletedArray]="array_not_deleted"
+                    [deletedArray]="array_deleted"
+                    (close)="array_selected=[]"
+                    itemType="usuarios">
+</modal-delete-array>
+
+
